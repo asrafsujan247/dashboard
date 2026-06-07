@@ -465,80 +465,11 @@ const protectedRoutes: RouteObject = {
           children: [
             {
               index: true,
-              element: <Navigate to="/prototypes/users-card/users-card-1" replace />,
-            },
-            {
-              path: "onboarding",
-              children: [
-                {
-                  path: "onboarding-1",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/onboarding-1")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "onboarding-2",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/onboarding-2")
-                    ).default,
-                  }),
-                },
-              ],
+              element: <Navigate to="/prototypes/users-card/users-card-7" replace />,
             },
             {
               path: "users-card",
               children: [
-                {
-                  path: "users-card-1",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/users-card-1")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "users-card-2",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/users-card-2")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "users-card-3",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/users-card-3")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "users-card-4",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/users-card-4")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "users-card-5",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/users-card-5")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "users-card-6",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/users-card-6")
-                    ).default,
-                  }),
-                },
                 {
                   path: "users-card-7",
                   lazy: async () => ({
@@ -561,58 +492,10 @@ const protectedRoutes: RouteObject = {
                   }),
                 },
                 {
-                  path: "blog-card-2",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/blog-card-2")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "blog-card-3",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/blog-card-3")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "blog-card-4",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/blog-card-4")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "blog-card-5",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/blog-card-5")
-                    ).default,
-                  }),
-                },
-                {
                   path: "blog-card-6",
                   lazy: async () => ({
                     Component: (
                       await import("@/app/pages/prototypes/blog-card-6")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "blog-card-7",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/blog-card-7")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "blog-card-8",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/blog-card-8")
                     ).default,
                   }),
                 },
@@ -629,30 +512,6 @@ const protectedRoutes: RouteObject = {
               path: "price-list",
               children: [
                 {
-                  path: "price-list-1",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/price-list-1")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "price-list-2",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/price-list-2")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "price-list-3",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/price-list-3")
-                    ).default,
-                  }),
-                },
-                {
                   path: "price-list-4",
                   lazy: async () => ({
                     Component: (
@@ -666,23 +525,9 @@ const protectedRoutes: RouteObject = {
               path: "help",
               children: [
                 {
-                  path: "help-1",
-                  lazy: async () => ({
-                    Component: (await import("@/app/pages/prototypes/help-1"))
-                      .default,
-                  }),
-                },
-                {
                   path: "help-2",
                   lazy: async () => ({
                     Component: (await import("@/app/pages/prototypes/help-2"))
-                      .default,
-                  }),
-                },
-                {
-                  path: "help-3",
-                  lazy: async () => ({
-                    Component: (await import("@/app/pages/prototypes/help-3"))
                       .default,
                   }),
                 },
@@ -696,27 +541,6 @@ const protectedRoutes: RouteObject = {
                   lazy: async () => ({
                     Component: (
                       await import("@/app/pages/prototypes/invoice-1")
-                    ).default,
-                  }),
-                },
-                {
-                  path: "invoice-2",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/invoice-2")
-                    ).default,
-                  }),
-                },
-              ],
-            },
-            {
-              path: "errors",
-              children: [
-                {
-                  path: "404-v4",
-                  lazy: async () => ({
-                    Component: (
-                      await import("@/app/pages/prototypes/errors/404/v4")
                     ).default,
                   }),
                 },
