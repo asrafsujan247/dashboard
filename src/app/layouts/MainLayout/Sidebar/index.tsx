@@ -1,6 +1,6 @@
 // Import Dependencies
-import { useMemo, useState } from "react";
-import { useLocation } from "react-router";
+import { type Dispatch, type SetStateAction, useMemo, useState } from "react";
+import { useLocation, useNavigate } from "react-router";
 
 // Local Imports
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
@@ -17,6 +17,7 @@ export type SegmentPath = string | undefined;
 
 export function Sidebar() {
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const { name, lgAndDown } = useBreakpointsContext();
   const { isExpanded, close } = useSidebarContext();
 
@@ -33,6 +34,17 @@ export function Sidebar() {
   const currentSegment = useMemo(() => {
     return navigation.find((item) => item.path === activeSegmentPath);
   }, [activeSegmentPath]);
+
+  const handleSetActiveSegmentPath: Dispatch<SetStateAction<SegmentPath>> = (
+    action,
+  ) => {
+    const next =
+      typeof action === "function" ? action(activeSegmentPath) : action;
+    setActiveSegmentPath(next);
+    if (next === "/apps" && pathname !== "/apps") {
+      navigate("/apps");
+    }
+  };
 
   useDidUpdate(() => {
     const activePath = navigation.find((item) =>
@@ -51,7 +63,7 @@ export function Sidebar() {
       <MainPanel
         nav={navigation}
         activeSegmentPath={activeSegmentPath}
-        setActiveSegmentPath={setActiveSegmentPath}
+        setActiveSegmentPath={handleSetActiveSegmentPath}
       />
       <PrimePanel
         close={close}

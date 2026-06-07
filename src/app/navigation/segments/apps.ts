@@ -7,6 +7,7 @@ const path = (root: string, item: string) => `${root}${item}`;
 
 export const apps: NavigationTree = {
   ...baseNavigationObj["apps"],
+  type: "root",
   childs: [
     {
       id: "apps.mail",
