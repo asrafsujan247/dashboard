@@ -49,33 +49,5 @@ export const tables: NavigationTree = {
       transKey: "nav.tables.projects-datatable",
       icon: "table.item",
     },
-    {
-      id: "tables.divide-1",
-      type: "divider",
-    },
-    {
-      id: "tables.basic-table",
-      path: path(ROOT_TABLES, "/basic-table"),
-      type: "item",
-      title: "Basic Table",
-      transKey: "nav.tables.basic-table",
-      icon: "table.item",
-    },
-    {
-      id: "tables.react-table",
-      path: path(ROOT_TABLES, "/react-table"),
-      type: "item",
-      title: "React Table",
-      transKey: "nav.tables.react-table",
-      icon: "table.item",
-    },
-    {
-      id: "tables.advanced-tables",
-      path: path(ROOT_TABLES, "/advanced-tables"),
-      type: "item",
-      title: "Advanced Table",
-      transKey: "nav.tables.advanced-tables",
-      icon: "table.item",
-    },
   ],
 };

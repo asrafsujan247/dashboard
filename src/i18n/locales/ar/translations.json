@@ -95,10 +95,7 @@
       "orders-datatable-2": "جدول الطلبات v2",
       "courses-datatable": "جدول الدورات",
       "users-datatable": "جدول المستخدمين",
-      "projects-datatable": "جدول المشاريع",
-      "basic-table": "جدول أساسي",
-      "react-table": "جدول React",
-      "advanced-tables": "الجداول المتقدمة"
+      "projects-datatable": "جدول المشاريع"
     },
     "forms": {
       "forms": "النماذج",

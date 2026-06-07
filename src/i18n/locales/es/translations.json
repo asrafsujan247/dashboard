@@ -95,10 +95,7 @@
       "orders-datatable-2": "Tabla de pedidos v2",
       "courses-datatable": "Tabla de cursos",
       "users-datatable": "Tabla de usuarios",
-      "projects-datatable": "Tabla de proyectos",
-      "basic-table": "Tabla básica",
-      "react-table": "Tabla React",
-      "advanced-tables": "Tablas avanzadas"
+      "projects-datatable": "Tabla de proyectos"
     },
     "forms": {
       "forms": "Formularios",
