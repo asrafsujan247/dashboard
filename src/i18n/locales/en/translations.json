@@ -95,10 +95,7 @@
       "orders-datatable-2": "Orders Datatable v2",
       "courses-datatable": "Courses Datatable",
       "users-datatable": "Users Datatable",
-      "projects-datatable": "Projects Datatable",
-      "basic-table": "Basic Table",
-      "react-table": "React Table",
-      "advanced-tables": "Advanced Tables"
+      "projects-datatable": "Projects Datatable"
     },
     "forms": {
       "forms": "Forms",

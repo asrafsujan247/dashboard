@@ -399,27 +399,6 @@ const protectedRoutes: RouteObject = {
               element: <Navigate to="/tables/orders-datatable-1" replace />,
             },
             {
-              path: "basic-table",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/tables/basic-table"))
-                  .default,
-              }),
-            },
-            {
-              path: "react-table",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/tables/react-table"))
-                  .default,
-              }),
-            },
-            {
-              path: "advanced-tables",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/tables/advanced-table"))
-                  .default,
-              }),
-            },
-            {
               path: "orders-datatable-1",
               lazy: async () => ({
                 Component: (

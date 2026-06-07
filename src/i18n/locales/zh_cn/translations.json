@@ -95,10 +95,7 @@
       "orders-datatable-2": "订单数据表 v2",
       "courses-datatable": "课程数据表",
       "users-datatable": "用户数据表",
-      "projects-datatable": "项目数据表",
-      "basic-table": "基础表格",
-      "react-table": "React 表格",
-      "advanced-tables": "高级表格"
+      "projects-datatable": "项目数据表"
     },
     "forms": {
       "forms": "表单",
