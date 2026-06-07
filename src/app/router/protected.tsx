@@ -19,14 +19,14 @@ const protectedRoutes: RouteObject = {
       children: [
         {
           index: true,
-          element: <Navigate to="/dashboards/sales" />,
+          element: <Navigate to="/dashboards/sales" replace />,
         },
         {
           path: "/components",
           children: [
             {
               index: true,
-              element: <Navigate to="/components/basic-ui/avatar" />,
+              element: <Navigate to="/components/basic-ui/avatar" replace />,
             },
             {
               path: "basic-ui/avatar",
@@ -258,7 +258,7 @@ const protectedRoutes: RouteObject = {
           children: [
             {
               index: true,
-              element: <Navigate to="/forms/input" />,
+              element: <Navigate to="/forms/input" replace />,
             },
             {
               path: "ekyc-form",
@@ -396,7 +396,7 @@ const protectedRoutes: RouteObject = {
           children: [
             {
               index: true,
-              element: <Navigate to="/tables/orders-datatable-1" />,
+              element: <Navigate to="/tables/orders-datatable-1" replace />,
             },
             {
               path: "basic-table",
@@ -465,7 +465,7 @@ const protectedRoutes: RouteObject = {
           children: [
             {
               index: true,
-              element: <Navigate to="/prototypes/users-card/users-card-1" />,
+              element: <Navigate to="/prototypes/users-card/users-card-1" replace />,
             },
             {
               path: "onboarding",
@@ -729,7 +729,7 @@ const protectedRoutes: RouteObject = {
           children: [
             {
               index: true,
-              element: <Navigate to="/dashboards/sales" />,
+              element: <Navigate to="/dashboards/sales" replace />,
             },
             {
               path: "sales",
@@ -764,39 +764,13 @@ const protectedRoutes: RouteObject = {
         },
         {
           path: "apps",
-          children: [
-            {
-              index: true,
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/list")).default,
-              }),
-            },
-            {
-              path: "nft-1",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/nft-1")).default,
-              }),
-            },
-            {
-              path: "nft-2",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/nft-2")).default,
-              }),
-            },
-            {
-              path: "travel",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/travel")).default,
-              }),
-            },
-          ],
         },
         {
           path: "Docs",
           children: [
             {
               index: true,
-              element: <Navigate to="/docs/getting-started" />,
+              element: <Navigate to="/docs/getting-started" replace />,
             },
             {
               path: "getting-started",
@@ -856,25 +830,6 @@ const protectedRoutes: RouteObject = {
               }),
             },
             {
-              path: "filemanager",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/filemanager"))
-                  .default,
-              }),
-            },
-            {
-              path: "chat",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/chat")).default,
-              }),
-            },
-            {
-              path: "ai-chat",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/ai-chat")).default,
-              }),
-            },
-            {
               path: "mail",
               lazy: async () => ({
                 Component: (await import("@/app/pages/apps/mail/Layout"))
@@ -898,18 +853,6 @@ const protectedRoutes: RouteObject = {
                 },
               ],
             },
-            {
-              path: "todo",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/todo")).default,
-              }),
-            },
-            {
-              path: "kanban",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/apps/kanban")).default,
-              }),
-            },
           ],
         },
         {
@@ -920,7 +863,7 @@ const protectedRoutes: RouteObject = {
           children: [
             {
               index: true,
-              element: <Navigate to="/settings/general" />,
+              element: <Navigate to="/settings/general" replace />,
             },
             {
               path: "general",
