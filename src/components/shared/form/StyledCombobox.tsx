@@ -135,18 +135,20 @@ function CustomCombobox<TValue = DataItem>(
   };
 
   return (
-    <div className={clsx("flex flex-col", classNames?.root)} {...rootProps}>
-      <Combobox
-        multiple={multiple}
-        value={value}
-        onChange={handleChange}
-        defaultValue={defaultValue}
-        disabled={disabled}
-        name={name}
-        form={form}
-        by={by ?? defaultBy}
-        {...(headlessProps as any)}
-      >
+    <Combobox
+      as="div"
+      className={clsx("flex flex-col", classNames?.root)}
+      multiple={multiple}
+      value={value}
+      onChange={handleChange}
+      defaultValue={defaultValue}
+      disabled={disabled}
+      name={name}
+      form={form}
+      by={by ?? defaultBy}
+      {...(headlessProps as any)}
+      {...(rootProps as any)}
+    >
         {({ open, value: selectedValue }) => {
           return (
             <>
@@ -320,8 +322,7 @@ function CustomCombobox<TValue = DataItem>(
             </>
           );
         }}
-      </Combobox>
-    </div>
+    </Combobox>
   );
 }
 
