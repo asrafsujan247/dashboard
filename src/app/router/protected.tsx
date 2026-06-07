@@ -258,7 +258,7 @@ const protectedRoutes: RouteObject = {
           children: [
             {
               index: true,
-              element: <Navigate to="/forms/input" replace />,
+              element: <Navigate to="/forms/ekyc-form" replace />,
             },
             {
               path: "ekyc-form",
@@ -277,115 +277,6 @@ const protectedRoutes: RouteObject = {
               path: "new-post-form",
               lazy: async () => ({
                 Component: (await import("@/app/pages/forms/new-post-form"))
-                  .default,
-              }),
-            },
-            {
-              path: "input",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/input")).default,
-              }),
-            },
-            {
-              path: "input-group",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/input-group"))
-                  .default,
-              }),
-            },
-            {
-              path: "input-mask",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/input-mask"))
-                  .default,
-              }),
-            },
-            {
-              path: "checkbox",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/checkbox")).default,
-              }),
-            },
-            {
-              path: "radio",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/radio")).default,
-              }),
-            },
-            {
-              path: "switch",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/switch")).default,
-              }),
-            },
-            {
-              path: "swap",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/swap")).default,
-              }),
-            },
-            {
-              path: "textarea",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/textarea")).default,
-              }),
-            },
-            {
-              path: "select",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/select")).default,
-              }),
-            },
-            {
-              path: "range",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/range")).default,
-              }),
-            },
-            {
-              path: "listbox",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/listbox")).default,
-              }),
-            },
-            {
-              path: "autocomplete",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/autocomplete"))
-                  .default,
-              }),
-            },
-            {
-              path: "file-upload",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/file-upload"))
-                  .default,
-              }),
-            },
-            {
-              path: "form-validation",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/form-validation"))
-                  .default,
-              }),
-            },
-            {
-              path: "text-editor",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/text-editor"))
-                  .default,
-              }),
-            },
-            {
-              path: "filepond",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/filepond")).default,
-              }),
-            },
-            {
-              path: "datepicker",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/forms/datepicker"))
                   .default,
               }),
             },
