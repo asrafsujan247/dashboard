@@ -10,7 +10,6 @@ import dayjs from "dayjs";
 import { Getter, Row } from "@tanstack/react-table";
 
 // Local Imports
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { Avatar } from "@/components/ui";
 import { ColorType } from "@/constants/app";
 import { CryptoActivity } from "./fakeData";
@@ -76,10 +75,9 @@ export function AccountNameCell({ getValue }: { getValue: Getter<any> }) {
 }
 
 export function TransactionDateCell({ getValue }: { getValue: Getter<any> }) {
-  const { locale } = useLocaleContext();
   return (
     <span>
-      {dayjs(getValue()).locale(locale).format("ddd, DD MMM - HH:mm")}
+      {dayjs(getValue()).format("ddd, DD MMM - HH:mm")}
     </span>
   );
 }

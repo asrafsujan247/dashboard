@@ -6,7 +6,6 @@ import invariant from "tiny-invariant";
 
 // Local Imports
 import { randomId } from "@/utils/randomId";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -20,8 +19,6 @@ const images = [
 ];
 
 export function Default() {
-  const { direction } = useLocaleContext();
-
   const carouselRef = useRef<SwiperContainer | null>(null);
 
   useLayoutEffect(() => {
@@ -47,7 +44,7 @@ export function Default() {
         ref={carouselRef}
         init="false"
         slides-per-view="1"
-        dir={direction}
+        dir="ltr"
         space-between="16"
         style={{ "--swiper-navigation-size": "32px" } as React.CSSProperties}
       >

@@ -1,11 +1,8 @@
 // Import Dependencies
 import { ReactNode, HTMLAttributes } from "react";
 import { NavLink } from "react-router";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
-
-// Local Imports
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -24,9 +21,7 @@ function Breadcrumbs({
   className,
   ...rest
 }: BreadcrumbsProps): ReactNode {
-  const { isRtl } = useLocaleContext();
-
-  const SeparatorIcon = isRtl ? ChevronLeftIcon : ChevronRightIcon;
+  const SeparatorIcon = ChevronRightIcon;
 
   return (
     <ul

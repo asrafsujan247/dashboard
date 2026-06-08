@@ -1,7 +1,6 @@
 // Import Dependencies
 import clsx from "clsx";
 import { NavLink, useRouteLoaderData } from "react-router";
-import { useTranslation } from "react-i18next";
 import invariant from "tiny-invariant";
 
 // Local Imports
@@ -14,10 +13,9 @@ import { navigationIcons } from "@/app/navigation/icons";
 // ----------------------------------------------------------------------
 
 export function MenuItem({ data }: { data: NavigationTree }) {
-  const { icon, path, id, transKey, title } = data;
+  const { icon, path, id, title } = data;
   const { lgAndDown } = useBreakpointsContext();
   const { close } = useSidebarContext();
-  const { t } = useTranslation();
 
   invariant(
     icon && navigationIcons[icon],
@@ -28,7 +26,7 @@ export function MenuItem({ data }: { data: NavigationTree }) {
 
   const Icon = navigationIcons[icon];
 
-  const label = transKey ? t(transKey) : title;
+  const label = title;
 
   const info = useRouteLoaderData("root")?.[id]?.info;
 

@@ -1,13 +1,12 @@
 // Import Dependencies
 import clsx from "clsx";
 import React, { useState } from "react";
-import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
+import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import { HiFolder } from "react-icons/hi";
 
 // Local Imports
 import { randomId } from "@/utils/randomId";
 import { Collapse } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -86,13 +85,11 @@ const tree: TreeItem[] = [
 
 function Tree({ tree }: { tree: TreeItem[] }): React.ReactElement {
   const [show, setshow] = useState<TreeShowState>({});
-  const { isRtl } = useLocaleContext();
-
   const toggle = (name: string): void => {
     setshow({ ...show, [name]: !show[name] });
   };
 
-  const Icon = isRtl ? ChevronLeftIcon : ChevronRightIcon;
+  const Icon = ChevronRightIcon;
 
   return (
     <>

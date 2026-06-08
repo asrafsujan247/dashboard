@@ -4,7 +4,6 @@ import { register } from "swiper/element/bundle";
 // Local Imports
 import { randomId } from "@/utils/randomId";
 import { useThemeContext } from "@/app/contexts/theme/context";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -19,7 +18,6 @@ const images = [
 
 export function Cube() {
   const { primaryColorScheme: primary } = useThemeContext();
-  const { direction } = useLocaleContext();
 
   return (
     <div className="max-w-md">
@@ -29,7 +27,7 @@ export function Cube() {
         cube-effect-shadow="false"
         navigation="true"
         slides-per-view="1"
-        dir={direction}
+        dir="ltr"
         style={
           {
             "--swiper-navigation-size": "32px",

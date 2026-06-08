@@ -5,7 +5,6 @@ import type { SwiperContainer } from "swiper/element";
 
 // Local Imports
 import { randomId } from "@/utils/randomId";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import invariant from "tiny-invariant";
 
 // ----------------------------------------------------------------------
@@ -20,7 +19,6 @@ const images = [
 ];
 
 export function WithScrollbar() {
-  const { direction } = useLocaleContext();
   const carouselRef = useRef<SwiperContainer | null>(null);
 
   useLayoutEffect(() => {
@@ -47,7 +45,7 @@ export function WithScrollbar() {
         init="false"
         space-between="16"
         slides-per-view="1"
-        dir={direction}
+        dir="ltr"
       >
         {images.map(({ img, id }) => (
           // @ts-expect-error - Swiper web components

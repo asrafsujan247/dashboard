@@ -8,7 +8,6 @@ import React from "react";
 
 // Local Imports
 import { Button } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { DatePicker } from "../form/Datepicker";
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
 import { ResponsiveFilter } from "./ResponsiveFilter";
@@ -30,8 +29,6 @@ export const DateFilter = React.memo(({
   const { smAndDown } = useBreakpointsContext();
   const selectedValues = column?.getFilterValue() as DateOption[] | undefined;
 
-  const { locale } = useLocaleContext();
-  
   const handleDateChange = useCallback((date: Date[]) => {
     if (date.length === 0) {
       column.setFilterValue([null, null]);
@@ -52,9 +49,9 @@ export const DateFilter = React.memo(({
             <>
               <div className="dark:bg-dark-450 h-full w-px bg-gray-300" />
               <span>
-                {dayjs(selectedValues[0]).locale(locale).format("DD MMM YYYY")}{" "}
+                {dayjs(selectedValues[0]).format("DD MMM YYYY")}{" "}
                 -{" "}
-                {dayjs(selectedValues[1]).locale(locale).format("DD MMM YYYY")}
+                {dayjs(selectedValues[1]).format("DD MMM YYYY")}
               </span>
             </>
           )}

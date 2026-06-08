@@ -2,7 +2,6 @@
 import clsx from "clsx";
 import { NavLink, useRouteLoaderData } from "react-router";
 import invariant from "tiny-invariant";
-import { useTranslation } from "react-i18next";
 
 // Local Imports
 import { Badge } from "@/components/ui";
@@ -13,14 +12,13 @@ import { NavigationTree } from "@/@types/navigation";
 // ----------------------------------------------------------------------
 
 export function MenuItem({ data }: { data: NavigationTree }) {
-  const { id, transKey, path, title } = data;
-  const { t } = useTranslation();
+  const { id, path, title } = data;
   const { lgAndDown } = useBreakpointsContext();
   const { close } = useSidebarContext();
 
   invariant(path, `[MenuItem] Path is required for navigation item`);
 
-  const label = transKey ? t(transKey) : title;
+  const label = title;
   const info = useRouteLoaderData("root")?.[id]?.info;
 
   const handleMenuItemClick = () => lgAndDown && close();

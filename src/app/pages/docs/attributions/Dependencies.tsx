@@ -67,10 +67,6 @@ const dependencies: Dependency[] = [
     url: "https://github.com/remarkablemark/html-react-parser",
   },
   {
-    label: "i18next",
-    url: "https://www.i18next.com/",
-  },
-  {
     label: "jwt-decode",
     url: "https://jwt.io/",
   },

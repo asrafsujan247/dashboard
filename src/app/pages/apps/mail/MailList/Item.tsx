@@ -7,14 +7,12 @@ import { Link } from "react-router";
 
 // Local Imports
 import { Avatar, Badge, Button, Checkbox } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { Mail } from "../data";
 
 // ----------------------------------------------------------------------
 
 export function Item({ data }: { data: Mail }) {
   const { id, date, title, body, isImportant, isUnread, labels, sender } = data;
-  const { locale } = useLocaleContext();
 
   return (
     <div
@@ -68,7 +66,7 @@ export function Item({ data }: { data: Mail }) {
           </Link>
         </div>
         <div className="shrink-0 px-1 text-xs sm:hidden">
-          {dayjs(date).locale(locale).format("MMM D")}
+          {dayjs(date).format("MMM D")}
         </div>
       </div>
       <div className="flex min-w-0 flex-1 items-center justify-between gap-2">
@@ -107,7 +105,7 @@ export function Item({ data }: { data: Mail }) {
         </div>
       </div>
       <div className="text-xs-plus hidden px-2 sm:flex">
-        {dayjs(date).locale(locale).format("MMM D")}
+        {dayjs(date).format("MMM D")}
       </div>
     </div>
   );

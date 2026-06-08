@@ -4,7 +4,6 @@ import { Getter, Column } from "@tanstack/react-table";
 
 // Local Imports
 import { Badge, BadgeProps } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { Highlight } from "@/components/shared/Highlight";
 import { ensureString } from "@/utils/ensureString";
 import { Invoice, InvoiceStatusType } from "./invoiceList";
@@ -39,8 +38,7 @@ export function InvoiceName({
 }
 
 export function Date({ getValue }: { getValue: Getter<any> }) {
-  const { locale } = useLocaleContext();
-  const date = dayjs(+getValue()).locale(locale).format("DD MMM YYYY");
+  const date = dayjs(+getValue()).format("DD MMM YYYY");
   return <span>{date}</span>;
 }
 

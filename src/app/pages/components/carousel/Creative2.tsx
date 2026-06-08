@@ -5,7 +5,6 @@ import type { SwiperContainer } from "swiper/element";
 
 // Local Imports
 import { randomId } from "@/utils/randomId";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import invariant from "tiny-invariant";
 
 // ----------------------------------------------------------------------
@@ -20,7 +19,6 @@ const images = [
 ];
 
 export function Creative2() {
-  const { direction } = useLocaleContext();
   const carouselRef = useRef<SwiperContainer | null>(null);
 
   useLayoutEffect(() => {
@@ -51,7 +49,7 @@ export function Creative2() {
       {/* @ts-expect-error - Swiper web components */}
       <swiper-container
         navigation="true"
-        dir={direction}
+        dir="ltr"
         ref={carouselRef}
         init="false"
         class="overflow-hidden rounded-lg"

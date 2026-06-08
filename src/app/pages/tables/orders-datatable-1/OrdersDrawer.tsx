@@ -23,7 +23,6 @@ import {
   Td,
 } from "@/components/ui";
 import { orderStatusOptions } from "./data";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { Row } from "@tanstack/react-table";
 import { Order } from "./data";
 
@@ -44,10 +43,9 @@ export function OrdersDrawer({
     (item) => item.value === row.original.order_status,
   );
 
-  const { locale } = useLocaleContext();
   const timestapms = +row.original.created_at;
-  const date = dayjs(timestapms).locale(locale).format("DD MMM YYYY");
-  const time = dayjs(timestapms).locale(locale).format("hh:mm A");
+  const date = dayjs(timestapms).format("DD MMM YYYY");
+  const time = dayjs(timestapms).format("hh:mm A");
 
   return (
     <Transition appear show={isOpen} as={Fragment}>

@@ -6,7 +6,6 @@ import {
   QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import { Link, NavLink, To } from "react-router";
-import { useTranslation } from "react-i18next";
 
 // Local Imports
 import { Header } from "./Header";
@@ -110,7 +109,6 @@ function MenuItem({
 }) {
   const { lgAndDown } = useBreakpointsContext();
   const { close } = useSidebarContext();
-  const { t } = useTranslation();
 
   if (!icon || !navigationIcons[icon]) {
     throw new Error(`Icon ${icon} not found in navigationIcons`);
@@ -148,7 +146,7 @@ function MenuItem({
               )}
             />
           )}
-          <span>{t(transKey) || title}</span>
+          <span>{title}</span>
         </Button>
       )}
     </NavLink>

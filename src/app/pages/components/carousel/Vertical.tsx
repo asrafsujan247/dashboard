@@ -7,7 +7,6 @@ import invariant from "tiny-invariant";
 // Local Imports
 import { randomId } from "@/utils/randomId";
 import { useThemeContext } from "@/app/contexts/theme/context";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -22,7 +21,6 @@ const images = [
 
 export function Vertical() {
   const { primaryColorScheme: primary } = useThemeContext();
-  const { direction } = useLocaleContext();
   const carouselRef = useRef<SwiperContainer | null>(null);
 
   useLayoutEffect(() => {
@@ -49,7 +47,7 @@ export function Vertical() {
         direction="vertical"
         class="h-72"
         slides-per-view="1"
-        dir={direction}
+        dir="ltr"
         space-between="16"
         style={
           {

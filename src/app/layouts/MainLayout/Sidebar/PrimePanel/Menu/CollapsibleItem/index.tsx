@@ -1,7 +1,6 @@
 // Import Dependencies
 import clsx from "clsx";
-import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/outline";
-import { useTranslation } from "react-i18next";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 
 // Local Imports
 import {
@@ -9,19 +8,16 @@ import {
   AccordionItem,
   AccordionPanel,
 } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { MenuItem } from "./MenuItem";
 import { NavigationTree } from "@/@types/navigation";
 
 // ----------------------------------------------------------------------
 
 export function CollapsibleItem({ data }: { data: NavigationTree }) {
-  const { id, path, childs, transKey } = data;
-  const { t } = useTranslation();
-  const { isRtl } = useLocaleContext();
-  const title = transKey ? t(transKey) : data.title;
+  const { id, path, childs } = data;
+  const title = data.title;
 
-  const Icon = isRtl ? ChevronLeftIcon : ChevronRightIcon;
+  const Icon = ChevronRightIcon;
 
   if (!childs) {
     throw "The collapsible item must have childs";
@@ -43,7 +39,7 @@ export function CollapsibleItem({ data }: { data: NavigationTree }) {
             <Icon
               className={clsx(
                 "dark:text-dark-200 size-4 text-gray-400 transition-transform ease-in-out",
-                open && [isRtl ? "-rotate-90" : "rotate-90"],
+                open && "rotate-90",
               )}
             />
           </AccordionButton>

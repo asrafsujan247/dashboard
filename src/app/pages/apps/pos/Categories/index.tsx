@@ -5,7 +5,6 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 import invariant from "tiny-invariant";
 
 // Local Imports
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { Button, Card } from "@/components/ui";
 
 // ----------------------------------------------------------------------
@@ -67,7 +66,6 @@ const items: Category[] = [
 register();
 
 export function Categories() {
-  const { direction } = useLocaleContext();
   const carouselRef = useRef<SwiperContainer>(null);
 
   useLayoutEffect(() => {
@@ -93,7 +91,7 @@ export function Categories() {
         ref={carouselRef}
         init="false"
         slides-per-view="auto"
-        dir={direction}
+        dir="ltr"
         space-between="16"
       >
         <span slot="container-start">

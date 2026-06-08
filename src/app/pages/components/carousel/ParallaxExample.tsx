@@ -6,7 +6,6 @@ import invariant from "tiny-invariant";
 
 // Local Imports
 import { useThemeContext } from "@/app/contexts/theme/context";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -14,7 +13,6 @@ register();
 
 export function ParallaxExample() {
   const { primaryColorScheme: primary } = useThemeContext();
-  const { direction } = useLocaleContext();
 
   const carouselRef = useRef<SwiperContainer | null>(null);
 
@@ -45,7 +43,7 @@ export function ParallaxExample() {
         speed="600"
         parallax="true"
         navigation="true"
-        dir={direction}
+        dir="ltr"
         style={
           {
             "--swiper-navigation-size": "32px",
