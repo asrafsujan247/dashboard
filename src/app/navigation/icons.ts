@@ -11,7 +11,6 @@ import DashboardsIcon from "@/assets/dualicons/dashboards.svg?react";
 import AppsIcon from "@/assets/dualicons/applications.svg?react";
 import PrototypesIcon from "@/assets/dualicons/prototypes.svg?react";
 import FormsIcon from "@/assets/dualicons/forms.svg?react";
-import ComponentsIcon from "@/assets/dualicons/components.svg?react";
 import DualTableIcon from "@/assets/dualicons/table.svg?react";
 import LampIcon from "@/assets/dualicons/lamp.svg?react";
 import ChatIcon from "@/assets/nav-icons/chat.svg?react";
@@ -68,12 +67,6 @@ import CalendarIcon from "@/assets/nav-icons/calendar.svg?react";
 import RangeIcon from "@/assets/nav-icons/range.svg?react";
 import ValidationIcon from "@/assets/nav-icons/validation.svg?react";
 import ActtachmentIcon from "@/assets/nav-icons/attachment.svg?react";
-import ModalIcon from "@/assets/nav-icons/modal.svg?react";
-import PaginationIcon from "@/assets/nav-icons/pagination.svg?react";
-import InfoIcon from "@/assets/nav-icons/info.svg?react";
-import CirclebarIcon from "@/assets/nav-icons/circlebar.svg?react";
-import ButtonIcon from "@/assets/nav-icons/button.svg?react";
-import DocIcon from "@/assets/nav-icons/doc.svg?react";
 import SharedComponentsIcon from "@/assets/nav-icons/shared-components.svg?react";
 import HooksIcon from "@/assets/nav-icons/hooks.svg?react";
 import UtilityIcon from "@/assets/nav-icons/utility.svg?react";
@@ -86,7 +79,6 @@ export const navigationIcons: Record<string, ElementType> = {
   apps: AppsIcon,
   prototypes: PrototypesIcon,
   forms: FormsIcon,
-  components: ComponentsIcon,
   tables: DualTableIcon,
   docs: LampIcon,
   settings: SettingIcon,
@@ -149,13 +141,6 @@ export const navigationIcons: Record<string, ElementType> = {
   "forms.text-editor": TextareaIcon,
   "forms.filepond": ActtachmentIcon,
   "forms.datepicker": CalendarIcon,
-  "components.basic-ui": ButtonIcon,
-  "components.data-display": DocIcon,
-  "components.navigation": PaginationIcon,
-  "components.loading": CirclebarIcon,
-  "components.feedback": InfoIcon,
-  "components.modal": ModalIcon,
-  "components.advanced": OnboardingIcon,
   "docs.getting-started": RocketLaunchIcon,
   "docs.shared-components": SharedComponentsIcon,
   "docs.hooks": HooksIcon,

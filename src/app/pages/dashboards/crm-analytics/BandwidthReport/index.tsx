@@ -39,6 +39,7 @@ const chartConfig: ApexOptions = {
     zoom: {
       enabled: false,
     },
+    animations: { enabled: false },
   },
   dataLabels: {
     enabled: false,

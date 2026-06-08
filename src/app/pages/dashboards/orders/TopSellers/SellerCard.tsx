@@ -23,6 +23,7 @@ const chartConfig: ApexOptions = {
     toolbar: {
       show: false,
     },
+    animations: { enabled: false },
   },
   dataLabels: {
     enabled: false,

@@ -1,5 +1,4 @@
 import { apps } from "./segments/apps";
-import { components } from "./segments/components";
 import { dashboards } from "./segments/dashboards";
 import { docs } from "./segments/docs";
 import { forms } from "./segments/forms";
@@ -12,6 +11,5 @@ export const navigation = [
   prototypes,
   tables,
   forms,
-  components,
   docs,
 ];
