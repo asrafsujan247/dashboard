@@ -41,14 +41,6 @@ export const baseNavigationObj: Record<string, NavigationTree> = {
     transKey: "nav.forms.forms",
     icon: "forms",
   },
-  docs: {
-    id: "docs",
-    type: "item",
-    path: "/docs",
-    title: "Documentation",
-    transKey: "nav.docs.docs",
-    icon: "docs",
-  },
 };
 
 export const baseNavigation: NavigationTree[] = Array.from(
