@@ -13,7 +13,7 @@ export interface Product {
 
 export function ProductCard({ image, name, category, price }: Product) {
   return (
-    <Card className="group p-2 transition-transform hover:scale-105">
+    <Card className="group relative p-2 transition-transform hover:scale-105">
       <img className="rounded-lg" src={image} alt={name} />
       <div className="pt-2">
         <p className="dark:text-dark-100 truncate font-medium text-gray-800">
