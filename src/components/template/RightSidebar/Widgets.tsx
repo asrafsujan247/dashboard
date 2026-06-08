@@ -18,6 +18,7 @@ const chart1config: ApexOptions = {
     toolbar: {
       show: false,
     },
+    animations: { enabled: false },
   },
   dataLabels: {
     enabled: false,
@@ -73,6 +74,7 @@ const chart2config: ApexOptions = {
     toolbar: {
       show: false,
     },
+    animations: { enabled: false },
   },
   dataLabels: {
     enabled: false,

@@ -70,6 +70,7 @@ const chartConfig = {
     toolbar: {
       show: false,
     },
+    animations: { enabled: false },
   },
   dataLabels: {
     enabled: false,

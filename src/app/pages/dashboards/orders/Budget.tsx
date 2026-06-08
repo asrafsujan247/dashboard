@@ -68,6 +68,7 @@ const chartConfig: ApexOptions = {
     },
     stacked: true,
     stackType: "100%",
+    animations: { enabled: false },
   },
   dataLabels: {
     enabled: false,
