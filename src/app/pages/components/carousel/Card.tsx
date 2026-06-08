@@ -3,7 +3,6 @@ import { register } from "swiper/element/bundle";
 
 // Local Imports
 import { randomId } from "@/utils/randomId";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -17,8 +16,6 @@ const images = [
 ];
 
 export function Card() {
-  const { direction } = useLocaleContext();
-
   return (
     <div className="w-10/12 max-w-md">
       {/* @ts-expect-error - Swiper web components */}
@@ -27,7 +24,7 @@ export function Card() {
         navigation="true"
         grabCursor="true"
         slides-per-view="1"
-        dir={direction}
+        dir="ltr"
       >
         {images.map(({ img, id }) => (
           // @ts-expect-error - Swiper web components

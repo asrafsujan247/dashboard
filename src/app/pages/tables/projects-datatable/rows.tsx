@@ -4,7 +4,6 @@ import { Getter, Row } from "@tanstack/react-table";
 
 // Local Imports
 import { Avatar, Badge, Circlebar } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { colorFromText } from "@/utils/colorFromText";
 import { collaborators, Project } from "./data";
 import { ColorType } from "@/constants/app";
@@ -108,16 +107,14 @@ export function StartedDateCell({
   getValue: Getter<any>;
   row: Row<Project>;
 }) {
-  const { locale } = useLocaleContext();
-
   return (
     <div>
-      <p>{dayjs(getValue()).locale(locale).format("DD MMM YYYY")}</p>
+      <p>{dayjs(getValue()).format("DD MMM YYYY")}</p>
       <p className="mt-1 text-xs">
         <span className="dark:text-error-lighter font-semibold text-gray-700">
           Deadline:
         </span>{" "}
-        {dayjs(row.original.deadline).locale(locale).format("DD MMM YYYY")}
+        {dayjs(row.original.deadline).format("DD MMM YYYY")}
       </p>
     </div>
   );

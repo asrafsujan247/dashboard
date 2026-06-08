@@ -1,7 +1,6 @@
 // Import Dependencies
 import clsx from "clsx";
 import { NavLink, useRouteLoaderData } from "react-router";
-import { useTranslation } from "react-i18next";
 
 // Local Imports
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
@@ -12,12 +11,11 @@ import { NavigationTree } from "@/@types/navigation";
 // ----------------------------------------------------------------------
 
 export function MenuItem({ data }: { data: NavigationTree }) {
-  const { transKey, path, id } = data;
+  const { path, id } = data;
   const { lgAndDown } = useBreakpointsContext();
   const { close } = useSidebarContext();
-  const { t } = useTranslation();
 
-  const title = transKey ? t(transKey) : data.title;
+  const title = data.title;
   const info = useRouteLoaderData("root")?.[id]?.info;
 
   const handleMenuItemClick = () => {

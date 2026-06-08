@@ -3,7 +3,6 @@ import { useLayoutEffect, useRef } from "react";
 import { register } from "swiper/element/bundle";
 
 // Local Imports
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { Box } from "@/components/ui";
 
 // ----------------------------------------------------------------------
@@ -11,7 +10,6 @@ import { Box } from "@/components/ui";
 register();
 
 export function BankingCard() {
-  const { direction } = useLocaleContext();
   const carouselRef = useRef<HTMLElement | null>(null);
 
   useLayoutEffect(() => {
@@ -45,7 +43,7 @@ export function BankingCard() {
         init="false"
         ref={carouselRef}
         slides-per-view="auto"
-        dir={direction}
+        dir="ltr"
         space-between="16"
       >
         {/* @ts-expect-error - Custom web component */}

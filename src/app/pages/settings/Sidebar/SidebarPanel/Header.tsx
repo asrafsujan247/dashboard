@@ -1,6 +1,5 @@
 // Import Dependencies
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
-import { useTranslation } from "react-i18next";
 
 // Local Imports
 import { useSidebarContext } from "@/app/contexts/sidebar/context";
@@ -19,9 +18,7 @@ export function Header() {
 
   const Icon = navigationIcons[settings.icon];
 
-  const { t } = useTranslation();
-
-  const title = t(settings.transKey ?? "") || settings.title;
+  const title = settings.title;
 
   return (
     <div className="relative flex h-18 w-full shrink-0 items-center justify-between pl-4 pr-1 rtl:pl-1 rtl:pr-4">

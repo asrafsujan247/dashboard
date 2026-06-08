@@ -1,7 +1,6 @@
 // Import Dependencies
 import clsx from "clsx";
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
-import { useTranslation } from "react-i18next";
 
 // Local Imports
 import { useThemeContext } from "@/app/contexts/theme/context";
@@ -19,9 +18,8 @@ export interface PrimePanelProps {
 
 export function PrimePanel({ currentSegment, pathname, close }: PrimePanelProps) {
   const { cardSkin } = useThemeContext();
-  const { t } = useTranslation();
 
-  const title = t(currentSegment?.transKey ?? "") || currentSegment?.title;
+  const title = currentSegment?.title;
 
   return (
     <div

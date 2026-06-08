@@ -7,7 +7,6 @@ import invariant from "tiny-invariant";
 // Local Imports
 import { randomId } from "@/utils/randomId";
 import { useThemeContext } from "@/app/contexts/theme/context";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -22,7 +21,6 @@ const images = [
 
 export function SpaceBetween() {
   const { primaryColorScheme: primary } = useThemeContext();
-  const { direction } = useLocaleContext();
   const carouselRef = useRef<SwiperContainer | null>(null);
 
   useLayoutEffect(() => {
@@ -47,7 +45,7 @@ export function SpaceBetween() {
         ref={carouselRef}
         init="false"
         slides-per-view="auto"
-        dir={direction}
+        dir="ltr"
         space-between="30"
         style={
           {

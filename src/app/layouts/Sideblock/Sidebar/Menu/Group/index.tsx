@@ -1,5 +1,4 @@
 // Import Dependencies
-import { useTranslation } from "react-i18next";
 import clsx from "clsx";
 import invariant from "tiny-invariant";
 
@@ -15,7 +14,6 @@ import { type NavigationTree } from "@/@types/navigation";
 
 export function Group({ data }: { data: NavigationTree }) {
   const [isOpened, { toggle }] = useDisclosure(true);
-  const { t } = useTranslation();
   const { cardSkin } = useThemeContext();
 
   invariant(
@@ -35,7 +33,7 @@ export function Group({ data }: { data: NavigationTree }) {
           onClick={toggle}
           className="dark:text-dark-300 dark:hover:text-dark-50 dark:focus:text-dark-50 mb-2 flex cursor-pointer items-center gap-3 pt-2 text-xs font-medium tracking-wider text-gray-500 uppercase outline-hidden hover:text-gray-900 focus:text-gray-900"
         >
-          <span>{data.transKey ? t(data.transKey) : data.title}</span>
+          <span>{data.title}</span>
         </button>
         <div
           className={clsx(

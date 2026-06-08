@@ -1,16 +1,14 @@
 // Import Dependencies
 import { CalendarIcon } from "@heroicons/react/24/solid";
 import clsx from "clsx";
-import { forwardRef, useEffect, useRef, useState, useMemo } from "react";
+import { forwardRef, useEffect, useRef, useMemo } from "react";
 import { BaseOptions } from "flatpickr/dist/types/options";
 // import Flatpickr from "react-flatpickr";
 import flatpickrCSS from "flatpickr/dist/themes/light.css?inline";
 
 // Local Imports
 import { Input, InputProps } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { useMergedRef } from "@/hooks";
-import { locales } from "@/i18n/langs";
 import {
   injectStyles,
   insertStylesToHead,
@@ -54,26 +52,9 @@ const DatePicker = forwardRef<FlatpickrRef, DatePickerProps>(
     ref,
   ) => {
     const flatpickrRef = useRef<FlatpickrRef | null>(null);
-    const { locale } = useLocaleContext();
-    const [localeData, setLocaleData] = useState<any>(null);
-
-    useEffect(() => {
-      const loadLocale = async () => {
-        const currentLocale = locales[locale];
-        if (currentLocale?.flatpickr) {
-          const loadedLocale = await currentLocale.flatpickr();
-          setLocaleData(loadedLocale);
-        } else {
-          setLocaleData(null);
-        }
-      };
-
-      loadLocale();
-    }, [locale]);
 
     const options = {
       inline: isCalendar,
-      locale: localeData,
       ...userOptions,
     };
 

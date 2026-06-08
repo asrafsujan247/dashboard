@@ -1,6 +1,5 @@
 // Import Dependencies
 import { Dispatch, ElementType, SetStateAction } from "react";
-import { useTranslation } from "react-i18next";
 import { Link } from "react-router";
 
 // Local Imports
@@ -23,7 +22,6 @@ export function Menu({
   setActiveSegmentPath,
   activeSegmentPath,
 }: MenuProps) {
-  const { t } = useTranslation();
   const { isExpanded, open } = useSidebarContext();
 
   const handleSegmentSelect = (path: string) => {
@@ -41,7 +39,7 @@ export function Menu({
       ...(isLink ? { to: path } : {}),
       onClick: isLink ? undefined : () => handleSegmentSelect(path as string),
       isActive: path === activeSegmentPath,
-      title: t(transKey as string) || (title as string),
+      title: (title as string),
       path,
     };
   };

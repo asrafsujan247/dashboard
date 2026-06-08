@@ -6,7 +6,6 @@ import { ComponentPropsWithoutRef, ReactNode, forwardRef } from "react";
 
 // Local Imports
 import { setThisClass } from "@/utils/setThisClass";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { TimelineVariant, useTimelineContext } from "./context";
 import { ColorType } from "@/constants/app";
 
@@ -75,12 +74,11 @@ const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(({
   isPing,
   ...rest
 }, ref) => {
-  const { locale } = useLocaleContext();
   const ctx = useTimelineContext();
 
   const mergedVariant = variant || ctx.variant;
 
-  const formattedTime = dayjs(time).locale(locale).fromNow();
+  const formattedTime = dayjs(time).fromNow();
 
   const pointNode = (
     <div

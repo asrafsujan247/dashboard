@@ -4,13 +4,10 @@ import { CalendarIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 // Local Imports
 import { Button } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
-
 // ----------------------------------------------------------------------
 
 export function Header({ close }: { close: () => void }) {
-  const { locale } = useLocaleContext();
-  const now = dayjs().locale(locale).format("DD MMMM, YYYY");
+  const now = dayjs().format("DD MMMM, YYYY");
 
   return (
     <div className="flex items-center justify-between px-4 py-2">

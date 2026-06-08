@@ -6,7 +6,6 @@ import type { SwiperContainer } from "swiper/element";
 // Local Imports
 import { randomId } from "@/utils/randomId";
 import { useThemeContext } from "@/app/contexts/theme/context";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import invariant from "tiny-invariant";
 
 // ----------------------------------------------------------------------
@@ -22,7 +21,6 @@ const images = [
 
 export function PaginationExample() {
   const { primaryColorScheme: primary } = useThemeContext();
-  const { direction } = useLocaleContext();
   const carouselRef = useRef<SwiperContainer | null>(null);
 
   useLayoutEffect(() => {
@@ -48,7 +46,7 @@ export function PaginationExample() {
         ref={carouselRef}
         init="false"
         slides-per-view="1"
-        dir={direction}
+        dir="ltr"
         space-between="16"
         style={
           {

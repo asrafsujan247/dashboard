@@ -1,20 +1,16 @@
 // Local Imports
 import { Button } from "@/components/ui";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
-import { useLocaleContext } from "@/app/contexts/locale/context";
-
 // ----------------------------------------------------------------------
 
 const ButtonGroup = () => {
-  const { isRtl } = useLocaleContext();
-
   const onKeyDown = createScopedKeydownHandler({
     siblingSelector: ".btn-base",
     parentSelector: "[data-button-group]",
     activateOnFocus: false,
     loop: true,
     orientation: "horizontal",
-    dir: isRtl ? "rtl" : "ltr",
+    dir: "ltr",
   });
 
   return (

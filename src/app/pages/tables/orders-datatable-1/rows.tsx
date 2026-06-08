@@ -16,7 +16,6 @@ import invariant from "tiny-invariant";
 // Local Imports
 import { Highlight } from "@/components/shared/Highlight";
 import { Avatar, Badge, Tag } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { ensureString } from "@/utils/ensureString";
 import { type Order, OrderStatus, orderStatusOptions } from "./data";
 
@@ -31,10 +30,9 @@ export function OrderIdCell({ getValue }: { getValue: Getter<any> }) {
 }
 
 export function DateCell({ getValue }: { getValue: Getter<any> }) {
-  const { locale } = useLocaleContext();
   const timestapms = getValue();
-  const date = dayjs(Number(timestapms)).locale(locale).format("DD MMM YYYY");
-  const time = dayjs(Number(timestapms)).locale(locale).format("hh:mm A");
+  const date = dayjs(Number(timestapms)).format("DD MMM YYYY");
+  const time = dayjs(Number(timestapms)).format("hh:mm A");
 
   return (
     <>

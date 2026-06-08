@@ -1,7 +1,6 @@
 // Import Dependencies
-import { ChevronRightIcon, ChevronLeftIcon } from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
-import { useTranslation } from "react-i18next";
 import invariant from "tiny-invariant";
 
 // Local Imports
@@ -10,7 +9,6 @@ import {
   AccordionItem,
   AccordionPanel,
 } from "@/components/ui";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 import { MenuItem } from "./MenuItem";
 import { type NavigationTree } from "@/@types/navigation";
 import { navigationIcons } from "@/app/navigation/icons";
@@ -18,9 +16,7 @@ import { navigationIcons } from "@/app/navigation/icons";
 // ----------------------------------------------------------------------
 
 export function CollapsibleItem({ data }: { data: NavigationTree }) {
-  const { id, path, transKey, icon, childs, title } = data;
-  const { t } = useTranslation();
-  const { isRtl } = useLocaleContext();
+  const { id, path, icon, childs, title } = data;
 
   invariant(path, `[CollapsibleItem] path is required for navigation item`);
 
@@ -34,8 +30,8 @@ export function CollapsibleItem({ data }: { data: NavigationTree }) {
     `[CollapsibleItem] At least one child item is required for collapsible menu: ${path}`,
   );
 
-  const label = transKey ? t(transKey) : title;
-  const ChevronIcon = isRtl ? ChevronLeftIcon : ChevronRightIcon;
+  const label = title;
+  const ChevronIcon = ChevronRightIcon;
 
   const Icon = navigationIcons[icon];
 
@@ -68,7 +64,7 @@ export function CollapsibleItem({ data }: { data: NavigationTree }) {
             <ChevronIcon
               className={clsx(
                 "size-4 shrink-0 transition-transform",
-                open && "ltr:rotate-90 rtl:-rotate-90",
+                open && "rotate-90",
               )}
             />
           </AccordionButton>

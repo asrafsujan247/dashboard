@@ -14,7 +14,6 @@ import { register } from "swiper/element/bundle";
 // Local Imports
 import { Button, Card } from "@/components/ui";
 import { SellerCard, type Seller } from "./SellerCard";
-import { useLocaleContext } from "@/app/contexts/locale/context";
 
 // ----------------------------------------------------------------------
 
@@ -56,8 +55,6 @@ const sellers: Seller[] = [
 ];
 
 export function TopSellers() {
-  const { direction } = useLocaleContext();
-
   return (
     <Card className="pb-4">
       <div className="flex min-w-0 items-center justify-between px-4 py-3">
@@ -71,7 +68,7 @@ export function TopSellers() {
         pagination
         pagination-clickable
         slides-per-view="1"
-        dir={direction}
+        dir="ltr"
         space-between="16"
       >
         {sellers.map((seller) => (
