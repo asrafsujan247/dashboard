@@ -227,55 +227,6 @@ const protectedRoutes: RouteObject = {
         {
           path: "apps",
         },
-        {
-          path: "Docs",
-          children: [
-            {
-              index: true,
-              element: <Navigate to="/docs/getting-started" replace />,
-            },
-            {
-              path: "getting-started",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/docs/getting-started"))
-                  .default,
-              }),
-            },
-            {
-              path: "shared-components/*",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/docs/shared-components"))
-                  .default,
-              }),
-            },
-            {
-              path: "hooks/*",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/docs/hooks")).default,
-              }),
-            },
-            {
-              path: "utils/*",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/docs/utils")).default,
-              }),
-            },
-            {
-              path: "attributions",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/docs/attributions"))
-                  .default,
-              }),
-            },
-            {
-              path: "changelogs",
-              lazy: async () => ({
-                Component: (await import("@/app/pages/docs/changelogs"))
-                  .default,
-              }),
-            },
-          ],
-        },
       ],
     },
     // The app layout supports only the main layout. Avoid using it for other layouts.

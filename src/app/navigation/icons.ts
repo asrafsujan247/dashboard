@@ -1,6 +1,5 @@
 import { ElementType } from "react";
 import {
-  RocketLaunchIcon,
   BellAlertIcon,
   CubeIcon,
   UserIcon as HiUserIcon,
@@ -12,7 +11,6 @@ import AppsIcon from "@/assets/dualicons/applications.svg?react";
 import PrototypesIcon from "@/assets/dualicons/prototypes.svg?react";
 import FormsIcon from "@/assets/dualicons/forms.svg?react";
 import DualTableIcon from "@/assets/dualicons/table.svg?react";
-import LampIcon from "@/assets/dualicons/lamp.svg?react";
 import ChatIcon from "@/assets/nav-icons/chat.svg?react";
 import KanbanIcon from "@/assets/nav-icons/kanban.svg?react";
 import MailIcon from "@/assets/nav-icons/mail.svg?react";
@@ -67,11 +65,6 @@ import CalendarIcon from "@/assets/nav-icons/calendar.svg?react";
 import RangeIcon from "@/assets/nav-icons/range.svg?react";
 import ValidationIcon from "@/assets/nav-icons/validation.svg?react";
 import ActtachmentIcon from "@/assets/nav-icons/attachment.svg?react";
-import SharedComponentsIcon from "@/assets/nav-icons/shared-components.svg?react";
-import HooksIcon from "@/assets/nav-icons/hooks.svg?react";
-import UtilityIcon from "@/assets/nav-icons/utility.svg?react";
-import AttributionsIcon from "@/assets/nav-icons/attributions.svg?react";
-import ChangelogsIcon from "@/assets/nav-icons/changelogs.svg?react";
 import SettingIcon from "@/assets/dualicons/setting.svg?react";
 
 export const navigationIcons: Record<string, ElementType> = {
@@ -80,7 +73,6 @@ export const navigationIcons: Record<string, ElementType> = {
   prototypes: PrototypesIcon,
   forms: FormsIcon,
   tables: DualTableIcon,
-  docs: LampIcon,
   settings: SettingIcon,
   "dashboards.sales": StatisticIcon,
   "dashboards.crm-analytics": WindowIcon,
@@ -141,12 +133,6 @@ export const navigationIcons: Record<string, ElementType> = {
   "forms.text-editor": TextareaIcon,
   "forms.filepond": ActtachmentIcon,
   "forms.datepicker": CalendarIcon,
-  "docs.getting-started": RocketLaunchIcon,
-  "docs.shared-components": SharedComponentsIcon,
-  "docs.hooks": HooksIcon,
-  "docs.utils": UtilityIcon,
-  "docs.attributions": AttributionsIcon,
-  "docs.changelogs": ChangelogsIcon,
   "settings.general": HiUserIcon,
   "settings.appearance": TbPalette,
   "settings.billing": TbCoins,
