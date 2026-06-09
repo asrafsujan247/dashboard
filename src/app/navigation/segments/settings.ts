@@ -41,12 +41,12 @@ export const settings: NavigationTree = {
       icon: "settings.notifications",
     },
     {
-      id: "sessions",
+      id: "password",
       type: "item",
-      path: "/settings/sessions",
-      title: "Sessions & Password",
-      transKey: "nav.settings.sessions",
-      icon: "settings.sessions",
+      path: "/settings/password",
+      title: "Password",
+      transKey: "nav.settings.password",
+      icon: "settings.password",
     },
   ],
 };

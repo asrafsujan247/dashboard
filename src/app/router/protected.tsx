@@ -302,7 +302,7 @@ const protectedRoutes: RouteObject = {
               }),
             },
             {
-              path: "sessions",
+              path: "password",
               lazy: async () => ({
                 Component: (
                   await import("@/app/pages/settings/sections/Sessions")

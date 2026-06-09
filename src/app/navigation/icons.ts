@@ -136,5 +136,5 @@ export const navigationIcons: Record<string, ElementType> = {
   "settings.appearance": TbPalette,
   "settings.billing": TbCoins,
   "settings.notifications": BellAlertIcon,
-  "settings.sessions": TbDevices,
+  "settings.password": TbDevices,
 };
