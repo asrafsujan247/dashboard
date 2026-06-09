@@ -36,25 +36,3 @@
 [data-layout="main-layout"].is-sidebar-open .main-panel {
   @apply visible translate-x-0;
 }
-
-/* Sideblock */
-[data-layout="sideblock"] {
-  @apply [--margin-x:1rem] [--sidebar-panel-width:17.5rem] md:[--margin-x:1.5rem] 2xl:[--margin-x:3rem];
-}
-
-[data-layout="sideblock"] #root {
-  @apply grid min-h-full [grid-template-rows:auto_1fr];
-}
-
-[data-layout="sideblock"] main.main-content,
-[data-layout="sideblock"] .app-header {
-  @apply xl:ltr:ml-(--sidebar-panel-width) xl:rtl:mr-(--sidebar-panel-width);
-}
-
-[data-layout="sideblock"] .sidebar-panel {
-  @apply invisible fixed top-0 z-30 h-full w-(--sidebar-panel-width) -translate-x-full transform-gpu transition-[transform,visibility,width] duration-[.25s] ease-in xl:visible ltr:left-0 xl:ltr:translate-x-0 rtl:right-0 rtl:translate-x-full xl:rtl:translate-x-0;
-}
-
-[data-layout="sideblock"].is-sidebar-open .sidebar-panel {
-  @apply visible translate-x-0 ease-out;
-}

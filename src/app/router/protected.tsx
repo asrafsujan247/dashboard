@@ -13,7 +13,6 @@ const protectedRoutes: RouteObject = {
   id: "protected",
   Component: AuthGuard,
   children: [
-    // The dynamic layout supports both the main layout and the sideblock.
     {
       Component: DynamicLayout,
       children: [

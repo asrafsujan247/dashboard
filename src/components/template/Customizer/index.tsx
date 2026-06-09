@@ -326,43 +326,6 @@ function CustomizerContent({ close }: { close: () => void }) {
               )}
             </Radio>
 
-            <Radio value="sideblock" className="cursor-pointer outline-hidden">
-              {({ checked }) => (
-                <>
-                  <div
-                    className={clsx(
-                      "dark:bg-dark-900 flex overflow-hidden rounded-sm bg-gray-100",
-                      checked &&
-                        "ring-primary-600 dark:ring-primary-500 dark:ring-offset-dark-700 ring-2 ring-offset-2 ring-offset-white transition-all",
-                    )}
-                  >
-                    <div className="dark:bg-dark-700 flex h-24 w-[30%] flex-col justify-between bg-gray-200 px-1 py-1.5">
-                      <div className="space-y-2">
-                        <div className="dark:bg-dark-400 h-1 rounded-full bg-gray-400" />
-                        <div className="space-y-1">
-                          {range(1, 5).map((i) => (
-                            <div
-                              key={i}
-                              className="dark:bg-dark-400 h-0.5 rounded-full bg-gray-400"
-                            />
-                          ))}
-                        </div>
-                      </div>
-                      <div className="dark:bg-dark-400 h-1 rounded-full bg-gray-400" />
-                    </div>
-                    <div className="flex-1">
-                      <div className="dark:border-dark-600 dark:bg-dark-700 flex h-3 w-full items-center justify-end gap-1 border-l border-gray-300 bg-gray-200 px-1.5">
-                        <div className="dark:bg-dark-400 size-1.5 rounded-full bg-gray-400" />
-                        <div className="dark:bg-dark-400 size-1.5 rounded-full bg-gray-400" />
-                        <div className="dark:bg-dark-400 size-1.5 rounded-full bg-gray-400" />
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-xs-plus mt-1.5 text-center">Sideblock</p>
-                </>
-              )}
-            </Radio>
           </div>
         </RadioGroup>
 

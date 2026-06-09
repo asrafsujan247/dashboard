@@ -14,7 +14,6 @@ const themeLayouts: Record<
   React.LazyExoticComponent<React.ComponentType<any>>
 > = {
   "main-layout": lazy(() => import("./MainLayout")),
-  sideblock: lazy(() => import("./Sideblock")),
 };
 
 export function DynamicLayout() {
