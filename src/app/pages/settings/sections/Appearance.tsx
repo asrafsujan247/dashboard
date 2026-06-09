@@ -22,10 +22,6 @@ const lightColors: LightColor[] = ["slate"];
 
 const cardSkins = [
   {
-    value: "shadow",
-    label: "Shadow",
-  },
-  {
     value: "bordered",
     label: "Bordered",
   },
@@ -36,28 +32,8 @@ const notificationPos: {
   label: string;
 }[] = [
   {
-    value: "top-left",
-    label: "Top Left",
-  },
-  {
-    value: "top-center",
-    label: "Top Center",
-  },
-  {
     value: "top-right",
     label: "Top Right",
-  },
-  {
-    value: "bottom-left",
-    label: "Bottom Left",
-  },
-  {
-    value: "bottom-center",
-    label: "Bottom Center",
-  },
-  {
-    value: "bottom-right",
-    label: "Bottom Right",
   },
 ];
 
@@ -312,32 +288,6 @@ export default function Appearance() {
                   </>
                 )}
               </Radio>
-              <Radio value="expand" className="cursor-pointer outline-hidden">
-                {({ checked }) => (
-                  <>
-                    <div
-                      className={clsx(
-                        "dark:border-dark-500 relative flex h-52 w-full flex-col justify-between space-y-2 rounded-lg border border-gray-200 px-4 py-5",
-                        checked &&
-                          "ring-primary-600 dark:ring-primary-500 dark:ring-offset-dark-700 ring-2 ring-offset-2 ring-offset-white transition-all",
-                      )}
-                    >
-                      {Array(3)
-                        .fill(null)
-                        .map((_, i) => (
-                          <div
-                            key={i}
-                            className="dark:border-dark-500 dark:bg-dark-600 relative flex h-12 w-full flex-col justify-center space-y-2 rounded-sm border bg-white p-2 shadow-[0_4px_12px_#0000001a] dark:shadow-none"
-                          >
-                            <div className="bg-gray-150 dark:bg-dark-400 h-2 w-9/12 rounded-lg"></div>
-                            <div className="bg-gray-150 dark:bg-dark-400 h-2 w-11/12 rounded-lg"></div>
-                          </div>
-                        ))}
-                    </div>
-                    <p className="mt-2">Expanded</p>
-                  </>
-                )}
-              </Radio>
             </div>
           </RadioGroup>
         </div>
@@ -350,24 +300,19 @@ export default function Appearance() {
           >
             <Label className="sr-only">Notification Max Count</Label>
             <div className="flex w-full max-w-sm space-x-0.5">
-              {Array(MAX_NOTIFICATION_COUNT)
-                .fill(null)
-                .map((_, i) => (
-                  <Radio
-                    value={i + 1}
-                    key={i}
-                    className={({ checked }) =>
-                      clsx(
-                        "flex-1 cursor-pointer border-2 border-transparent border-b-current pb-1 text-base font-medium outline-hidden",
-                        checked
-                          ? "text-primary-600 dark:text-primary-400"
-                          : "dark:text-dark-300 text-gray-500",
-                      )
-                    }
-                  >
-                    {i + 1}
-                  </Radio>
-                ))}
+              <Radio
+                value={MAX_NOTIFICATION_COUNT}
+                className={({ checked }) =>
+                  clsx(
+                    "flex-1 cursor-pointer border-2 border-transparent border-b-current pb-1 text-base font-medium outline-hidden",
+                    checked
+                      ? "text-primary-600 dark:text-primary-400"
+                      : "dark:text-dark-300 text-gray-500",
+                  )
+                }
+              >
+                {MAX_NOTIFICATION_COUNT}
+              </Radio>
             </div>
           </RadioGroup>
         </div>
