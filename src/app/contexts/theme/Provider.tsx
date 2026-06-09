@@ -6,7 +6,6 @@ import { ThemeContext, type ThemeContextValue } from "./context";
 import {
   CardSkin,
   DarkColor,
-  IsMonochrome,
   LightColor,
   Notification,
   PrimaryColor,
@@ -23,7 +22,6 @@ const initialState: ThemeContextValue = {
   ...defaultTheme,
   setThemeMode: () => {},
   setThemeLayout: () => {},
-  setMonochromeMode: () => {},
   setCardSkin: () => {},
   setLightColorScheme: () => {},
   setDarkColorScheme: () => {},
@@ -47,7 +45,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     themeMode: initialState.themeMode,
     themeLayout: initialState.themeLayout,
     cardSkin: initialState.cardSkin,
-    isMonochrome: initialState.isMonochrome,
     darkColorScheme: initialState.darkColorScheme,
     lightColorScheme: initialState.lightColorScheme,
     primaryColorScheme: initialState.primaryColorScheme,
@@ -69,13 +66,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setSettings((prevSettings) => ({
       ...prevSettings,
       themeLayout: val,
-    }));
-  };
-
-  const setMonochromeMode = (val: IsMonochrome) => {
-    setSettings((prevSettings) => ({
-      ...prevSettings,
-      isMonochrome: val,
     }));
   };
 
@@ -150,7 +140,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     setSettings({
       themeMode: initialState.themeMode,
       themeLayout: initialState.themeLayout,
-      isMonochrome: initialState.isMonochrome,
       darkColorScheme: initialState.darkColorScheme,
       lightColorScheme: initialState.lightColorScheme,
       primaryColorScheme: initialState.primaryColorScheme,
@@ -163,11 +152,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     if (isDark) _html?.classList.add("dark");
     else _html?.classList.remove("dark");
   }, [isDark]);
-
-  useLayoutEffect(() => {
-    if (settings.isMonochrome) document.body.classList.add("is-monochrome");
-    else document.body.classList.remove("is-monochrome");
-  }, [settings.isMonochrome]);
 
   useLayoutEffect(() => {
     _html!.dataset.themeLight = settings.lightColorScheme.name;
@@ -196,7 +180,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const contextValue: ThemeContextValue = {
     ...settings,
     isDark,
-    setMonochromeMode,
     setThemeMode,
     setThemeLayout,
     setLightColorScheme,

@@ -8,26 +8,17 @@ import { useThemeContext } from "@/app/contexts/theme/context";
 import { colors } from "@/constants/colors";
 import { Listbox } from "@/components/shared/form/StyledListbox";
 import { useDidUpdate } from "@/hooks";
-import { Button, Switch } from "@/components/ui";
+import { Button } from "@/components/ui";
 import {
   PrimaryColor,
   LightColor,
-  DarkColor,
   Notification,
 } from "@/configs/@types/theme";
 
 // ----------------------------------------------------------------------
 
-const primaryColors: PrimaryColor[] = [
-  "indigo",
-  "blue",
-  "green",
-  "amber",
-  "purple",
-  "rose",
-];
-const lightColors: LightColor[] = ["slate", "gray", "neutral"];
-const darkColors: DarkColor[] = ["mint", "navy", "mirage", "cinder", "black"];
+const primaryColors: PrimaryColor[] = ["amber"];
+const lightColors: LightColor[] = ["slate"];
 
 const cardSkins = [
   {
@@ -70,7 +61,7 @@ const notificationPos: {
   },
 ];
 
-const MAX_NOTIFICATION_COUNT = 5;
+const MAX_NOTIFICATION_COUNT = 2;
 
 export default function Appearance() {
   const theme = useThemeContext();
@@ -121,64 +112,6 @@ export default function Appearance() {
             <Label className="sr-only">Theme Mode (dark or light)</Label>
             <div className="mt-2 flex flex-wrap gap-6">
               <Radio
-                value="system"
-                className="w-44 cursor-pointer outline-hidden"
-              >
-                {({ checked }) => (
-                  <>
-                    <div
-                      className={clsx(
-                        "bg-dark-900 relative overflow-hidden rounded-lg border-2 dark:border-transparent",
-                        checked &&
-                          "ring-primary-600 dark:ring-primary-500 dark:ring-offset-dark-700 ring-2 ring-offset-2 ring-offset-white transition-all",
-                      )}
-                    >
-                      <div
-                        style={{
-                          clipPath: "polygon(50% 50%, 100% 0, 0 0, 0% 100%)",
-                        }}
-                        className="w-full space-y-2 bg-gray-50 p-1.5"
-                      >
-                        <div className="w-full space-y-2 rounded-sm bg-white p-2 shadow-xs">
-                          <div className="bg-gray-150 h-2 w-9/12 rounded-lg"></div>
-                          <div className="bg-gray-150 h-2 w-11/12 rounded-lg"></div>
-                        </div>
-                        <div className="flex items-center space-x-2 rounded-sm bg-white p-2 shadow-xs">
-                          <div className="bg-gray-150 size-4 shrink-0 rounded-full"></div>
-                          <div className="bg-gray-150 h-2 w-full rounded-lg"></div>
-                        </div>
-                        <div className="flex items-center space-x-2 rounded-sm bg-white p-2 shadow-xs">
-                          <div className="bg-gray-150 size-4 shrink-0 rounded-full"></div>
-                          <div className="bg-gray-150 h-2 w-9/12 rounded-lg"></div>
-                        </div>
-                      </div>
-                      <div
-                        style={{
-                          clipPath:
-                            "polygon(50% 50%, 100% 0, 100% 100%, 0% 100%)",
-                        }}
-                        className="absolute inset-0 space-y-2 p-1.5"
-                      >
-                        <div className="bg-dark-700 w-full space-y-2 rounded-sm p-2 shadow-xs">
-                          <div className="bg-dark-400 h-2 w-9/12 rounded-lg"></div>
-                          <div className="bg-dark-400 h-2 w-11/12 rounded-lg"></div>
-                        </div>
-                        <div className="bg-dark-700 flex items-center space-x-2 rounded-sm p-2 shadow-xs">
-                          <div className="bg-dark-400 size-4 shrink-0 rounded-full"></div>
-                          <div className="bg-dark-400 h-2 w-full rounded-lg"></div>
-                        </div>
-                        <div className="bg-dark-700 flex items-center space-x-2 rounded-sm p-2 shadow-xs">
-                          <div className="bg-dark-400 size-4 shrink-0 rounded-full"></div>
-                          <div className="bg-dark-400 h-2 w-9/12 rounded-lg"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <p className="mt-1.5 text-center">System</p>
-                  </>
-                )}
-              </Radio>
-              <Radio
                 value="light"
                 className="w-44 cursor-pointer outline-hidden"
               >
@@ -207,38 +140,6 @@ export default function Appearance() {
                       </div>
                     </div>
                     <p className="mt-1.5 text-center">Light</p>
-                  </>
-                )}
-              </Radio>
-              <Radio
-                value="dark"
-                className="w-44 cursor-pointer outline-hidden"
-              >
-                {({ checked }) => (
-                  <>
-                    <div
-                      className={clsx(
-                        "bg-dark-900 relative overflow-hidden rounded-lg border border-transparent",
-                        checked &&
-                          "ring-primary-600 dark:ring-primary-500 dark:ring-offset-dark-700 ring-2 ring-offset-2 ring-offset-white transition-all",
-                      )}
-                    >
-                      <div className="bg-dark-900 w-full space-y-2 p-1.5">
-                        <div className="bg-dark-700 w-full space-y-2 rounded-sm p-2 shadow-xs">
-                          <div className="bg-dark-400 h-2 w-9/12 rounded-lg"></div>
-                          <div className="bg-dark-400 h-2 w-11/12 rounded-lg"></div>
-                        </div>
-                        <div className="bg-dark-700 flex items-center space-x-2 rounded-sm p-2 shadow-xs">
-                          <div className="bg-dark-400 size-4 shrink-0 rounded-full"></div>
-                          <div className="bg-dark-400 h-2 w-full rounded-lg"></div>
-                        </div>
-                        <div className="bg-dark-700 flex items-center space-x-2 rounded-sm p-2 shadow-xs">
-                          <div className="bg-dark-400 size-4 shrink-0 rounded-full"></div>
-                          <div className="bg-dark-400 h-2 w-9/12 rounded-lg"></div>
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mt-1.5 text-center">Dark</p>
                   </>
                 )}
               </Radio>
@@ -337,77 +238,6 @@ export default function Appearance() {
                             ></div>
                           </div>
                           <div className="flex items-center space-x-2 rounded-sm bg-white p-2 shadow-xs">
-                            <div
-                              className="size-4 shrink-0 rounded-full"
-                              style={{ backgroundColor: colors[color][400] }}
-                            ></div>
-                            <div
-                              className="h-2 w-full rounded-lg"
-                              style={{ backgroundColor: colors[color][400] }}
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                      <p className="mt-1.5 text-center capitalize">{color}</p>
-                    </>
-                  )}
-                </Radio>
-              ))}
-            </div>
-          </RadioGroup>
-        </div>
-        <div>
-          <div>
-            <p className="dark:text-dark-100 text-base font-medium text-gray-800">
-              Dark Color Scheme
-            </p>
-            <p className="mt-0.5">
-              Select dark color scheme that will be used for your theme.
-            </p>
-          </div>
-          <RadioGroup
-            value={theme.darkColorScheme.name}
-            onChange={theme.setDarkColorScheme}
-            className="mt-4"
-          >
-            <Label className="sr-only">Dark Mode Color Schemes</Label>
-            <div className="mt-2 flex flex-wrap gap-4">
-              {darkColors.map((color) => (
-                <Radio
-                  key={color}
-                  value={color}
-                  className="w-32 cursor-pointer outline-hidden"
-                >
-                  {({ checked }) => (
-                    <>
-                      <div
-                        className={clsx(
-                          "relative overflow-hidden rounded-lg",
-                          checked &&
-                            "ring-primary-600 dark:ring-primary-500 dark:ring-offset-dark-700 ring-2 ring-offset-2 ring-offset-white transition-all",
-                        )}
-                      >
-                        <div
-                          className="w-full space-y-2 p-1.5"
-                          style={{ backgroundColor: colors[color][900] }}
-                        >
-                          <div
-                            className="w-full space-y-2 rounded-sm p-2 shadow-xs"
-                            style={{ backgroundColor: colors[color][700] }}
-                          >
-                            <div
-                              className="h-2 w-9/12 rounded-lg"
-                              style={{ backgroundColor: colors[color][400] }}
-                            ></div>
-                            <div
-                              className="h-2 w-11/12 rounded-lg"
-                              style={{ backgroundColor: colors[color][400] }}
-                            ></div>
-                          </div>
-                          <div
-                            className="flex items-center space-x-2 rounded-sm p-2 shadow-xs"
-                            style={{ backgroundColor: colors[color][700] }}
-                          >
                             <div
                               className="size-4 shrink-0 rounded-full"
                               style={{ backgroundColor: colors[color][400] }}
@@ -567,16 +397,6 @@ export default function Appearance() {
             value={cardSkins.find((skin) => skin.value === theme.cardSkin)}
             onChange={({ value }) => theme.setCardSkin(value)}
           />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3">
-          <p className="my-auto">Theme Chrome Mode:</p>
-          <div className="dark:border-dark-450 mt-1.5 flex flex-1 items-center justify-between space-x-2 rounded-lg border border-gray-300 px-3 py-2 md:col-span-2 md:mt-0">
-            <p className="dark:text-dark-100 text-gray-800">Monochrome Mode</p>
-            <Switch
-              checked={theme.isMonochrome}
-              onChange={(e) => theme.setMonochromeMode(e.target.checked)}
-            />
-          </div>
         </div>
       </div>
       <div className="mt-10">

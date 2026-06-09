@@ -3,7 +3,6 @@ import { createSafeContext } from "@/utils/createSafeContext";
 import {
   CardSkin,
   DarkColor,
-  IsMonochrome,
   LightColor,
   Notification,
   PrimaryColor,
@@ -16,7 +15,6 @@ export interface ThemeContextValue extends ThemeConfig {
   isDark: boolean;
   setThemeMode: (val: ThemeMode) => void;
   setThemeLayout: (val: ThemeLayout) => void;
-  setMonochromeMode: (val: IsMonochrome) => void;
   setLightColorScheme: (val: LightColor) => void;
   setDarkColorScheme: (val: DarkColor) => void;
   setPrimaryColorScheme: (val: PrimaryColor) => void;

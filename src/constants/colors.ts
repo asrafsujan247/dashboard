@@ -86,7 +86,7 @@ const colors = {
   indigo: twColors.indigo,
   blue: twColors.blue,
   green: twColors.green,
-  amber: twColors.amber,
+  amber: { ...twColors.amber, 500: "#F59E47" },
   purple: twColors.purple,
   rose: twColors.rose,
   variants: {
