@@ -294,14 +294,6 @@ const protectedRoutes: RouteObject = {
               }),
             },
             {
-              path: "notifications",
-              lazy: async () => ({
-                Component: (
-                  await import("@/app/pages/settings/sections/Notifications")
-                ).default,
-              }),
-            },
-            {
               path: "password",
               lazy: async () => ({
                 Component: (

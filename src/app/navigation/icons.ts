@@ -1,8 +1,5 @@
 import { ElementType } from "react";
-import {
-  BellAlertIcon,
-  UserIcon as HiUserIcon,
-} from "@heroicons/react/24/outline";
+import { UserIcon as HiUserIcon } from "@heroicons/react/24/outline";
 import { TbCoins, TbDevices, TbPalette } from "react-icons/tb";
 
 import DashboardsIcon from "@/assets/dualicons/dashboards.svg?react";
@@ -135,6 +132,5 @@ export const navigationIcons: Record<string, ElementType> = {
   "settings.general": HiUserIcon,
   "settings.appearance": TbPalette,
   "settings.billing": TbCoins,
-  "settings.notifications": BellAlertIcon,
   "settings.password": TbDevices,
 };
