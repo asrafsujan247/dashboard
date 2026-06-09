@@ -4,7 +4,6 @@ import { NavLink, To } from "react-router";
 
 // Local Imports
 import { Header } from "./Header";
-import { Footer } from "./Footer";
 import { Button, ScrollShadow } from "@/components/ui";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
 import { useThemeContext } from "@/app/contexts/theme/context";
@@ -49,7 +48,6 @@ export function SidebarPanel() {
           </ul>
 
         </ScrollShadow>
-        <Footer />
       </div>
     </div>
   );
