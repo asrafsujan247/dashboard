@@ -305,7 +305,7 @@ const protectedRoutes: RouteObject = {
               path: "password",
               lazy: async () => ({
                 Component: (
-                  await import("@/app/pages/settings/sections/Sessions")
+                  await import("@/app/pages/settings/sections/Password")
                 ).default,
               }),
             },
