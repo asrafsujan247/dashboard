@@ -1,11 +1,6 @@
 // Import Dependencies
 import clsx from "clsx";
-import {
-  ChatBubbleBottomCenterIcon,
-  DocumentMagnifyingGlassIcon,
-  QuestionMarkCircleIcon,
-} from "@heroicons/react/24/outline";
-import { Link, NavLink, To } from "react-router";
+import { NavLink, To } from "react-router";
 
 // Local Imports
 import { Header } from "./Header";
@@ -53,41 +48,6 @@ export function SidebarPanel() {
             ))}
           </ul>
 
-          <div className="dark:bg-dark-500 mx-4 my-4 h-px bg-gray-200"></div>
-
-          <ul className="space-y-1.5 px-2 font-medium">
-            <li>
-              <Button
-                component={Link}
-                to="/docs/getting-started"
-                variant="flat"
-                className="group text-xs-plus w-full justify-start gap-2 p-2"
-              >
-                <DocumentMagnifyingGlassIcon className="dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200 size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
-                <span>Documentation</span>
-              </Button>
-            </li>
-            <li>
-              <Button
-                variant="flat"
-                className="group text-xs-plus w-full justify-start gap-2 p-2"
-              >
-                <QuestionMarkCircleIcon className="dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200 size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
-                <span>Tailux Faq</span>
-              </Button>
-            </li>
-            <li>
-              <Button
-                component="a"
-                href="mailto:help@piniastudio.com"
-                variant="flat"
-                className="group text-xs-plus w-full justify-start gap-2 p-2"
-              >
-                <ChatBubbleBottomCenterIcon className="dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200 size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
-                <span>Ask a Question</span>
-              </Button>
-            </li>
-          </ul>
         </ScrollShadow>
         <Footer />
       </div>

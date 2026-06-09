@@ -41,14 +41,6 @@ export const settings: NavigationTree = {
       icon: "settings.notifications",
     },
     {
-      id: "applications",
-      type: "item",
-      path: "/settings/applications",
-      title: "Applications",
-      transKey: "nav.settings.applications",
-      icon: "settings.applications",
-    },
-    {
       id: "sessions",
       type: "item",
       path: "/settings/sessions",

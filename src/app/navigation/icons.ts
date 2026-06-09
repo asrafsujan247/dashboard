@@ -1,7 +1,6 @@
 import { ElementType } from "react";
 import {
   BellAlertIcon,
-  CubeIcon,
   UserIcon as HiUserIcon,
 } from "@heroicons/react/24/outline";
 import { TbCoins, TbDevices, TbPalette } from "react-icons/tb";
@@ -137,6 +136,5 @@ export const navigationIcons: Record<string, ElementType> = {
   "settings.appearance": TbPalette,
   "settings.billing": TbCoins,
   "settings.notifications": BellAlertIcon,
-  "settings.applications": CubeIcon,
   "settings.sessions": TbDevices,
 };
