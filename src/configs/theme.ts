@@ -8,12 +8,11 @@ import {
 
 const DEFAULT_DARK_COLOR: DarkColor = "cinder";
 const DEFAULT_LIGHT_COLOR: LightColor = "slate";
-const DEFAULT_PRIMARY_COLOR: PrimaryColor = "blue";
+const DEFAULT_PRIMARY_COLOR: PrimaryColor = "amber";
 
 // Default theme configuration
 export const defaultTheme: ThemeConfig = {
-  themeMode: "system",
-  isMonochrome: false,
+  themeMode: "light",
   themeLayout: "main-layout",
   cardSkin: "bordered",
 
@@ -34,7 +33,7 @@ export const defaultTheme: ThemeConfig = {
 
   notification: {
     isExpanded: false,
-    position: "bottom-right",
-    visibleToasts: 4,
+    position: "top-right",
+    visibleToasts: 2,
   },
 };

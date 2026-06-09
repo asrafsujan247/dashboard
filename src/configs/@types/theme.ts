@@ -12,7 +12,6 @@ export type PrimaryColor =
   | "rose";
 
 export type ThemeMode = "light" | "dark" | "system";
-export type IsMonochrome = boolean;
 export type ThemeLayout = "main-layout";
 export type CardSkin = "bordered" | "shadow";
 
@@ -39,7 +38,6 @@ export interface Notification {
 
 export interface ThemeConfig {
   themeMode: ThemeMode;
-  isMonochrome: IsMonochrome;
   themeLayout: ThemeLayout;
   cardSkin: CardSkin;
   darkColorScheme: DarkColorScheme;
