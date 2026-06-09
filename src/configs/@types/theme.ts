@@ -13,7 +13,7 @@ export type PrimaryColor =
 
 export type ThemeMode = "light" | "dark" | "system";
 export type IsMonochrome = boolean;
-export type ThemeLayout = "main-layout" | "sideblock";
+export type ThemeLayout = "main-layout";
 export type CardSkin = "bordered" | "shadow";
 
 export interface DarkColorScheme {

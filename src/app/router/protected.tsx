@@ -13,7 +13,6 @@ const protectedRoutes: RouteObject = {
   id: "protected",
   Component: AuthGuard,
   children: [
-    // The dynamic layout supports both the main layout and the sideblock.
     {
       Component: DynamicLayout,
       children: [
@@ -295,26 +294,10 @@ const protectedRoutes: RouteObject = {
               }),
             },
             {
-              path: "notifications",
+              path: "password",
               lazy: async () => ({
                 Component: (
-                  await import("@/app/pages/settings/sections/Notifications")
-                ).default,
-              }),
-            },
-            {
-              path: "applications",
-              lazy: async () => ({
-                Component: (
-                  await import("@/app/pages/settings/sections/Applications")
-                ).default,
-              }),
-            },
-            {
-              path: "sessions",
-              lazy: async () => ({
-                Component: (
-                  await import("@/app/pages/settings/sections/Sessions")
+                  await import("@/app/pages/settings/sections/Password")
                 ).default,
               }),
             },
