@@ -286,14 +286,6 @@ const protectedRoutes: RouteObject = {
               }),
             },
             {
-              path: "appearance",
-              lazy: async () => ({
-                Component: (
-                  await import("@/app/pages/settings/sections/Appearance")
-                ).default,
-              }),
-            },
-            {
               path: "password",
               lazy: async () => ({
                 Component: (

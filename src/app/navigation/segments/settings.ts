@@ -17,14 +17,6 @@ export const settings: NavigationTree = {
       icon: "settings.general",
     },
     {
-      id: "appearance",
-      type: "item",
-      path: "/settings/appearance",
-      title: "Appearance",
-      transKey: "nav.settings.appearance",
-      icon: "settings.appearance",
-    },
-    {
       id: "billing",
       type: "item",
       path: "/settings/billing",

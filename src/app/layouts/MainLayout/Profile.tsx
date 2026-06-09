@@ -64,7 +64,7 @@ const links: LinkItem[] = [
     id: "5",
     title: "Settings",
     description: "Webapp settings",
-    to: "/settings/appearance",
+    to: "/settings/general",
     Icon: Cog6ToothIcon,
     color: "success",
   },
