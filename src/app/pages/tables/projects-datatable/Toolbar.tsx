@@ -31,7 +31,6 @@ import {
 } from "@/components/ui";
 import { DateFilter } from "@/components/shared/table/DateFilter";
 import { FacedtedFilter } from "@/components/shared/table/FacedtedFilter";
-import { TableConfig } from "./TableConfig";
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
 import { collaborators, tags } from "./data";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
@@ -331,7 +330,6 @@ export function Toolbar({ table }: { table: Table<Project> }) {
             )}
           >
             <SearchInput table={table} />
-            <TableConfig table={table} />
           </div>
           <div
             className={clsx(
@@ -360,8 +358,6 @@ export function Toolbar({ table }: { table: Table<Project> }) {
             <SearchInput table={table} />
             <Filters table={table} />
           </div>
-
-          <TableConfig table={table} />
         </div>
       )}
     </div>
