@@ -23,7 +23,6 @@ import { DateFilter } from "@/components/shared/table/DateFilter";
 import { FacedtedFilter } from "@/components/shared/table/FacedtedFilter";
 import { RangeFilter } from "@/components/shared/table/RangeFilter";
 import { Button, Input } from "@/components/ui";
-import { TableConfig } from "./TableConfig";
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
 import { Order, orderStatusOptions } from "./data";
 import { CSSProperties } from "react";
@@ -313,7 +312,6 @@ export function Toolbar({ table }: { table: Table<Order> }) {
             )}
           >
             <SearchInput table={table} />
-            <TableConfig table={table} />
           </div>
           <div
             className={clsx(
@@ -342,8 +340,6 @@ export function Toolbar({ table }: { table: Table<Order> }) {
             <SearchInput table={table} />
             <Filters table={table} />
           </div>
-
-          <TableConfig table={table} />
         </div>
       )}
     </div>
