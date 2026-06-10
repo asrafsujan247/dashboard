@@ -32,7 +32,6 @@ import { RangeFilter } from "@/components/shared/table/RangeFilter";
 import { RadioFilter } from "@/components/shared/table/RadioFilter";
 import { FilterSelector } from "@/components/shared/table/FilterSelector";
 import { Button, Input } from "@/components/ui";
-import { TableConfig } from "./TableConfig";
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
 import {
   Course,
@@ -335,7 +334,6 @@ export function Toolbar({ table }: { table: Table<Course> }) {
             )}
           >
             <SearchInput table={table} />
-            <TableConfig table={table} />
           </div>
           <div
             className={clsx(
@@ -364,8 +362,6 @@ export function Toolbar({ table }: { table: Table<Course> }) {
             <SearchInput table={table} />
             <Filters table={table} />
           </div>
-
-          <TableConfig table={table} />
         </div>
       )}
     </div>
