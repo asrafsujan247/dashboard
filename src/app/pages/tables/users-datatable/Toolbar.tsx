@@ -20,7 +20,6 @@ import { CSSProperties } from "react";
 // Local Imports
 import { Button, Input } from "@/components/ui";
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
-import { TableConfig } from "./TableConfig";
 import { rolesOptions, User } from "./data";
 import { RoleFilter } from "./RoleFilter";
 import { ItemViewTypeSelect } from "@/components/shared/table/ItemViewTypeSelect";
@@ -310,7 +309,6 @@ export function Toolbar({ table }: { table: Table<User> }) {
             )}
           >
             <SearchInput table={table} />
-            <TableConfig table={table} />
             <ItemViewTypeSelect table={table} />
           </div>
           <div
@@ -350,7 +348,6 @@ export function Toolbar({ table }: { table: Table<User> }) {
 
           <div className="flex shrink-0 space-x-2">
             <SearchInput table={table} />
-            <TableConfig table={table} />
             <ItemViewTypeSelect table={table} />
           </div>
         </div>
