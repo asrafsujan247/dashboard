@@ -5,21 +5,18 @@ import { CSSProperties } from "react";
 // Local Imports
 import ReviewIllustration from "@/assets/illustrations/review.svg?react";
 import { Button } from "@/components/ui";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ----------------------------------------------------------------------
 
 export function UnderReview() {
-  const theme = useThemeContext();
-
   return (
     <div className="h-full text-center">
       <ReviewIllustration
         className="mx-auto h-auto w-56 sm:w-64"
         style={
           {
-            "--primary": theme.primaryColorScheme[600],
-            "--darker": theme.lightColorScheme[600],
+            "--primary": "oklch(66.6% 0.179 58.318)",
+            "--darker": "oklch(44.6% 0.043 257.281)",
           } as CSSProperties
         }
       />

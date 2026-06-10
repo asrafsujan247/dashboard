@@ -1,16 +1,10 @@
 // Local Imports
 import Authorize from "@/assets/illustrations/authorize.svg?react";
 import { Page } from "@/components/shared/Page";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ----------------------------------------------------------------------
 
 export default function Error401() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-  } = useThemeContext();
-
   return (
     <Page title="Error 401">
       <main className="min-h-100vh relative grid w-full grow grid-cols-1 place-items-center p-4">
@@ -18,8 +12,8 @@ export default function Error401() {
           <Authorize
             className="w-full"
             style={{
-              ["--primary" as string]: primary[500],
-              ["--dark-500" as string]: light[700],
+              ["--primary" as string]: "#F59E47",
+              ["--illus-500" as string]: "oklch(37.2% 0.044 257.287)",
             }}
           />
           <p className="pt-4 text-7xl font-bold text-primary-600">

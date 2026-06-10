@@ -1,16 +1,10 @@
 // Local Imports
 import WindowCrash from "@/assets/illustrations/window-crash.svg?react";
 import { Page } from "@/components/shared/Page";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ----------------------------------------------------------------------
 
 export default function Error429() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-  } = useThemeContext();
-
   return (
     <Page title="Error 429">
       <main className="min-h-100vh relative grid w-full grow grid-cols-1 place-items-center p-4">
@@ -18,9 +12,9 @@ export default function Error429() {
           <WindowCrash
             className="w-full"
             style={{
-              ["--primary" as string]: primary[500],
-              ["--dark-700" as string]: light[100],
-              ["--dark-800" as string]: light[300],
+              ["--primary" as string]: "#F59E47",
+              ["--illus-700" as string]: "oklch(96.8% 0.007 247.896)",
+              ["--illus-800" as string]: "oklch(86.9% 0.022 252.894)",
             }}
           />
           <p className="pt-6 text-7xl font-bold text-primary-600">

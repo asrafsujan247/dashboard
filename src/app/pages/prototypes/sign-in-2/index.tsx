@@ -1,22 +1,16 @@
-﻿// Local Imports
+// Local Imports
 import { EnvelopeIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router";
+import { CSSProperties } from "react";
 
 // Import Dependencies
 import Logo from "@/assets/appLogo.svg?react";
 import DashboardCheck from "@/assets/illustrations/dashboard-check.svg?react";
 import { Button, Checkbox, Input } from "@/components/ui";
-import { useThemeContext } from "@/app/contexts/theme/context";
-import { CSSProperties } from "react";
 
 // ----------------------------------------------------------------------
 
 export default function SignInV2() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-  } = useThemeContext();
-
   return (
     <main className="min-h-100vh flex">
       <div className="fixed top-0 hidden p-6 lg:block lg:px-12">
@@ -32,12 +26,12 @@ export default function SignInV2() {
           <DashboardCheck
             style={
               {
-                "--primary": primary[500],
-                "--dark-500": light[200],
-                "--dark-600": light[100],
-                "--dark-700": light[300],
-                "--dark-450": light[400],
-                "--dark-800": light[400],
+                "--primary": "#F59E47",
+                "--illus-500": "oklch(92.9% 0.013 255.508)",
+                "--illus-600": "oklch(96.8% 0.007 247.896)",
+                "--illus-700": "oklch(86.9% 0.022 252.894)",
+                "--illus-450": "oklch(70.4% 0.04 256.788)",
+                "--illus-800": "oklch(70.4% 0.04 256.788)",
               } as CSSProperties
             }
             className="w-full"
@@ -143,5 +137,3 @@ export default function SignInV2() {
     </main>
   );
 }
-
-

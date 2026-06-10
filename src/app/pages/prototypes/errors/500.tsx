@@ -4,16 +4,10 @@ import { CSSProperties } from "react";
 // Local Imports
 import RepairServer from "@/assets/illustrations/repair-server.svg?react";
 import { Page } from "@/components/shared/Page";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ----------------------------------------------------------------------
 
 export default function Error500() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-  } = useThemeContext();
-
   return (
     <Page title="Error 500">
       <main className="min-h-100vh relative grid w-full grow grid-cols-1 place-items-center p-4">
@@ -22,9 +16,9 @@ export default function Error500() {
             className="w-full"
             style={
               {
-                "--primary": primary[500],
-                "--dark-400": light[500],
-                "--dark-600": light[700],
+                "--primary": "#F59E47",
+                "--illus-400": "oklch(55.4% 0.046 257.417)",
+                "--illus-600": "oklch(37.2% 0.044 257.287)",
               } as CSSProperties
             }
           />

@@ -7,7 +7,6 @@ import {
   PolymorphicComponentProps,
   PolymorphicRef,
 } from "@/@types/polymorphic";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ------------------------------------------------------------------------
 
@@ -28,8 +27,7 @@ const CardInner = forwardRef(
     const { component, className, children, skin, ...rest } =
       props as CardProps<E>;
 
-    const { cardSkin } = useThemeContext();
-    const appliedSkin = skin ?? cardSkin;
+    const appliedSkin = skin ?? "bordered";
 
     const Component = component || "div";
 

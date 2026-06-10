@@ -6,15 +6,11 @@ import { CSSProperties } from "react";
 import Penguin from "@/assets/illustrations/penguin.svg?react";
 import { Page } from "@/components/shared/Page";
 import { Button } from "@/components/ui";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { useHover } from "@/hooks";
 
 // ----------------------------------------------------------------------
 
 export default function Error404V2() {
-  const {
-    lightColorScheme: light,
-  } = useThemeContext();
   const [btnRef, btnHovered] = useHover();
 
   return (
@@ -27,8 +23,8 @@ export default function Error404V2() {
               className="w-full"
               style={
                 {
-                  "--dark-100": light[400],
-                  "--dark-500": light[700],
+                  "--illus-100": "oklch(70.4% 0.04 256.788)",
+                  "--illus-500": "oklch(37.2% 0.044 257.287)",
                 } as CSSProperties
               }
             />

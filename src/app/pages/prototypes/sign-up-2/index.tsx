@@ -1,26 +1,20 @@
-﻿// Local Imports
+// Local Imports
 import {
   EnvelopeIcon,
   LockClosedIcon,
   UserIcon,
 } from "@heroicons/react/24/outline";
 import { Link } from "react-router";
+import { CSSProperties } from "react";
 
 // Import Dependencies
 import Logo from "@/assets/appLogo.svg?react";
 import DashboardMeet from "@/assets/illustrations/dashboard-meet.svg?react";
 import { Button, Checkbox, Input } from "@/components/ui";
-import { useThemeContext } from "@/app/contexts/theme/context";
-import { CSSProperties } from "react";
 
 // ----------------------------------------------------------------------
 
 export default function SignUpV2() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-  } = useThemeContext();
-
   return (
     <main className="min-h-100vh flex">
       <div className="fixed top-0 hidden p-6 lg:block lg:px-12">
@@ -36,9 +30,9 @@ export default function SignUpV2() {
           <DashboardMeet
             style={
               {
-                "--primary": primary[500],
-                "--dark-600": light[700],
-                "--dark-450": light[400],
+                "--primary": "#F59E47",
+                "--illus-600": "oklch(37.2% 0.044 257.287)",
+                "--illus-450": "oklch(70.4% 0.04 256.788)",
               } as CSSProperties
             }
             className="w-full"
@@ -166,5 +160,3 @@ export default function SignUpV2() {
     </main>
   );
 }
-
-

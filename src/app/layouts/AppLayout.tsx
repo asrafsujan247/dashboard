@@ -4,13 +4,11 @@ import { useLayoutEffect } from "react";
 
 // Local Imports
 import { useSidebarContext } from "@/app/contexts/sidebar/context";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
 
 // ----------------------------------------------------------------------
 
 export function AppLayout() {
-  const { themeLayout } = useThemeContext();
   const { close, open } = useSidebarContext();
   const { lgAndDown, xlAndUp } = useBreakpointsContext();
 
@@ -35,10 +33,10 @@ export function AppLayout() {
 
       return () => {
         cancelled = true;
-        document.body.dataset.layout = themeLayout;
+        document.body.dataset.layout = "main-layout";
       };
     }
-  }, [themeLayout]);
+  }, []);
 
   return <Outlet />;
 }

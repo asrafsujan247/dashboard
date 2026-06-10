@@ -5,13 +5,11 @@ import { Link } from "react-router";
 import Error404Magnify from "@/assets/illustrations/error-404-magnify.svg?react";
 import { Page } from "@/components/shared/Page";
 import { Button } from "@/components/ui";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { useHover } from "@/hooks";
 
 // ----------------------------------------------------------------------
 
 export default function Error404() {
-  const { primaryColorScheme: primary } = useThemeContext();
   const [btnRef, btnHovered] = useHover();
 
   return (
@@ -21,8 +19,8 @@ export default function Error404() {
           <Error404Magnify
             className="w-full"
             style={{
-              ["--primary" as string]: primary[600],
-              ["--primary-light" as string]: primary[300],
+              ["--primary" as string]: "oklch(66.6% 0.179 58.318)",
+              ["--primary-light" as string]: "oklch(87.9% 0.169 91.605)",
             } as React.CSSProperties}
           />
           <p className="pt-4 text-xl font-semibold text-gray-800">
