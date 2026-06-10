@@ -23,7 +23,6 @@ import { DateFilter } from "@/components/shared/table/DateFilter";
 import { FacedtedFilter } from "@/components/shared/table/FacedtedFilter";
 import { RangeFilter } from "@/components/shared/table/RangeFilter";
 import { Button, Input } from "@/components/ui";
-import { TableConfig } from "./TableConfig";
 import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
 import { Order, orderStatusOptions } from "./data";
 import { CSSProperties } from "react";
@@ -39,12 +38,12 @@ export function Toolbar({ table }: { table: Table<Order> }) {
       <div
         className={clsx(
           "transition-content flex items-center justify-between gap-4",
-          isFullScreenEnabled ? "px-4 sm:px-5" : "px-(--margin-x) pt-4",
+          isFullScreenEnabled ? "px-0 sm:px-0" : "pt-4",
         )}
       >
         <div className="min-w-0">
-          <h2 className="dark:text-dark-50 truncate text-xl font-medium tracking-wide text-gray-800">
-            Orders History
+          <h2 className="dark:text-dark-50 truncate text-base font-medium tracking-wide text-gray-800">
+            Orders Table
           </h2>
         </div>
         {isXs ? (
@@ -309,16 +308,15 @@ export function Toolbar({ table }: { table: Table<Order> }) {
           <div
             className={clsx(
               "flex space-x-2 pt-4 [&_.input-root]:flex-1",
-              isFullScreenEnabled ? "px-4 sm:px-5" : "px-(--margin-x)",
+              isFullScreenEnabled ? "px-4 sm:px-5" : "pl-0 pr-(--margin-x)",
             )}
           >
             <SearchInput table={table} />
-            <TableConfig table={table} />
           </div>
           <div
             className={clsx(
               "hide-scrollbar flex shrink-0 space-x-2 overflow-x-auto pt-4 pb-1",
-              isFullScreenEnabled ? "px-4 sm:px-5" : "px-(--margin-x)",
+              isFullScreenEnabled ? "px-4 sm:px-5" : "pl-0 pr-(--margin-x)",
             )}
           >
             <Filters table={table} />
@@ -328,7 +326,7 @@ export function Toolbar({ table }: { table: Table<Order> }) {
         <div
           className={clsx(
             "custom-scrollbar transition-content flex justify-between space-x-4 overflow-x-auto pt-4 pb-1",
-            isFullScreenEnabled ? "px-4 sm:px-5" : "px-(--margin-x)",
+            isFullScreenEnabled ? "px-4 sm:px-5" : "pl-0 pr-(--margin-x)",
           )}
           style={
             {
@@ -342,8 +340,6 @@ export function Toolbar({ table }: { table: Table<Order> }) {
             <SearchInput table={table} />
             <Filters table={table} />
           </div>
-
-          <TableConfig table={table} />
         </div>
       )}
     </div>

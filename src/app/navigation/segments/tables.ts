@@ -18,14 +18,6 @@ export const tables: NavigationTree = {
       icon: "table.item",
     },
     {
-      id: "tables.orders-datatable-2",
-      path: path(ROOT_TABLES, "/orders-datatable-2"),
-      type: "item",
-      title: "Orders Datatable 2",
-      transKey: "nav.tables.orders-datatable-2",
-      icon: "table.item",
-    },
-    {
       id: "tables.courses-datatable",
       path: path(ROOT_TABLES, "/courses-datatable"),
       type: "item",
