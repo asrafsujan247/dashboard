@@ -39,12 +39,12 @@ export const StyledSwitch = ({
     <Switch
       className={({ checked }: { checked: boolean }) =>
         clsx(
-          `styled-switch relative flex shrink-0 cursor-pointer items-center rounded-full p-(--thumb-border) outline-hidden transition-colors duration-200 ease-in-out focus:outline-hidden`,
+          `this:primary styled-switch relative flex shrink-0 cursor-pointer items-center rounded-full p-(--thumb-border) outline-hidden transition-colors duration-200 ease-in-out focus:outline-hidden`,
           disabled
             ? "pointer-events-none select-none bg-gray-150 opacity-70 ring-1 ring-gray-200"
             : checked
               ? "bg-this"
-              : "bg-gray-300",
+              : "bg-gray-400",
           className,
           classNames?.switch,
         )
