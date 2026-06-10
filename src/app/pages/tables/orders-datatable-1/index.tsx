@@ -33,7 +33,6 @@ import { columns } from "./columns";
 import { ordersList } from "./data";
 import { PaginationSection } from "@/components/shared/table/PaginationSection";
 import { SelectedRowsActions } from "./SelectedRowsActions";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { getUserAgentBrowser } from "@/utils/dom/getUserAgentBrowser";
 import { TableSettings } from "@/components/shared/table/TableSettings";
 import { Order } from "./data";
@@ -43,8 +42,6 @@ import { Order } from "./data";
 const isSafari = getUserAgentBrowser() === "Safari";
 
 export default function OrdersDatatableV1() {
-  const { cardSkin } = useThemeContext();
-
   const [orders, setOrders] = useState<Order[]>([...ordersList]);
 
   const [tableSettings, setTableSettings] = useState<TableSettings>({
@@ -138,7 +135,7 @@ export default function OrdersDatatableV1() {
     <div className="transition-content grid grid-cols-1 grid-rows-[auto_auto_1fr] px-(--margin-x) py-4">
       <div className="flex items-center justify-between space-x-4">
         <div className="min-w-0">
-          <h2 className="dark:text-dark-50 truncate text-xl font-medium tracking-wide text-gray-800">
+          <h2 className=" truncate text-xl font-medium tracking-wide text-gray-800">
             Orders History
           </h2>
         </div>
@@ -151,54 +148,54 @@ export default function OrdersDatatableV1() {
         </Button>
       </div>
       <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-6 2xl:gap-6">
-        <div className="bg-gray-150 dark:bg-dark-700 rounded-lg p-3 2xl:p-4">
+        <div className="bg-gray-150 rounded-lg p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               $67.6k
             </p>
             <CurrencyDollarIcon className="text-secondary size-5" />
           </div>
           <p className="text-xs-plus mt-1">Income</p>
         </div>
-        <div className="bg-gray-150 dark:bg-dark-700 rounded-lg p-3 2xl:p-4">
+        <div className="bg-gray-150 rounded-lg p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               7.6k
             </p>
             <CheckBadgeIcon className="text-success size-5" />
           </div>
           <p className="text-xs-plus mt-1">Completed</p>
         </div>
-        <div className="bg-gray-150 dark:bg-dark-700 rounded-lg p-3 2xl:p-4">
+        <div className="bg-gray-150 rounded-lg p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               1.4k
             </p>
             <ArrowPathIcon className="text-primary-500 size-5" />
           </div>
           <p className="text-xs-plus mt-1">Processing</p>
         </div>
-        <div className="bg-gray-150 dark:bg-dark-700 rounded-lg p-3 2xl:p-4">
+        <div className="bg-gray-150 rounded-lg p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               345
             </p>
             <ClockIcon className="text-warning size-5" />
           </div>
           <p className="text-xs-plus mt-1">Pending</p>
         </div>
-        <div className="bg-gray-150 dark:bg-dark-700 rounded-lg p-3 2xl:p-4">
+        <div className="bg-gray-150 rounded-lg p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               896
             </p>
             <TruckIcon className="text-info size-5" />
           </div>
           <p className="text-xs-plus mt-1">Shipping</p>
         </div>
-        <div className="bg-gray-150 dark:bg-dark-700 rounded-lg p-3 2xl:p-4">
+        <div className="bg-gray-150 rounded-lg p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               3.1k
             </p>
             <XCircleIcon className="text-error size-5" />
@@ -210,7 +207,7 @@ export default function OrdersDatatableV1() {
         className={clsx(
           "flex flex-col pt-4",
           tableSettings.enableFullScreen &&
-            "dark:bg-dark-900 fixed inset-0 z-61 h-full w-full bg-white pt-3",
+            " fixed inset-0 z-61 h-full w-full bg-white pt-3",
         )}
       >
         <Toolbar table={table} />
@@ -234,7 +231,7 @@ export default function OrdersDatatableV1() {
                       <Th
                         key={header.id}
                         className={clsx(
-                          "dark:bg-dark-800 dark:text-dark-100 bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-tl-lg last:ltr:rounded-tr-lg first:rtl:rounded-tr-lg last:rtl:rounded-tl-lg",
+                          " bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-tl-lg last:ltr:rounded-tr-lg first:rtl:rounded-tr-lg last:rtl:rounded-tl-lg",
                           header.column.getCanPin() && [
                             header.column.getIsPinned() === "left" &&
                               "sticky z-2 ltr:left-0 rtl:right-0",
@@ -277,7 +274,7 @@ export default function OrdersDatatableV1() {
                     <Tr
                       key={row.id}
                       className={clsx(
-                        "dark:border-b-dark-500 relative border-y border-transparent border-b-gray-200",
+                        " relative border-y border-transparent border-b-gray-200",
                         row.getIsSelected() &&
                           !isSafari &&
                           "row-selected after:bg-primary-500/10 ltr:after:border-l-primary-500 rtl:after:border-r-primary-500 after:pointer-events-none after:absolute after:inset-0 after:z-2 after:h-full after:w-full after:border-3 after:border-transparent",
@@ -290,9 +287,6 @@ export default function OrdersDatatableV1() {
                             key={cell.id}
                             className={clsx(
                               "relative bg-white",
-                              cardSkin === "shadow"
-                                ? "dark:bg-dark-700"
-                                : "dark:bg-dark-900",
                               cell.column.getCanPin() && [
                                 cell.column.getIsPinned() === "left" &&
                                   "sticky z-2 ltr:left-0 rtl:right-0",
@@ -304,7 +298,7 @@ export default function OrdersDatatableV1() {
                             {cell.column.getIsPinned() && (
                               <div
                                 className={clsx(
-                                  "dark:border-dark-500 pointer-events-none absolute inset-0 border-gray-200",
+                                  " pointer-events-none absolute inset-0 border-gray-200",
                                   cell.column.getIsPinned() === "left"
                                     ? "ltr:border-r rtl:border-l"
                                     : "ltr:border-l rtl:border-r",
@@ -330,7 +324,7 @@ export default function OrdersDatatableV1() {
               className={clsx(
                 "px-4 pb-4 sm:px-5 sm:pt-4",
                 tableSettings.enableFullScreen &&
-                  "dark:bg-dark-800 bg-gray-50",
+                  " bg-gray-50",
                 !(
                   table.getIsSomeRowsSelected() ||
                   table.getIsAllRowsSelected()

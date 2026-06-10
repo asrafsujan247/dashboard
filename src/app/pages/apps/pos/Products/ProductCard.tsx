@@ -16,13 +16,13 @@ export function ProductCard({ image, name, category, price }: Product) {
     <Card className="group relative p-2 transition-transform hover:scale-105">
       <img className="rounded-lg" src={image} alt={name} />
       <div className="pt-2">
-        <p className="dark:text-dark-100 truncate font-medium text-gray-800">
+        <p className=" truncate font-medium text-gray-800">
           {name}
         </p>
-        <p className="dark:text-dark-300 truncate text-xs text-gray-400">
+        <p className=" truncate text-xs text-gray-400">
           {category}
         </p>
-        <p className="text-primary-600 dark:text-primary-400 text-end font-medium">
+        <p className="text-primary-600 text-end font-medium">
           ${price}
         </p>
       </div>

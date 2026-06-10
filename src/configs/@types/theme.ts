@@ -1,7 +1,6 @@
 import { ToasterProps } from "sonner";
 
 // Define color options
-export type DarkColor = "cinder" | "navy" | "mirage" | "black" | "mint";
 export type LightColor = "slate" | "gray" | "neutral";
 export type PrimaryColor =
   | "indigo"
@@ -11,14 +10,9 @@ export type PrimaryColor =
   | "purple"
   | "rose";
 
-export type ThemeMode = "light" | "dark" | "system";
+export type ThemeMode = "light";
 export type ThemeLayout = "main-layout";
 export type CardSkin = "bordered" | "shadow";
-
-export interface DarkColorScheme {
-  name: DarkColor;
-  [key: string]: string;
-}
 
 export interface LightColorScheme {
   name: LightColor;
@@ -40,7 +34,6 @@ export interface ThemeConfig {
   themeMode: ThemeMode;
   themeLayout: ThemeLayout;
   cardSkin: CardSkin;
-  darkColorScheme: DarkColorScheme;
   lightColorScheme: LightColorScheme;
   primaryColorScheme: PrimaryColorScheme;
   notification: Notification;

@@ -1,28 +1,17 @@
-// Import Dependencies
-import clsx from "clsx";
 import { ReactNode } from "react";
+import clsx from "clsx";
 
 // ----------------------------------------------------------------------
 
-export type InputErrorMsgProps = {
-  when: boolean;
-  children: ReactNode;
+interface InputErrorMsgProps {
+  when?: boolean;
   className?: string;
-};
+  children?: ReactNode;
+}
 
-export function InputErrorMsg({
-  when,
-  children,
-  className,
-}: InputErrorMsgProps) {
-  return when ? (
-    <span
-      className={clsx(
-        "input-text-error mt-1 text-xs text-error dark:text-error-lighter",
-        className,
-      )}
-    >
-      {children}
-    </span>
-  ) : null;
+export function InputErrorMsg({ when, className, children }: InputErrorMsgProps) {
+  if (!when) return null;
+  return (
+    <p className={clsx("mt-1 text-xs text-error", className)}>{children}</p>
+  );
 }

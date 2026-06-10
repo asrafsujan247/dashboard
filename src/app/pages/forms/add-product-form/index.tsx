@@ -66,11 +66,11 @@ const AddProductForm = () => {
       </div>
       <div className="col-span-12 sm:col-span-8 lg:col-span-9">
         <Card className="flex h-full flex-col">
-          <div className="dark:border-dark-500 flex items-center space-x-2 border-b border-gray-200 p-4 sm:px-5">
-            <div className="bg-primary-600/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400 flex size-7 items-center justify-center rounded-lg p-1">
+          <div className=" flex items-center space-x-2 border-b border-gray-200 p-4 sm:px-5">
+            <div className="bg-primary-600/10 text-primary-600  flex size-7 items-center justify-center rounded-lg p-1">
               <StepIcon className="size-4" />
             </div>
-            <h4 className="dark:text-dark-100 text-lg font-medium text-gray-800">
+            <h4 className=" text-lg font-medium text-gray-800">
               <span> {steps[currentStep].label}</span>
             </h4>
           </div>
@@ -90,7 +90,7 @@ const AddProductForm = () => {
   return (
     <Page title="Add Product Form">
       <div className="transition-content grid w-full grid-rows-[auto_1fr] px-(--margin-x) pb-8">
-        <h2 className="dark:text-dark-50 py-5 text-xl font-medium tracking-wide text-gray-800 lg:py-6 lg:text-2xl">
+        <h2 className=" py-5 text-xl font-medium tracking-wide text-gray-800 lg:py-6 lg:text-2xl">
           Add New Product
         </h2>
 

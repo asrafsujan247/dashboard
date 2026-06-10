@@ -74,12 +74,12 @@ export function CountrySource() {
   return (
     <Card className="pb-4">
       <div className="flex h-14 min-w-0 items-center justify-between px-4 py-3 sm:px-5">
-        <h2 className="dark:text-dark-100 min-w-0 font-medium tracking-wide text-gray-800">
+        <h2 className=" min-w-0 font-medium tracking-wide text-gray-800">
           Country Source
         </h2>
         <a
           href="##"
-          className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70 dark:text-primary-400 dark:hover:text-primary-400/70 dark:focus:text-primary-400/70 border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
+          className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70   border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
         >
           View All
         </a>
@@ -87,8 +87,8 @@ export function CountrySource() {
 
       <div className="-mt-2 px-4 sm:px-5">
         <p>
-          <span className="dark:text-dark-100 text-2xl text-gray-800">93</span>
-          <span className="text-success dark:text-success-lighter text-xs">
+          <span className=" text-2xl text-gray-800">93</span>
+          <span className="text-success text-xs">
             {" "}
             +1.3%
           </span>
@@ -103,7 +103,7 @@ export function CountrySource() {
         {countries.map((country) => (
           <Box
             key={country.uid}
-            className="border-gray-150 dark:border-dark-600 inline-flex shrink-0 items-center gap-4 rounded-lg border p-2"
+            className="border-gray-150 inline-flex shrink-0 items-center gap-4 rounded-lg border p-2"
           >
             <div className="flex items-center gap-2">
               <img className="size-6" src={country.flag} alt={country.name} />

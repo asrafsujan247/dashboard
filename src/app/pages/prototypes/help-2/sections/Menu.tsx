@@ -62,14 +62,14 @@ export function Menu() {
           className={clsx(
             "relative rounded-lg px-4 py-10 text-center",
             isActive
-              ? "bg-primary-600 dark:bg-primary-500 text-white"
-              : "shadow-soft dark:bg-dark-700 dark:text-dark-100 bg-white text-gray-800 dark:shadow-none",
+              ? "bg-primary-600 text-white"
+              : "shadow-soft bg-white text-gray-800",
           )}
         >
           <Icon
             className={clsx(
               "inline size-12",
-              !isActive && "text-primary-600 dark:text-primary-400",
+              !isActive && "text-primary-600",
             )}
           />
           <h4 className="mt-2 text-lg font-medium">{title}</h4>

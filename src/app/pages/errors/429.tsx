@@ -9,8 +9,6 @@ export default function Error429() {
   const {
     primaryColorScheme: primary,
     lightColorScheme: light,
-    darkColorScheme: dark,
-    isDark,
   } = useThemeContext();
 
   return (
@@ -21,17 +19,17 @@ export default function Error429() {
             className="w-full"
             style={{
               ["--primary" as string]: primary[500],
-              ["--dark-700" as string]: isDark ? dark[700] : light[100],
-              ["--dark-800" as string]: isDark ? dark[800] : light[300],
+              ["--dark-700" as string]: light[100],
+              ["--dark-800" as string]: light[300],
             }}
           />
-          <p className="pt-6 text-7xl font-bold text-primary-600 dark:text-primary-500">
+          <p className="pt-6 text-7xl font-bold text-primary-600">
             429
           </p>
-          <p className="pt-4 text-xl font-semibold text-gray-800 dark:text-dark-50">
+          <p className="pt-4 text-xl font-semibold text-gray-800">
             Too many requests
           </p>
-          <p className="text-balance pt-2 text-gray-500 dark:text-dark-200">
+          <p className="text-balance pt-2 text-gray-500">
             The user has send too many requests in a given amount of time.
             Intended for use with rate limiting schemas
           </p>

@@ -25,11 +25,11 @@ export default function Help2() {
       <div className="transition-content w-full px-(--margin-x) pb-8">
         <div className="flex items-center justify-between space-x-4 py-5 lg:py-6">
           <div className="flex items-center space-x-4">
-            <h2 className="dark:text-dark-50 text-xl font-medium tracking-wide text-gray-800 lg:text-2xl">
+            <h2 className=" text-xl font-medium tracking-wide text-gray-800 lg:text-2xl">
               Help v2
             </h2>
             <div className="hidden self-stretch py-1 sm:flex">
-              <div className="dark:bg-dark-600 h-full w-px bg-gray-300"></div>
+              <div className=" h-full w-px bg-gray-300"></div>
             </div>
             <Breadcrumbs items={breadcrumbs} className="max-sm:hidden" />
           </div>

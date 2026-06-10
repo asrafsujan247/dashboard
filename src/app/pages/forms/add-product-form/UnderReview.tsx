@@ -31,11 +31,11 @@ export function UnderReview() {
       />
       <div className="h-full text-center">
         <AnimatedTick
-          className="text-success dark:text-success-light mx-auto h-auto w-48"
+          className="text-success mx-auto h-auto w-48"
           strokeWidth={8}
         />
 
-        <p className="dark:text-dark-50 mt-6 pt-4 text-xl font-semibold text-gray-800">
+        <p className=" mt-6 pt-4 text-xl font-semibold text-gray-800">
           You Uploaded Product successfully
         </p>
         <p className="mx-auto mt-2 max-w-(--breakpoint-lg) text-balance">

@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   CheckBadgeIcon,
   ClockIcon,
@@ -19,55 +19,55 @@ export function Statistics() {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-2">
         <Card className="p-3 lg:p-4">
           <div className="flex justify-between gap-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-dark-100">
+            <p className="text-xl font-semibold text-gray-800">
               $67.6k
             </p>
-            <CurrencyDollarIcon className="this:primary size-5 text-this dark:text-this-light" />
+            <CurrencyDollarIcon className="size-5 text-this-primary" />
           </div>
           <p className="mt-1 text-xs-plus">Income</p>
         </Card>
         <Card className="p-3 lg:p-4">
           <div className="flex justify-between gap-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-dark-100">
+            <p className="text-xl font-semibold text-gray-800">
               7.6k
             </p>
-            <CheckBadgeIcon className="this:success size-5 text-this dark:text-this-light" />
+            <CheckBadgeIcon className="size-5 text-this-success" />
           </div>
           <p className="mt-1 text-xs-plus">Completed</p>
         </Card>
         <Card className="p-3 lg:p-4">
           <div className="flex justify-between gap-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-dark-100">
+            <p className="text-xl font-semibold text-gray-800">
               143
             </p>
-            <ClockIcon className="this:warning size-5 text-this dark:text-this-light" />
+            <ClockIcon className="size-5 text-this-warning" />
           </div>
           <p className="mt-1 text-xs-plus">Pending</p>
         </Card>
         <Card className="p-3 lg:p-4">
           <div className="flex justify-between gap-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-dark-100">
+            <p className="text-xl font-semibold text-gray-800">
               618
             </p>
-            <TruckIcon className="this:info size-5 text-this dark:text-this-light" />
+            <TruckIcon className="size-5 text-this-info" />
           </div>
           <p className="mt-1 text-xs-plus">Dispatch</p>
         </Card>
         <Card className="p-3 lg:p-4">
           <div className="flex justify-between gap-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-dark-100">
+            <p className="text-xl font-semibold text-gray-800">
               46k
             </p>
-            <CubeIcon className="this:secondary size-5 text-this dark:text-this-light" />
+            <CubeIcon className="size-5 text-this-secondary" />
           </div>
           <p className="mt-1 text-xs-plus">Products</p>
         </Card>
         <Card className="p-3 lg:p-4">
           <div className="flex justify-between gap-1">
-            <p className="text-xl font-semibold text-gray-800 dark:text-dark-100">
+            <p className="text-xl font-semibold text-gray-800">
               8.8k
             </p>
-            <UsersIcon className="this:error size-5 text-this dark:text-this-light" />
+            <UsersIcon className="size-5 text-this-error" />
           </div>
           <p className="mt-1 text-xs-plus">Customers</p>
         </Card>
@@ -75,3 +75,4 @@ export function Statistics() {
     </div>
   );
 }
+

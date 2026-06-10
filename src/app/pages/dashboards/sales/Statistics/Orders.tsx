@@ -73,10 +73,10 @@ const chartConfig: ApexOptions = {
 export function Orders() {
   return (
     <Card className="row-span-2 flex flex-col">
-      <h2 className="min-w-0 px-4 pt-3 font-medium tracking-wide text-gray-800 dark:text-dark-100 sm:px-5">
+      <h2 className="min-w-0 px-4 pt-3 font-medium tracking-wide text-gray-800 sm:px-5">
         Orders
       </h2>
-      <p className="grow px-4 mt-1 text-xl font-semibold text-gray-800 dark:text-dark-100 sm:px-5">
+      <p className="grow px-4 mt-1 text-xl font-semibold text-gray-800 sm:px-5">
         22.6k
       </p>
       <div className="ax-transparent-gridline">

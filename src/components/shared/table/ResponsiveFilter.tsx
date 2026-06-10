@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   PopoverButton,
   Dialog,
@@ -76,7 +76,7 @@ const MobileView = ({
         className={clsx(
           "h-8 gap-2 px-2.5 text-xs whitespace-nowrap",
           isOpen
-            ? "border-primary-600 ring-primary-500/50 dark:border-primary-500 ring-3"
+            ? "border-primary-600 ring-primary-500/50 ring-3"
             : "border-dashed",
           classNames?.button,
         )}
@@ -99,7 +99,7 @@ const MobileView = ({
           leave="ease-in duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity dark:bg-black/40"
+          className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity"
         />
         <TransitionChild
           as={DialogPanel}
@@ -109,7 +109,7 @@ const MobileView = ({
           leave="ease-in transform-gpu transition-transform duration-200"
           leaveFrom="translate-y-0"
           leaveTo="translate-y-full"
-          className="dark:bg-dark-700 fixed bottom-0 left-0 flex w-full transform-gpu flex-col rounded-t-2xl bg-white transition-transform duration-200"
+          className=" fixed bottom-0 left-0 flex w-full transform-gpu flex-col rounded-t-2xl bg-white transition-transform duration-200"
         >
           {children}
         </TransitionChild>
@@ -134,7 +134,7 @@ const DesktopView = ({
             className={clsx(
               "h-8 gap-2 px-2.5 text-xs whitespace-nowrap",
               open
-                ? "border-primary-600 ring-primary-500/50 dark:border-primary-500 ring-3"
+                ? "border-primary-600 ring-primary-500/50 ring-3"
                 : "border-dashed",
               classNames?.button,
             )}
@@ -150,7 +150,7 @@ const DesktopView = ({
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-2"
             anchor={anchor}
-            className="ring-primary-500/50 dark:border-dark-500 dark:bg-dark-750 z-100 flex w-fit flex-col rounded-md border border-gray-300 bg-white shadow-lg shadow-gray-200/50 outline-hidden focus-visible:ring-3 focus-visible:outline-hidden dark:shadow-none"
+            className="ring-primary-500/50  z-100 flex w-fit flex-col rounded-md border border-gray-300 bg-white shadow-lg shadow-gray-200/50 outline-hidden focus-visible:ring-3 focus-visible:outline-hidden "
           >
             <div className="flex flex-col overflow-hidden">{children}</div>
           </Transition>
@@ -159,3 +159,5 @@ const DesktopView = ({
     </Popover>
   );
 };
+
+

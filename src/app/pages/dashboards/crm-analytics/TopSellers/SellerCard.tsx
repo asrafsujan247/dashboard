@@ -59,10 +59,10 @@ export function SellerCard({
           />
 
           <div>
-            <p className="dark:text-dark-100 font-medium text-gray-800">
+            <p className=" font-medium text-gray-800">
               {name}
             </p>
-            <p className="dark:text-dark-300 text-xs text-gray-400">Employee</p>
+            <p className=" text-xs text-gray-400">Employee</p>
           </div>
         </div>
         <div className="flex gap-2">
@@ -71,7 +71,7 @@ export function SellerCard({
               <ChatBubbleOvalLeftEllipsisIcon className="size-4" />
             </Button>
             {messages && (
-              <div className="bg-primary-600 text-tiny dark:bg-primary-500 pointer-events-none absolute top-0 right-0 -m-1 flex h-4 min-w-[1rem] items-center justify-center rounded-full px-1 leading-none font-medium text-white">
+              <div className="bg-primary-600 text-tiny pointer-events-none absolute top-0 right-0 -m-1 flex h-4 min-w-[1rem] items-center justify-center rounded-full px-1 leading-none font-medium text-white">
                 {messages}
               </div>
             )}
@@ -81,7 +81,7 @@ export function SellerCard({
               <EnvelopeIcon className="size-4" />
             </Button>
             {mails && (
-              <div className="bg-primary-600 text-tiny dark:bg-primary-500 pointer-events-none absolute top-0 right-0 -m-1 flex h-4 min-w-[1rem] items-center justify-center rounded-full px-1 leading-none font-medium text-white">
+              <div className="bg-primary-600 text-tiny pointer-events-none absolute top-0 right-0 -m-1 flex h-4 min-w-[1rem] items-center justify-center rounded-full px-1 leading-none font-medium text-white">
                 {mails}
               </div>
             )}
@@ -92,19 +92,19 @@ export function SellerCard({
       <div className="flex justify-between gap-2">
         <div>
           <p className="text-xs-plus">Sells</p>
-          <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+          <p className=" text-xl font-semibold text-gray-800">
             {sells}
           </p>
         </div>
         <div>
           <p className="text-xs-plus">Target</p>
-          <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+          <p className=" text-xl font-semibold text-gray-800">
             {target}
           </p>
         </div>
         <div>
           <p className="text-xs-plus">Clients</p>
-          <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+          <p className=" text-xl font-semibold text-gray-800">
             {clients}
           </p>
         </div>
@@ -114,7 +114,7 @@ export function SellerCard({
         <div className="flex w-full gap-1">
           {relations?.calls && (
             <div
-              className="this:primary bg-this dark:bg-this-light h-2 rounded-full"
+              className="h-2 rounded-full bg-this-primary"
               style={{
                 width: `${relations.calls * 100}%`,
               }}
@@ -122,7 +122,7 @@ export function SellerCard({
           )}
           {relations?.chatMessages && (
             <div
-              className="this:success bg-this dark:bg-this-light h-2 rounded-full"
+              className="h-2 rounded-full bg-this-success"
               style={{
                 width: `${relations.chatMessages * 100}%`,
               }}
@@ -130,7 +130,7 @@ export function SellerCard({
           )}
           {relations?.emails && (
             <div
-              className="this:info bg-this dark:bg-this-light h-2 rounded-full"
+              className="h-2 rounded-full bg-this-info"
               style={{
                 width: `${relations.emails * 100}%`,
               }}
@@ -140,9 +140,9 @@ export function SellerCard({
         <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
           {relations?.calls && (
             <div className="inline-flex items-center gap-x-2">
-              <div className="this:primary bg-this dark:bg-this-light size-2 rounded-full" />
+              <div className="size-2 rounded-full bg-this-primary" />
               <div className="flex space-x-1 text-xs leading-none">
-                <span className="dark:text-dark-100 font-medium text-gray-800">
+                <span className=" font-medium text-gray-800">
                   Calls
                 </span>
                 <span>{(relations.calls * 100).toFixed(0)}%</span>
@@ -151,9 +151,9 @@ export function SellerCard({
           )}
           {relations?.chatMessages && (
             <div className="inline-flex items-center gap-x-2">
-              <div className="this:success bg-this dark:bg-this-light size-2 rounded-full" />
+              <div className="size-2 rounded-full bg-this-success" />
               <div className="flex space-x-1 text-xs leading-none">
-                <span className="dark:text-dark-100 font-medium text-gray-800">
+                <span className=" font-medium text-gray-800">
                   Chat Messages
                 </span>
                 <span>{(relations.chatMessages * 100).toFixed(0)}%</span>
@@ -162,9 +162,9 @@ export function SellerCard({
           )}
           {relations?.emails && (
             <div className="inline-flex items-center gap-x-2">
-              <div className="this:info bg-this dark:bg-this-light size-2 rounded-full" />
+              <div className="size-2 rounded-full bg-this-info" />
               <div className="flex space-x-1 text-xs leading-none">
-                <span className="dark:text-dark-100 font-medium text-gray-800">
+                <span className=" font-medium text-gray-800">
                   Emails
                 </span>
                 <span>{(relations?.emails * 100).toFixed(0)}%</span>

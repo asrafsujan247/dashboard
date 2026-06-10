@@ -7,5 +7,5 @@
 }
 
 .avatar-dot {
-  @apply size-3.5 border-2 border-white dark:border-dark-700;
+  @apply size-3.5 border-2 border-white
 }

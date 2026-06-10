@@ -30,15 +30,15 @@ export type BadgeProps<E extends ElementType = "div"> =
 const variants: Record<Variant, string> = {
   filled: "text-white bg-this",
   outlined:
-    "border border-this/30 text-this dark:border-this-lighter/30 dark:text-this-lighter",
-  soft: "text-this-darker bg-this-darker/[0.07] dark:text-this-lighter dark:bg-this-lighter/10",
+    "border border-this/30 text-this",
+  soft: "text-this-darker bg-this-darker/[0.07]"
 };
 
 const neutralVariants: Record<Variant, string> = {
-  filled: "bg-gray-200 text-gray-900 dark:bg-surface-2 dark:text-dark-50",
+  filled: "bg-gray-200 text-gray-900",
   outlined:
-    "border border-gray-300 text-gray-900 dark:border-surface-1 dark:text-dark-50",
-  soft: "bg-gray-200/30 text-gray-900 dark:bg-dark-500/30 dark:text-dark-50",
+    "border border-gray-300 text-gray-900",
+  soft: "bg-gray-200/30 text-gray-900"
 };
 
 const BadgeInner = forwardRef(
@@ -68,13 +68,13 @@ const BadgeInner = forwardRef(
               ? [
                 neutralVariants[variant],
                 isGlow &&
-                "dark:shadow-dark-450/50 shadow-lg shadow-gray-200/50",
+                " shadow-lg shadow-gray-200/50",
               ]
               : [
                 setThisClass(color),
                 variants[variant],
                 isGlow &&
-                "shadow-this/50 dark:shadow-this-light/50 shadow-lg",
+                "shadow-this/50 shadow-lg",
               ],
           ],
           className,

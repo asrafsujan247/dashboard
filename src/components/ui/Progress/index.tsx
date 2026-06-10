@@ -62,8 +62,8 @@ const Progress = forwardRef(
           showRail &&
             !unstyled && [
               color === "neutral" || variant !== "soft"
-                ? "bg-gray-150 dark:bg-dark-500"
-                : [setThisClass(color), "bg-this/[.15] dark:bg-this-light/25"],
+                ? "bg-gray-150"
+                : [setThisClass(color), "bg-this/[.15]"],
             ],
           className,
           classNames?.root,
@@ -76,8 +76,8 @@ const Progress = forwardRef(
             "progress relative rounded-full transition-[width] ease-out",
             !unstyled && [
               color === "neutral"
-                ? "dark:bg-dark-400 bg-gray-500"
-                : [setThisClass(color), "bg-this dark:bg-this-light"],
+                ? " bg-gray-500"
+                : [setThisClass(color), "bg-this"],
             ],
             isActive && "is-active",
             isIndeterminate

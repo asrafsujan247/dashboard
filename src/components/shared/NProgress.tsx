@@ -11,7 +11,7 @@ interface NProgressProps {
 }
 
 function NProgress({ isAnimating }: NProgressProps) {
-  const { primaryColorScheme: primary, isDark } = useThemeContext();
+  const { primaryColorScheme: primary } = useThemeContext();
   const { animationDuration, isFinished, progress } = useNProgress({
     isAnimating,
   });
@@ -27,7 +27,7 @@ function NProgress({ isAnimating }: NProgressProps) {
         <div
           className="relative h-full"
           style={{
-            backgroundColor: isDark ? primary[500] : primary[600],
+            backgroundColor: primary[600],
             width: `${progress * 100}%`,
             transition: `width ${animationDuration}ms ease-out`,
           }}
@@ -35,9 +35,7 @@ function NProgress({ isAnimating }: NProgressProps) {
           <div
             className="absolute right-0 h-full opacity-100"
             style={{
-              boxShadow: `0 0 10px ${
-                isDark ? primary[500] : primary[600]
-              }, 0 0 5px ${isDark ? primary[500] : primary[600]}`,
+              boxShadow: `0 0 10px ${primary[600]}, 0 0 5px ${primary[600]}`,
               transform: "rotate(3deg) translate(0px, -4px)",
               width: 100,
             }}

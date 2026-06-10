@@ -18,10 +18,10 @@ export function Overview() {
       <Card className="flex justify-between p-5">
         <div>
           <p>Sales</p>
-          <p className="this:info text-this dark:text-this-lighter mt-0.5 text-2xl font-medium">
+          <p className="text-this-info mt-0.5 text-2xl font-medium">
             6.5k
           </p>
-          <p className="this:success text-this dark:text-this-lighter mt-3 flex items-center gap-1">
+          <p className="text-this-success mt-3 flex items-center gap-1">
             <ArrowUpIcon className="size-4" />
             <span>4.3%</span>
           </p>
@@ -41,10 +41,10 @@ export function Overview() {
       <Card className="flex justify-between p-5">
         <div>
           <p>Customers</p>
-          <p className="this:warning text-this dark:text-this-lighter mt-0.5 text-2xl font-medium">
+          <p className="text-this-warning mt-0.5 text-2xl font-medium">
             12k
           </p>
-          <p className="this:success text-this dark:text-this-lighter mt-3 flex items-center gap-1">
+          <p className="text-this-success mt-3 flex items-center gap-1">
             <ArrowUpIcon className="size-4" />
             <span>7.2%</span>
           </p>
@@ -64,10 +64,10 @@ export function Overview() {
       <Card className="flex justify-between p-5">
         <div>
           <p>Products</p>
-          <p className="this:success text-this dark:text-this-lighter mt-0.5 text-2xl font-medium">
+          <p className="this:success text-this mt-0.5 text-2xl font-medium">
             47k
           </p>
-          <p className="this:success text-this dark:text-this-lighter mt-3 flex items-center gap-1">
+          <p className="text-this-success mt-3 flex items-center gap-1">
             <ArrowUpIcon className="size-4" />
             <span>8%</span>
           </p>
@@ -87,10 +87,10 @@ export function Overview() {
       <Card className="flex justify-between p-5">
         <div>
           <p>Revenue</p>
-          <p className="this:secondary text-this dark:text-this-lighter mt-0.5 text-2xl font-medium">
+          <p className="text-this-secondary mt-0.5 text-2xl font-medium">
             $128k
           </p>
-          <p className="this:success text-this dark:text-this-lighter mt-3 flex items-center gap-1">
+          <p className="text-this-success mt-3 flex items-center gap-1">
             <ArrowUpIcon className="size-4" />
             <span>3.69%</span>
           </p>

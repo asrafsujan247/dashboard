@@ -11,7 +11,7 @@ import { useHover } from "@/hooks";
 // ----------------------------------------------------------------------
 
 export default function Error404() {
-  const { primaryColorScheme: primary, isDark } = useThemeContext();
+  const { primaryColorScheme: primary } = useThemeContext();
   const [btnRef, btnHovered] = useHover();
 
   return (
@@ -21,14 +21,14 @@ export default function Error404() {
           <Error404Magnify
             className="w-full"
             style={{
-              ["--primary" as string]: isDark ? primary[500] : primary[600],
+              ["--primary" as string]: primary[600],
               ["--primary-light" as string]: primary[300],
             } as React.CSSProperties}
           />
-          <p className="pt-4 text-xl font-semibold text-gray-800 dark:text-dark-50">
+          <p className="pt-4 text-xl font-semibold text-gray-800">
             Oops. This Page Not Found.
           </p>
-          <p className="pt-2 text-gray-500 dark:text-dark-200">
+          <p className="pt-2 text-gray-500">
             This page you are looking not available. Please back to home
           </p>
           <div className="mt-8">

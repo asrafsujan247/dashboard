@@ -19,26 +19,26 @@ export function CustomerSatisfaction() {
   return (
     <Box className="col-span-12 lg:col-span-4">
       <div className="flex min-w-0 items-center justify-between">
-        <h2 className="min-w-0 font-medium tracking-wide text-gray-800 dark:text-dark-100">
+        <h2 className="min-w-0 font-medium tracking-wide text-gray-800">
           Customer Satisfaction
         </h2>
         <ActionMenu />
       </div>
       <div className="mt-3">
         <p>
-          <span className="text-3xl text-gray-800 dark:text-dark-100">9.7</span>
-          <span className="this:success text-xs text-this dark:text-this-lighter">
+          <span className="text-3xl text-gray-800">85%</span>
+          <span className="text-xs text-this-success">
             +2.1%
           </span>
         </p>
         <p className="text-xs-plus">Performance score</p>
       </div>
       <div className="mt-4 flex w-full gap-1">
-        <div className="this:primary h-2 w-5/12 rounded-full bg-this dark:bg-this-light" />
-        <div className="this:success w-2/12 rounded-full bg-this dark:bg-this-light" />
-        <div className="this:info w-2/12 rounded-full bg-this dark:bg-this-light" />
-        <div className="this:warning w-2/12 rounded-full bg-this dark:bg-this-light" />
-        <div className="this:error h-2 w-1/12 rounded-full bg-this dark:bg-this-light" />
+        <div className="h-2 w-5/12 rounded-full bg-this-primary" />
+        <div className="w-2/12 rounded-full bg-this-success" />
+        <div className="w-2/12 rounded-full bg-this-info" />
+        <div className="w-2/12 rounded-full bg-this-warning" />
+        <div className="h-2 w-1/12 rounded-full bg-this-error" />
       </div>
       <div className="hide-scrollbar mt-4 min-w-full overflow-x-auto">
         <table className="w-full">
@@ -46,14 +46,14 @@ export function CustomerSatisfaction() {
             <tr>
               <td className="whitespace-nowrap py-2">
                 <div className="flex items-center gap-2">
-                  <div className="this:primary size-3.5 rounded-full border-2 border-this dark:border-this-light"></div>
-                  <p className="font-medium tracking-wide text-gray-800 dark:text-dark-100">
-                    Exellent
+                  <div className="size-3.5 rounded-full border-2 border-this-primary bg-this-primary" />
+                  <p className="font-medium tracking-wide text-gray-800">
+                    Excellent
                   </p>
                 </div>
               </td>
               <td className="whitespace-nowrap py-2 text-end">
-                <p className="font-medium text-gray-800 dark:text-dark-100">
+                <p className="font-medium text-gray-800">
                   1 029
                 </p>
               </td>
@@ -62,14 +62,14 @@ export function CustomerSatisfaction() {
             <tr>
               <td className="whitespace-nowrap py-2">
                 <div className="flex items-center gap-2">
-                  <div className="this:success size-3.5 rounded-full border-2 border-this dark:border-this-light"></div>
-                  <p className="font-medium tracking-wide text-gray-800 dark:text-dark-100">
+                  <div className="size-3.5 rounded-full border-2 border-this-success bg-this-success" />
+                  <p className="font-medium tracking-wide text-gray-800">
                     Very Good
                   </p>
                 </div>
               </td>
               <td className="whitespace-nowrap py-2 text-end">
-                <p className="font-medium text-gray-800 dark:text-dark-100">
+                <p className="font-medium text-gray-800">
                   426
                 </p>
               </td>
@@ -78,14 +78,14 @@ export function CustomerSatisfaction() {
             <tr>
               <td className="whitespace-nowrap py-2">
                 <div className="flex items-center gap-2">
-                  <div className="this:info size-3.5 rounded-full border-2 border-this dark:border-this-light"></div>
-                  <p className="font-medium tracking-wide text-gray-800 dark:text-dark-100">
+                  <div className="size-3.5 rounded-full border-2 border-this-info bg-this-info" />
+                  <p className="font-medium tracking-wide text-gray-800">
                     Good
                   </p>
                 </div>
               </td>
               <td className="whitespace-nowrap py-2 text-end">
-                <p className="font-medium text-gray-800 dark:text-dark-100">
+                <p className="font-medium text-gray-800">
                   326
                 </p>
               </td>
@@ -94,14 +94,14 @@ export function CustomerSatisfaction() {
             <tr>
               <td className="whitespace-nowrap py-2">
                 <div className="flex items-center gap-2">
-                  <div className="this:warning size-3.5 rounded-full border-2 border-this dark:border-this-light"></div>
-                  <p className="font-medium tracking-wide text-gray-800 dark:text-dark-100">
+                  <div className="size-3.5 rounded-full border-2 border-this-warning bg-this-warning" />
+                  <p className="font-medium tracking-wide text-gray-800">
                     Poor
                   </p>
                 </div>
               </td>
               <td className="whitespace-nowrap py-2 text-end">
-                <p className="font-medium text-gray-800 dark:text-dark-100">
+                <p className="font-medium text-gray-800">
                   395
                 </p>
               </td>
@@ -110,14 +110,14 @@ export function CustomerSatisfaction() {
             <tr>
               <td className="whitespace-nowrap py-2">
                 <div className="flex items-center gap-2">
-                  <div className="this:error size-3.5 rounded-full border-2 border-this dark:border-this-light"></div>
-                  <p className="font-medium tracking-wide text-gray-800 dark:text-dark-100">
+                  <div className="size-3.5 rounded-full border-2 border-this-error bg-this-error" />
+                  <p className="font-medium tracking-wide text-gray-800">
                     Very Poor
                   </p>
                 </div>
               </td>
               <td className="whitespace-nowrap py-2 text-end">
-                <p className="font-medium text-gray-800 dark:text-dark-100">
+                <p className="font-medium text-gray-800">
                   129
                 </p>
               </td>
@@ -153,14 +153,14 @@ function ActionMenu() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
       >
-        <MenuItems className="absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden dark:border-dark-500 dark:bg-dark-700 dark:shadow-none ltr:right-0 rtl:left-0">
+        <MenuItems className="absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden   ltr:right-0 rtl:left-0">
           <MenuItem>
             {({ focus }) => (
               <button
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                    "bg-gray-100 text-gray-800"
                 )}
               >
                 <span>Action</span>
@@ -173,7 +173,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                    "bg-gray-100 text-gray-800"
                 )}
               >
                 <span>Another action</span>
@@ -186,7 +186,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                    "bg-gray-100 text-gray-800"
                 )}
               >
                 <span>Other action</span>
@@ -194,7 +194,7 @@ function ActionMenu() {
             )}
           </MenuItem>
 
-          <hr className="mx-3 my-1.5 h-px border-gray-150 dark:border-dark-500" />
+          <hr className="mx-3 my-1.5 h-px border-gray-150" />
 
           <MenuItem>
             {({ focus }) => (
@@ -202,7 +202,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                    "bg-gray-100 text-gray-800"
                 )}
               >
                 <span>Separated action</span>

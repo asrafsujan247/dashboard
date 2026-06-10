@@ -47,18 +47,18 @@ export function Stepper({
               "pb-12 last:pb-0",
               currentStep > i
                 ? "before:bg-primary-500"
-                : "dark:before:bg-dark-500 before:bg-gray-200",
+                : " before:bg-gray-200",
             )}
             key={step.key}
           >
             <button
               className={clsx(
-                "step-header rounded-full outline-hidden dark:text-white",
+                "step-header rounded-full outline-hidden",
                 isClickable && "cursor-pointer",
                 currentStep === i && "ring-primary-500 ring-2",
                 stepStatus[step.key as keyof typeof stepStatus]?.isDone
-                  ? "bg-primary-600 dark:bg-primary-500 dark:ring-offset-dark-900 text-white ring-offset-[3px] ring-offset-gray-100"
-                  : "dark:bg-dark-500 bg-gray-200 text-gray-950",
+                  ? "bg-primary-600  text-white ring-offset-[3px] ring-offset-gray-100"
+                  : " bg-gray-200 text-gray-950",
               )}
               {...{
                 onClick: isClickable
@@ -86,8 +86,8 @@ export function Stepper({
                 className={clsx(
                   "text-base font-medium",
                   currentStep === i
-                    ? "text-primary-600 dark:text-primary-400"
-                    : "dark:text-dark-100 text-gray-800",
+                    ? "text-primary-600"
+                    : " text-gray-800",
                 )}
               >
                 {step.label}

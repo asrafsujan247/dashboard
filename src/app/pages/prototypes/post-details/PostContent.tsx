@@ -1,7 +1,7 @@
 export function PostContent() {
   return (
-    <div className="dark:text-dark-200 mt-6 text-base text-gray-600">
-      <h1 className="dark:text-dark-50 text-xl font-medium text-gray-900 lg:text-2xl">
+    <div className=" mt-6 text-base text-gray-600">
+      <h1 className=" text-xl font-medium text-gray-900 lg:text-2xl">
         313 Pattern and Color ideas
       </h1>
       <h3 className="mt-1">
@@ -14,7 +14,7 @@ export function PostContent() {
         src="/images/objects/object-2.jpg"
         alt="postimage"
       />
-      <p className="text-xs-plus dark:text-dark-300 mt-1 text-center text-gray-400">
+      <p className="text-xs-plus mt-1 text-center text-gray-400">
         <span> Photo by </span>
         <a href="##" className="underline">
           Unsplash
@@ -46,8 +46,8 @@ export function PostContent() {
         was meant to be disjointed and arbitrary anyway.
       </p>
       <br />
-      <div className="dark:border-dark-400 border-l-4 border-gray-300 pl-4">
-        <p className="dark:text-dark-100 font-medium text-gray-800 italic">
+      <div className=" border-l-4 border-gray-300 pl-4">
+        <p className=" font-medium text-gray-800 italic">
           Why is Tailwind removing the default styles on my h1 elements? How do
           I disable this? What do you mean I lose all the other base styles too?
         </p>
@@ -69,7 +69,7 @@ export function PostContent() {
         was meant to be disjointed and arbitrary anyway.
       </p>
       <br />
-      <ul className="dark:text-dark-100 list-inside list-disc font-medium text-gray-800">
+      <ul className=" list-inside list-disc font-medium text-gray-800">
         <li>
           Now this is a story all about how, my life got flipped-turned upside
           down

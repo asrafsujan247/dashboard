@@ -148,7 +148,7 @@ export function Overview() {
     <Card className="col-span-12 lg:col-span-8">
       <div className="flex flex-col justify-between px-4 pt-3 sm:flex-row sm:items-center sm:px-5">
         <div className="flex flex-1 items-center justify-between space-x-2 sm:flex-initial">
-          <h2 className="text-sm-plus dark:text-dark-100 font-medium tracking-wide text-gray-800">
+          <h2 className="text-sm-plus font-medium tracking-wide text-gray-800">
             Order Overview
           </h2>
           <ActionMenu />
@@ -185,39 +185,39 @@ export function Overview() {
       </div>
 
       <div className="mt-4 grid grid-cols-2 gap-3 px-4 sm:mt-5 sm:grid-cols-4 sm:px-5 lg:mt-6">
-        <div className="dark:bg-surface-3 rounded-lg bg-gray-100 p-3 2xl:p-4">
+        <div className=" rounded-lg bg-gray-100 p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               $67.6k
             </p>
-            <CurrencyDollarIcon className="this:secondary text-this dark:text-this-light size-5" />
+            <CurrencyDollarIcon className="size-5 text-this-secondary" />
           </div>
           <p className="text-xs-plus mt-1">Income</p>
         </div>
-        <div className="dark:bg-surface-3 rounded-lg bg-gray-100 p-3 2xl:p-4">
+        <div className=" rounded-lg bg-gray-100 p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               7.6k
             </p>
-            <CheckBadgeIcon className="this:success text-this dark:text-this-light size-5" />
+            <CheckBadgeIcon className="size-5 text-this-success" />
           </div>
           <p className="text-xs-plus mt-1">Completed</p>
         </div>
-        <div className="dark:bg-surface-3 rounded-lg bg-gray-100 p-3 2xl:p-4">
+        <div className=" rounded-lg bg-gray-100 p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               1.4k
             </p>
-            <ArrowPathIcon className="this:primary text-this dark:text-this-light size-5" />
+            <ArrowPathIcon className="size-5 text-this-primary" />
           </div>
           <p className="text-xs-plus mt-1">Processing</p>
         </div>
-        <div className="dark:bg-surface-3 rounded-lg bg-gray-100 p-3 2xl:p-4">
+        <div className=" rounded-lg bg-gray-100 p-3 2xl:p-4">
           <div className="flex justify-between space-x-1">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               345
             </p>
-            <ClockIcon className="this:warning text-this dark:text-this-light size-5" />
+            <ClockIcon className="size-5 text-this-warning" />
           </div>
           <p className="text-xs-plus mt-1">Pending</p>
         </div>
@@ -258,14 +258,14 @@ function ActionMenu() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
       >
-        <MenuItems className="dark:border-dark-500 dark:bg-dark-700 absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 sm:ltr:left-0 rtl:left-0 sm:rtl:right-0 dark:shadow-none">
+        <MenuItems className="absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 sm:ltr:left-0 rtl:left-0 sm:rtl:right-0">
           <MenuItem>
             {({ focus }) => (
               <button
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Action</span>
@@ -278,7 +278,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Another action</span>
@@ -291,7 +291,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Other action</span>
@@ -299,7 +299,7 @@ function ActionMenu() {
             )}
           </MenuItem>
 
-          <hr className="border-gray-150 dark:border-dark-500 mx-3 my-1.5 h-px" />
+          <hr className="border-gray-150 mx-3 my-1.5 h-px" />
 
           <MenuItem>
             {({ focus }) => (
@@ -307,7 +307,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Separated action</span>

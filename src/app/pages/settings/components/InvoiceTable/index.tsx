@@ -1,4 +1,4 @@
-// Local Imports
+﻿// Local Imports
 import {
   flexRender,
   getCoreRowModel,
@@ -84,7 +84,7 @@ export function InvoiceTable() {
                   {headerGroup.headers.map((header) => (
                     <Th
                       key={header.id}
-                      className="bg-gray-200 font-semibold uppercase text-gray-800 dark:bg-dark-800 dark:text-dark-100"
+                      className="bg-gray-200 font-semibold uppercase text-gray-800"
                     >
                       {header.column.getCanSort() ? (
                         <div
@@ -117,7 +117,7 @@ export function InvoiceTable() {
                 return (
                   <Tr
                     key={row.id}
-                    className="relative border-y border-transparent border-b-gray-200 dark:border-b-dark-500"
+                    className="relative border-y border-transparent border-b-gray-200"
                   >
                     {row.getVisibleCells().map((cell) => {
                       return (
@@ -163,3 +163,5 @@ export function InvoiceTable() {
     </div>
   );
 }
+
+

@@ -34,7 +34,7 @@ function Breadcrumbs({
             <>
               <NavLink
                 to={item.path}
-                className="tracking-wide text-primary-600 transition-colors hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500"
+                className="tracking-wide text-primary-600 transition-colors hover:text-primary-700"
               >
                 {item.title}
               </NavLink>

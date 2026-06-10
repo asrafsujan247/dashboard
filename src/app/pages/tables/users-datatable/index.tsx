@@ -144,7 +144,7 @@ export default function UsersDatatable() {
           className={clsx(
             "flex h-full w-full flex-col",
             tableSettings.enableFullScreen &&
-              "dark:bg-dark-900 fixed inset-0 z-61 bg-white pt-3",
+              " fixed inset-0 z-61 bg-white pt-3",
           )}
         >
           <Toolbar table={table} />
@@ -175,7 +175,7 @@ export default function UsersDatatable() {
                     (viewType === "list" || tableSettings.enableFullScreen) &&
                       "px-4 sm:px-5",
                     tableSettings.enableFullScreen &&
-                      "dark:bg-dark-800 bg-gray-50",
+                      " bg-gray-50",
                     !(
                       table.getIsSomeRowsSelected() ||
                       table.getIsAllRowsSelected()

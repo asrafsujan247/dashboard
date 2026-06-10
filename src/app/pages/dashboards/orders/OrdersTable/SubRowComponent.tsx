@@ -18,10 +18,10 @@ export function SubRowComponent({
 }) {
   return (
     <div
-      className="dark:border-b-dark-500 dark:bg-dark-750 sticky border-b border-b-gray-200 bg-gray-50 pt-3 pb-4 ltr:left-0 rtl:right-0"
+      className=" sticky border-b border-b-gray-200 bg-gray-50 pt-3 pb-4 ltr:left-0 rtl:right-0"
       style={{ maxWidth: cardWidth }}
     >
-      <p className="dark:text-dark-100 mt-1 px-4 font-medium text-gray-800 sm:px-5 lg:ltr:ml-14 rtl:rtl:mr-14">
+      <p className=" mt-1 px-4 font-medium text-gray-800 sm:px-5 lg:ltr:ml-14 rtl:rtl:mr-14">
         Customer orders:
       </p>
 
@@ -31,11 +31,11 @@ export function SubRowComponent({
           className="text-xs-plus w-full text-left rtl:text-right [&_.table-td]:py-2"
         >
           <THead>
-            <Tr className="dark:border-b-dark-500 border-y border-transparent border-b-gray-200">
+            <Tr className=" border-y border-transparent border-b-gray-200">
               {cols.map((title, index) => (
                 <Th
                   key={index}
-                  className="dark:text-dark-100 py-2 font-semibold text-gray-800 uppercase first:px-0 last:px-0"
+                  className=" py-2 font-semibold text-gray-800 uppercase first:px-0 last:px-0"
                 >
                   {title}
                 </Th>
@@ -46,7 +46,7 @@ export function SubRowComponent({
             {row.original.products.map((tr) => (
               <Tr
                 key={tr.sku}
-                className="dark:border-b-dark-500 border-y border-transparent border-b-gray-200"
+                className=" border-y border-transparent border-b-gray-200"
               >
                 <Td className="px-0 font-medium ltr:rounded-l-lg rtl:rounded-r-lg">
                   <div className="flex items-center space-x-2">
@@ -64,7 +64,7 @@ export function SubRowComponent({
                 <Td>{tr.price}</Td>
                 <Td>{tr.qty}</Td>
                 <Td>{tr.discount}</Td>
-                <Td className="dark:text-dark-100 px-0 font-medium text-gray-800 ltr:rounded-r-lg rtl:rounded-l-lg">
+                <Td className=" px-0 font-medium text-gray-800 ltr:rounded-r-lg rtl:rounded-l-lg">
                   {tr.total}
                 </Td>
               </Tr>
@@ -80,7 +80,7 @@ export function SubRowComponent({
               <Tr>
                 <Td>Summary :</Td>
                 <Td>
-                  <span className="dark:text-dark-100 font-medium text-gray-800">
+                  <span className=" font-medium text-gray-800">
                     ${row.original.subtotal}
                   </span>
                 </Td>
@@ -88,7 +88,7 @@ export function SubRowComponent({
               <Tr>
                 <Td>Delivery fee :</Td>
                 <Td>
-                  <span className="dark:text-dark-100 font-medium text-gray-800">
+                  <span className=" font-medium text-gray-800">
                     ${row.original.delivery_fee}
                   </span>
                 </Td>
@@ -96,12 +96,12 @@ export function SubRowComponent({
               <Tr>
                 <Td>Tax :</Td>
                 <Td>
-                  <span className="dark:text-dark-100 font-medium text-gray-800">
+                  <span className=" font-medium text-gray-800">
                     ${row.original.tax}
                   </span>
                 </Td>
               </Tr>
-              <Tr className="text-primary-600 dark:text-primary-400 text-lg">
+              <Tr className="text-primary-600 text-lg">
                 <Td>Total :</Td>
                 <Td>
                   <span className="font-medium">

@@ -41,10 +41,10 @@ export default function SignIn() {
           <div className="text-center">
             <Logo className="mx-auto size-16" />
             <div className="mt-4">
-              <h2 className="text-2xl font-semibold text-gray-600 dark:text-dark-100">
+              <h2 className="text-2xl font-semibold text-gray-600">
                 Welcome Back
               </h2>
-              <p className="text-gray-400 dark:text-dark-300">
+              <p className="text-gray-400">
                 Please sign in to continue
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function SignIn() {
                 <Checkbox label="Remember me"/>
                 <a
                   href="##"
-                  className="text-xs text-gray-400 transition-colors hover:text-gray-800 focus:text-gray-800 dark:text-dark-300 dark:hover:text-dark-100 dark:focus:text-dark-100"
+                  className="text-xs text-gray-400 transition-colors hover:text-gray-800 focus:text-gray-800"
                 >
                   Forgot Password?
                 </a>
@@ -105,7 +105,7 @@ export default function SignIn() {
               <p className="line-clamp-1">
                 <span>Dont have Account?</span>{" "}
                 <Link
-                  className="text-primary-600 transition-colors hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-600"
+                  className="text-primary-600 transition-colors hover:text-primary-800"
                   to="/pages/sign-up-v1"
                 >
                   Create account
@@ -113,9 +113,9 @@ export default function SignIn() {
               </p>
             </div>
             <div className="my-7 flex items-center space-x-3 text-xs rtl:space-x-reverse">
-              <div className="h-px flex-1 bg-gray-200 dark:bg-dark-500"></div>
+              <div className="h-px flex-1 bg-gray-200" />
               <p>OR</p>
-              <div className="h-px flex-1 bg-gray-200 dark:bg-dark-500"></div>
+              <div className="h-px flex-1 bg-gray-200" />
             </div>
             <div className="flex gap-4">
               <Button className="h-10 flex-1 gap-3" variant="outlined">
@@ -136,9 +136,9 @@ export default function SignIn() {
               </Button>
             </div>
           </Card>
-          <div className="mt-8 flex justify-center text-xs text-gray-400 dark:text-dark-300">
+          <div className="mt-8 flex justify-center text-xs text-gray-400">
             <a href="##">Privacy Notice</a>
-            <div className="mx-2.5 my-0.5 w-px bg-gray-200 dark:bg-dark-500"></div>
+            <div className="mx-2.5 my-0.5 w-px bg-gray-200" />
             <a href="##">Term of service</a>
           </div>
         </div>

@@ -46,15 +46,17 @@ export function Channels() {
             variant="flat"
             className="w-full justify-start gap-2 p-2 text-xs-plus"
           >
-            <HomeIcon className="this:secondary size-4.5 text-this dark:text-this-lighter" />
-            <span className="text-gray-800 dark:text-dark-100">Office</span>
+            <HomeIcon className="size-4.5 text-this-secondary" />
+            <span className="text-gray-800">
+              Warehouse 1
+            </span>
           </Button>
           <Button
             variant="flat"
             className="w-full justify-start gap-2 p-2 text-xs-plus"
           >
-            <HomeIcon className="this:warning size-4.5 text-this dark:text-this-lighter" />
-            <span className="text-gray-800 dark:text-dark-100">
+            <HomeIcon className="size-4.5 text-this-warning" />
+            <span className="text-gray-800">
               Main Warehouse
             </span>
           </Button>
@@ -62,8 +64,8 @@ export function Channels() {
             variant="flat"
             className="w-full justify-start gap-2 p-2 text-xs-plus"
           >
-            <HomeIcon className="this:info size-4.5 text-this dark:text-this-lighter" />
-            <span className="text-gray-800 dark:text-dark-100">
+            <HomeIcon className="size-4.5 text-this-info" />
+            <span className="text-gray-800">
               Warehouse East
             </span>
           </Button>
@@ -71,8 +73,8 @@ export function Channels() {
             variant="flat"
             className="w-full justify-start gap-2 p-2 text-xs-plus"
           >
-            <HomeIcon className="this:success size-4.5 text-this dark:text-this-lighter" />
-            <span className="text-gray-800 dark:text-dark-100">
+            <HomeIcon className="size-4.5 text-this-success" />
+            <span className="text-gray-800">
               {" "}
               Warehouse #12
             </span>

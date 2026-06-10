@@ -40,16 +40,16 @@ export function UserCard({
           />
         }
       />
-      <h3 className="dark:text-dark-100 pt-3 text-lg font-medium text-gray-800">
+      <h3 className=" pt-3 text-lg font-medium text-gray-800">
         <Highlight query={query}>{name}</Highlight>
       </h3>
       <p className="text-xs-plus">
         <Highlight query={query}>{position}</Highlight>
       </p>
-      <div className="dark:bg-dark-500 my-4 h-px w-full bg-gray-200"></div>
+      <div className=" my-4 h-px w-full bg-gray-200"></div>
       <div className="mx-auto inline-grid grid-cols-1 gap-3">
         <div className="flex min-w-0 items-center space-x-2">
-          <div className="bg-primary-600/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400 flex size-6 shrink-0 items-center justify-center rounded-lg">
+          <div className="bg-primary-600/10 text-primary-600  flex size-6 shrink-0 items-center justify-center rounded-lg">
             <PhoneIcon className="size-3.5" />
           </div>
           <p className="truncate">
@@ -57,7 +57,7 @@ export function UserCard({
           </p>
         </div>
         <div className="flex min-w-0 items-center space-x-2">
-          <div className="bg-primary-600/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400 flex size-6 shrink-0 items-center justify-center rounded-lg">
+          <div className="bg-primary-600/10 text-primary-600  flex size-6 shrink-0 items-center justify-center rounded-lg">
             <EnvelopeIcon className="size-3.5" />
           </div>
           <p className="truncate">
@@ -65,7 +65,7 @@ export function UserCard({
           </p>
         </div>
         <div className="flex min-w-0 items-center space-x-2">
-          <div className="bg-primary-600/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400 flex size-6 shrink-0 items-center justify-center rounded-lg">
+          <div className="bg-primary-600/10 text-primary-600  flex size-6 shrink-0 items-center justify-center rounded-lg">
             <GlobeAltIcon className="size-3.5" />
           </div>
           <p className="truncate">

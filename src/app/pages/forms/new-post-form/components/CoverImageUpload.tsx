@@ -62,19 +62,19 @@ const CoverImageUpload = forwardRef<HTMLButtonElement, CoverImageUploadProps>(
             "h-40 w-full rounded-lg border-2 border-dashed border-current",
             !isDragAccept &&
               (isDragReject || error) &&
-              "text-error dark:text-error-light",
-            isDragAccept && "text-primary-600 dark:text-primary-500",
+              "text-error",
+            isDragAccept && "text-primary-600",
             !isDragReject &&
               !isDragAccept &&
               !error &&
-              "dark:text-dark-450 text-gray-300",
+              "text-gray-300",
             classNames?.box,
           )}
         >
           {value && typeof value !== 'string' ? (
             <div
               title={value.name}
-              className="group ring-primary-600 dark:ring-primary-500 dark:ring-offset-dark-700 relative h-full w-full rounded-lg ring-offset-4 ring-offset-white transition-all hover:ring-3"
+              className="group ring-primary-600  relative h-full w-full rounded-lg ring-offset-4 ring-offset-white transition-all hover:ring-3"
             >
               <div className="h-full w-full overflow-hidden p-2">
                 <PreviewImg
@@ -84,10 +84,10 @@ const CoverImageUpload = forwardRef<HTMLButtonElement, CoverImageUploadProps>(
                 />
               </div>
 
-              <div className="dark:bg-dark-700 absolute -top-4 -right-3 flex items-center justify-center rounded-full bg-white opacity-0 transition-opacity group-hover:opacity-100">
+              <div className=" absolute -top-4 -right-3 flex items-center justify-center rounded-full bg-white opacity-0 transition-opacity group-hover:opacity-100">
                 <Button
                   onClick={onRemove}
-                  className="dark:border-dark-450 size-6 shrink-0 rounded-full border p-0"
+                  className=" size-6 shrink-0 rounded-full border p-0"
                 >
                   <XMarkIcon className="size-4" />
                 </Button>
@@ -102,8 +102,8 @@ const CoverImageUpload = forwardRef<HTMLButtonElement, CoverImageUploadProps>(
                 className="h-full w-full shrink-0 flex-col space-x-2 px-3"
               >
                 <CloudArrowUpIcon className="pointer-events-none size-12" />
-                <span className="dark:text-dark-200 pointer-events-none mt-2 text-gray-600">
-                  <span className="text-primary-600 dark:text-primary-400">
+                <span className="pointer-events-none mt-2 text-gray-600">
+                  <span className="text-primary-600">
                     Browse
                   </span>
                   <span> or drop your files here</span>

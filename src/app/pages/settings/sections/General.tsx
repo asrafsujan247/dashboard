@@ -15,15 +15,15 @@ export default function General() {
 
   return (
     <div className="w-full max-w-3xl 2xl:max-w-5xl">
-      <h5 className="dark:text-dark-50 text-lg font-medium text-gray-800">
+      <h5 className=" text-lg font-medium text-gray-800">
         General
       </h5>
-      <p className="dark:text-dark-200 mt-0.5 text-sm text-balance text-gray-500">
+      <p className=" mt-0.5 text-sm text-balance text-gray-500">
         Update your account settings.
       </p>
-      <div className="dark:bg-dark-500 my-5 h-px bg-gray-200" />
+      <div className=" my-5 h-px bg-gray-200" />
       <div className="mt-4 flex flex-col space-y-1.5">
-        <span className="dark:text-dark-100 text-base font-medium text-gray-800">
+        <span className=" text-base font-medium text-gray-800">
           Avatar
         </span>
         <Avatar
@@ -32,11 +32,11 @@ export default function General() {
           imgProps={{ file: avatar } as any}
           src="/images/avatar/avatar-20.jpg"
           classNames={{
-            root: "ring-primary-600 dark:ring-primary-500 dark:ring-offset-dark-700 rounded-xl ring-offset-[3px] ring-offset-white transition-all hover:ring-3",
+            root: "ring-primary-600  rounded-xl ring-offset-[3px] ring-offset-white transition-all hover:ring-3",
             display: "rounded-xl",
           }}
           indicator={
-            <div className="dark:bg-dark-700 absolute right-0 bottom-0 -m-1 flex items-center justify-center rounded-full bg-white">
+            <div className=" absolute right-0 bottom-0 -m-1 flex items-center justify-center rounded-full bg-white">
               {avatar ? (
                 <Button
                   onClick={() => setAvatar(null)}
@@ -88,10 +88,10 @@ export default function General() {
           prefix={<PhoneIcon className="size-4.5" />}
         />
       </div>
-      <div className="dark:bg-dark-500 my-7 h-px bg-gray-200" />
+      <div className=" my-7 h-px bg-gray-200" />
       <div>
         <div>
-          <p className="dark:text-dark-100 text-base font-medium text-gray-800">
+          <p className=" text-base font-medium text-gray-800">
             Linked Accounts
           </p>
           <p className="mt-0.5">

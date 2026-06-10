@@ -23,7 +23,7 @@ export default function Invoice1() {
         style={{ gridTemplateRows: "auto 1fr" }}
       >
         <div className="flex items-center justify-between py-5 lg:py-6">
-          <h2 className="dark:text-dark-50 truncate text-xl font-medium text-gray-700 lg:text-2xl">
+          <h2 className=" truncate text-xl font-medium text-gray-700 lg:text-2xl">
             Invoice
           </h2>
 
@@ -49,7 +49,7 @@ export default function Invoice1() {
           >
             <div className="flex flex-col justify-between sm:flex-row">
               <div className="text-center sm:text-left">
-                <h2 className="text-primary-600 dark:text-primary-400 text-2xl font-semibold uppercase">
+                <h2 className="text-primary-600 text-2xl font-semibold uppercase">
                   tailux
                 </h2>
                 <div className="space-y-1 pt-2">
@@ -59,7 +59,7 @@ export default function Invoice1() {
                 </div>
               </div>
               <div className="mt-4 text-center sm:m-0 sm:text-right">
-                <h2 className="text-primary-600 dark:text-primary-400 text-2xl font-semibold uppercase">
+                <h2 className="text-primary-600 text-2xl font-semibold uppercase">
                   invoice
                 </h2>
                 <div className="space-y-1 pt-2">
@@ -77,11 +77,11 @@ export default function Invoice1() {
               </div>
             </div>
 
-            <div className="dark:bg-dark-500 my-7 h-px bg-gray-200"></div>
+            <div className=" my-7 h-px bg-gray-200"></div>
 
             <div className="flex flex-col justify-between sm:flex-row">
               <div className="text-center sm:text-left">
-                <p className="dark:text-dark-100 text-lg font-medium text-gray-600">
+                <p className=" text-lg font-medium text-gray-600">
                   Invoiced To:
                 </p>
                 <div className="space-y-1 pt-2">
@@ -91,7 +91,7 @@ export default function Invoice1() {
                 </div>
               </div>
               <div className="mt-4 text-center sm:m-0 sm:text-right">
-                <p className="dark:text-dark-100 text-lg font-medium text-gray-600">
+                <p className=" text-lg font-medium text-gray-600">
                   Payment Method:
                 </p>
                 <div className="space-y-1 pt-2">
@@ -100,17 +100,17 @@ export default function Invoice1() {
               </div>
             </div>
 
-            <div className="dark:bg-dark-500 my-7 h-px bg-gray-200"></div>
+            <div className=" my-7 h-px bg-gray-200"></div>
 
             <ItemsTable />
 
-            <div className="dark:bg-dark-500 my-7 h-px bg-gray-200"></div>
+            <div className=" my-7 h-px bg-gray-200"></div>
 
             <div className="grow"></div>
 
             <div className="flex flex-col justify-end sm:flex-row">
               <div className="mt-4 text-center sm:m-0 sm:text-right">
-                <p className="text-primary-600 dark:text-primary-400 text-lg font-medium">
+                <p className="text-primary-600 text-lg font-medium">
                   Total:
                 </p>
                 <div className="space-y-1 pt-2">
@@ -123,7 +123,7 @@ export default function Invoice1() {
                   <p>
                     Tax : <span className="font-medium">20%</span>
                   </p>
-                  <p className="text-primary-600 dark:text-primary-400 text-lg">
+                  <p className="text-primary-600 text-lg">
                     Total: <span className="font-medium">$8780</span>
                   </p>
                 </div>

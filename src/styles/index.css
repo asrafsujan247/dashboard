@@ -10,8 +10,6 @@
 
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme {
   --font-sans:
     Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
@@ -32,7 +30,6 @@
   --shadow-soft:
     rgba(145, 158, 171, 0.2) 0px 0px 2px 0px,
     rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
-  --shadow-soft-dark: 0 3px 10px 0 rgb(25 25 25 / 30%);
 
   --ease-elastic: cubic-bezier(0.53, 0.21, 0.29, 0.67);
 
@@ -97,19 +94,6 @@
   --color-gray-800: var(--color-slate-800);
   --color-gray-900: var(--color-slate-900);
   --color-gray-950: var(--color-slate-950);
-
-  --color-dark-50: #e6e7eb;
-  --color-dark-100: #d0d2db;
-  --color-dark-200: #b7bac4;
-  --color-dark-300: #838794;
-  --color-dark-400: #4c4f57;
-  --color-dark-450: #383a41;
-  --color-dark-500: #2a2c32;
-  --color-dark-600: #232429;
-  --color-dark-700: #1c1d21;
-  --color-dark-750: #1a1b1f;
-  --color-dark-800: #15161a;
-  --color-dark-900: #0e0f11;
 
   --color-primary-50: var(--color-indigo-50);
   --color-primary-100: var(--color-indigo-100);

@@ -82,16 +82,16 @@ export function BandwidthReport() {
   return (
     <Card className="flex flex-col">
       <div className="flex h-14 min-w-0 items-center justify-between px-4 py-3 sm:px-5">
-        <h2 className="dark:text-dark-100 truncate font-medium tracking-wide text-gray-800">
+        <h2 className=" truncate font-medium tracking-wide text-gray-800">
           Bandwidth Report
         </h2>
         <ActionMenu />
       </div>
       <div className="grid grid-cols-1 gap-4 px-4 sm:gap-5 sm:px-5 lg:grid-cols-2">
-        <div className="border-gray-150 dark:border-dark-600 rounded-lg border p-4">
+        <div className="border-gray-150 rounded-lg border p-4">
           <div className="flex justify-between">
             <div>
-              <span className="dark:text-dark-100 text-2xl font-medium text-gray-800">
+              <span className=" text-2xl font-medium text-gray-800">
                 393
               </span>
               <span className="text-xs">Mb</span>
@@ -105,16 +105,16 @@ export function BandwidthReport() {
             value={68}
             classNames={{ root: "mt-3 h-1.5" }}
           />
-          <div className="dark:text-dark-300 mt-2 flex justify-between text-xs text-gray-400">
+          <div className=" mt-2 flex justify-between text-xs text-gray-400">
             <p>Monthly target</p>
             <p>68%</p>
           </div>
         </div>
 
-        <div className="border-gray-150 dark:border-dark-600 rounded-lg border p-4">
+        <div className="border-gray-150 rounded-lg border p-4">
           <div className="flex justify-between">
             <div>
-              <span className="dark:text-dark-100 text-2xl font-medium text-gray-800">
+              <span className=" text-2xl font-medium text-gray-800">
                 293
               </span>
               <span className="text-xs">Mb</span>
@@ -127,16 +127,16 @@ export function BandwidthReport() {
             value={55}
             classNames={{ root: "mt-3 h-1.5" }}
           />
-          <div className="dark:text-dark-300 mt-2 flex justify-between text-xs text-gray-400">
+          <div className=" mt-2 flex justify-between text-xs text-gray-400">
             <p>Monthly target</p>
             <p>55%</p>
           </div>
         </div>
 
-        <div className="border-gray-150 dark:border-dark-600 rounded-lg border p-4">
+        <div className="border-gray-150 rounded-lg border p-4">
           <div className="flex justify-between">
             <div>
-              <span className="dark:text-dark-100 text-2xl font-medium text-gray-800">
+              <span className=" text-2xl font-medium text-gray-800">
                 36.6
               </span>
               <span className="text-xs">Gb</span>
@@ -149,16 +149,16 @@ export function BandwidthReport() {
             value={39}
             classNames={{ root: "mt-3 h-1.5" }}
           />
-          <div className="dark:text-dark-300 mt-2 flex justify-between text-xs text-gray-400">
+          <div className=" mt-2 flex justify-between text-xs text-gray-400">
             <p>Monthly target</p>
             <p>39%</p>
           </div>
         </div>
 
-        <div className="border-gray-150 dark:border-dark-600 rounded-lg border p-4">
+        <div className="border-gray-150 rounded-lg border p-4">
           <div className="flex justify-between">
             <div>
-              <span className="dark:text-dark-100 text-2xl font-medium text-gray-800">
+              <span className=" text-2xl font-medium text-gray-800">
                 96
               </span>
               <span className="text-xs">Mb</span>
@@ -172,7 +172,7 @@ export function BandwidthReport() {
             value={89}
             classNames={{ root: "mt-3 h-1.5" }}
           />
-          <div className="dark:text-dark-300 mt-2 flex justify-between text-xs text-gray-400">
+          <div className=" mt-2 flex justify-between text-xs text-gray-400">
             <p>Monthly target</p>
             <p>89%</p>
           </div>
@@ -183,12 +183,12 @@ export function BandwidthReport() {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <p className="text-xs-plus">Performance</p>
-            <p className="dark:text-dark-100 text-gray-800">3.2%</p>
-            <ArrowUpIcon className="this:success text-this dark:text-this-lighter size-4" />
+            <p className=" text-gray-800">3.2%</p>
+            <ArrowUpIcon className="size-4 text-this-success" />
           </div>
           <a
             href="##"
-            className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70 dark:text-primary-400 dark:hover:text-primary-400/70 dark:focus:text-primary-400/70 border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
+            className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70   border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
           >
             Download Report
           </a>
@@ -225,14 +225,14 @@ function ActionMenu() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
       >
-        <MenuItems className="dark:border-dark-500 dark:bg-dark-700 absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0 dark:shadow-none">
+        <MenuItems className="absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0">
           <MenuItem>
             {({ focus }) => (
               <button
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Action</span>
@@ -245,7 +245,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Another action</span>
@@ -258,7 +258,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Other action</span>
@@ -266,7 +266,7 @@ function ActionMenu() {
             )}
           </MenuItem>
 
-          <hr className="border-gray-150 dark:border-dark-500 mx-3 my-1.5 h-px" />
+          <hr className="border-gray-150 mx-3 my-1.5 h-px" />
 
           <MenuItem>
             {({ focus }) => (
@@ -274,7 +274,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Separated action</span>

@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 // Local Imports
@@ -26,7 +26,7 @@ export function Header() {
         <Avatar size={9} initialColor="primary" initialVariant="soft">
           <Icon className="size-5.5 stroke-2" />
         </Avatar>
-        <p className="truncate text-base tracking-wider text-gray-800 dark:text-dark-100">
+        <p className="truncate text-base tracking-wider text-gray-800">
           {title}
         </p>
       </div>
@@ -41,3 +41,4 @@ export function Header() {
     </div>
   );
 }
+

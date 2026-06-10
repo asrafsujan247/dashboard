@@ -18,10 +18,10 @@ function checkStock(stock: number) {
         : "Available";
   const style =
     stock === 0
-      ? "text-error dark:text-error-light"
+      ? "text-error"
       : stock < 100
-        ? "text-warning dark:text-warning-lighter"
-        : "text-success dark:text-success-lighter";
+        ? "text-warning"
+        : "text-success";
   return { text, style };
 }
 
@@ -36,10 +36,10 @@ export function NameCell({ row }: { row: Row<Product> }) {
         />
       </div>
       <div>
-        <p className="dark:text-dark-100 font-medium text-gray-800">
+        <p className=" font-medium text-gray-800">
           {row.original.name}
         </p>
-        <p className="dark:text-dark-300 mt-0.5 text-xs text-gray-400">
+        <p className=" mt-0.5 text-xs text-gray-400">
           {row.original.sku}
         </p>
       </div>
@@ -72,7 +72,7 @@ export function StockCell({ getValue }: { getValue: Getter<any> }) {
       <span className={clsx("font-medium", availability.style)}>
         {availability.text}
       </span>
-      <p className="dark:text-dark-300 text-xs text-gray-400">
+      <p className=" text-xs text-gray-400">
         {formatNumber(getValue())} stock
       </p>
     </>
@@ -93,8 +93,8 @@ export function ViewCell({
         className={clsx(
           "flex items-center space-x-0.5 text-xs leading-normal",
           row.original.view_impressions > 0
-            ? "text-success dark:text-success-lighter"
-            : "text-error dark:text-error-light",
+            ? "text-success"
+            : "text-error"
         )}
       >
         <ArrowUpIcon

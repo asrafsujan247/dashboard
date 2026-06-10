@@ -31,7 +31,7 @@ export function Menu({
     }
   };
 
-  const getProps = ({ path, type, title, transKey }: NavigationTree) => {
+  const getProps = ({ path, type, title }: NavigationTree) => {
     const isLink = type === "item";
 
     return {

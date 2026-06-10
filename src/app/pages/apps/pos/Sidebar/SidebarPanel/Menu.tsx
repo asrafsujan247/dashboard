@@ -19,7 +19,7 @@ export function Menu() {
           variant="flat"
           className="group w-full justify-start gap-2 p-2 text-xs-plus"
         >
-          <ReceiptPercentIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500 dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200" />
+          <ReceiptPercentIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
           <span>Top Deals</span>
         </Button>
       </li>
@@ -28,7 +28,7 @@ export function Menu() {
           variant="flat"
           className="group w-full justify-start gap-2 p-2 text-xs-plus"
         >
-          <Cog6ToothIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500 dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200" />
+          <Cog6ToothIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
           <span>Setting</span>
         </Button>
       </li>
@@ -37,7 +37,7 @@ export function Menu() {
           variant="flat"
           className="group w-full justify-start gap-2 p-2 text-xs-plus"
         >
-          <ClockIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500 dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200" />
+          <ClockIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
           <span>History</span>
         </Button>
       </li>
@@ -46,7 +46,7 @@ export function Menu() {
           variant="flat"
           className="group w-full justify-start gap-2 p-2 text-xs-plus"
         >
-          <DocumentChartBarIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500 dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200" />
+          <DocumentChartBarIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
           <span>Report</span>
         </Button>
       </li>

@@ -48,7 +48,7 @@ export function AddressInfo({
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-      <h6 className="dark:text-dark-100 mt-6 flex space-x-1.5 text-base font-medium text-gray-800">
+      <h6 className=" mt-6 flex space-x-1.5 text-base font-medium text-gray-800">
         <span>Permanent Address</span>
         <ContextualHelp
           title="Permanent Address"
@@ -119,7 +119,7 @@ export function AddressInfo({
           label={
             <>
               Address Line 2{" "}
-              <span className="dark:text-dark-300 text-xs text-gray-400">
+              <span className=" text-xs text-gray-400">
                 (Optional)
               </span>
             </>
@@ -135,8 +135,8 @@ export function AddressInfo({
       </div>
 
       <Collapse in={showCorrespondenceAddressForm}>
-        <hr className="dark:border-dark-500 mt-4 border-gray-200" />
-        <h6 className="dark:text-dark-100 mt-3 flex space-x-1.5 text-base font-medium text-gray-800">
+        <hr className=" mt-4 border-gray-200" />
+        <h6 className=" mt-3 flex space-x-1.5 text-base font-medium text-gray-800">
           <span>Correspondence Address</span>
           <ContextualHelp
             title="Correspondence Address"
@@ -205,7 +205,7 @@ export function AddressInfo({
             label={
               <>
                 Address Line 2{" "}
-                <span className="dark:text-dark-300 text-xs text-gray-400">
+                <span className=" text-xs text-gray-400">
                   (Optional)
                 </span>
               </>

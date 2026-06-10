@@ -23,11 +23,11 @@
 }
 
 .timeline-item:not(:last-child) {
-  @apply dark:before:bg-dark-400 before:bg-gray-300;
+  @apply before:bg-gray-300;
 }
 
 .timeline-item:last-child {
-  @apply dark:before:from-dark-400 before:bg-linear-to-b before:from-gray-300 before:to-transparent;
+  @apply before:bg-linear-to-b before:from-gray-300 before:to-transparent;
 }
 
 .timeline-item:last-child {

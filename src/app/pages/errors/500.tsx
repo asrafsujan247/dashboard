@@ -9,8 +9,6 @@ export default function Error500() {
   const {
     primaryColorScheme: primary,
     lightColorScheme: light,
-    darkColorScheme: dark,
-    isDark,
   } = useThemeContext();
 
   return (
@@ -21,17 +19,17 @@ export default function Error500() {
             className="w-full"
             style={{
               "--primary": primary[500],
-              "--dark-400": isDark ? dark[400] : light[500],
-              "--dark-600": isDark ? dark[600] : light[700],
+              "--dark-400": light[500],
+              "--dark-600": light[700],
             } as React.CSSProperties}
           />
-          <p className="pt-8 text-7xl font-bold text-primary-600 dark:text-primary-500">
+          <p className="pt-8 text-7xl font-bold text-primary-600">
             500
           </p>
-          <p className="pt-4 text-xl font-semibold text-gray-800 dark:text-dark-50">
+          <p className="pt-4 text-xl font-semibold text-gray-800">
             Internal Server Error
           </p>
-          <p className="text-balance pt-2 text-gray-500 dark:text-dark-200">
+          <p className="text-balance pt-2 text-gray-500">
             The server has been deserted for a while. Please be patient or try
             again later
           </p>

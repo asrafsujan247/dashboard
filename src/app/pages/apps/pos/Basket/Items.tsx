@@ -74,13 +74,13 @@ export function Items() {
                 alt={item.name}
               />
 
-              <div className="absolute right-0 top-0 -m-1 flex h-5 min-w-[1.25rem] items-center justify-center rounded-full border border-white bg-gray-200 px-1 text-tiny-plus font-medium leading-none text-gray-800 dark:border-dark-700 dark:bg-dark-450 dark:text-white">
+              <div className="absolute right-0 top-0 -m-1 flex h-5 min-w-[1.25rem] items-center justify-center rounded-full border border-white bg-gray-200 px-1 text-tiny-plus font-medium leading-none text-gray-800">
                 {item.count}
               </div>
             </div>
             <div className="min-w-0">
               <div className="flex items-center gap-1">
-                <p className="truncate font-medium text-gray-800 dark:text-dark-100">
+                <p className="truncate font-medium text-gray-800">
                   {item.name}
                 </p>
                 <Button
@@ -91,7 +91,7 @@ export function Items() {
                   <PencilSquareIcon className="size-4" />
                 </Button>
               </div>
-              <p className="truncate text-xs-plus text-gray-400 dark:text-dark-300">
+              <p className="truncate text-xs-plus text-gray-400">
                 {item.description}
               </p>
             </div>

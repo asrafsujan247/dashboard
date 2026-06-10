@@ -97,12 +97,12 @@ export function Profile() {
       >
         <PopoverPanel
           anchor={{ to: "right end", gap: 12 }}
-          className="z-70 flex w-64 flex-col rounded-lg border border-gray-150 bg-white shadow-soft transition dark:border-dark-600 dark:bg-dark-700 dark:shadow-none"
+          className="z-70 flex w-64 flex-col rounded-lg border border-gray-150 bg-white shadow-soft transition"
         >
           {({ close }) => (
             <>
               {/* User Info */}
-              <div className="flex items-center gap-4 rounded-t-lg bg-gray-100 px-4 py-5 dark:bg-dark-800">
+              <div className="flex items-center gap-4 rounded-t-lg bg-gray-100 px-4 py-5">
                 <Avatar
                   size={14}
                   src="/images/avatar/avatar-12.jpg"
@@ -110,12 +110,12 @@ export function Profile() {
                 />
                 <div>
                   <Link
-                    className="text-base font-medium text-gray-700 hover:text-primary-600 focus:text-primary-600 dark:text-dark-100 dark:hover:text-primary-400 dark:focus:text-primary-400"
+                    className="text-base font-medium text-gray-700 hover:text-primary-600 focus:text-primary-600"
                     to="/settings/general"
                   >
                     Travis Fuller
                   </Link>
-                  <p className="mt-0.5 text-xs text-gray-400 dark:text-dark-300">
+                  <p className="mt-0.5 text-xs text-gray-400">
                     Product Designer
                   </p>
                 </div>
@@ -128,7 +128,7 @@ export function Profile() {
                     key={link.id}
                     to={link.to}
                     onClick={() => close()}
-                    className="group flex items-center gap-3 px-4 py-2 tracking-wide outline-hidden transition-all hover:bg-gray-100 focus:bg-gray-100 dark:hover:bg-dark-600 dark:focus:bg-dark-600"
+                    className="group flex items-center gap-3 px-4 py-2 tracking-wide outline-hidden transition-all hover:bg-gray-100 focus:bg-gray-100"
                   >
                     <Avatar
                       size={8}
@@ -138,10 +138,10 @@ export function Profile() {
                       <link.Icon className="size-4.5" />
                     </Avatar>
                     <div>
-                      <h2 className="font-medium text-gray-800 transition-colors group-hover:text-primary-600 group-focus:text-primary-600 dark:text-dark-100 dark:group-hover:text-primary-400 dark:group-focus:text-primary-400">
+                      <h2 className="font-medium text-gray-800 transition-colors group-hover:text-primary-600 group-focus:text-primary-600">
                         {link.title}
                       </h2>
-                      <div className="truncate text-xs text-gray-400 dark:text-dark-300">
+                      <div className="truncate text-xs text-gray-400">
                         {link.description}
                       </div>
                     </div>

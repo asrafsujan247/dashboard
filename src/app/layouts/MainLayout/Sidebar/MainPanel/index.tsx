@@ -8,7 +8,6 @@ import Logo from "@/assets/appLogo.svg?react";
 import { Menu } from "./Menu";
 import { Item } from "./Menu/item";
 import { Profile } from "../../Profile";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { settings } from "@/app/navigation/segments/settings";
 import { NavigationTree } from "@/@types/navigation";
 import { SegmentPath } from "..";
@@ -27,20 +26,17 @@ export function MainPanel({
   setActiveSegmentPath,
   activeSegmentPath,
 }: MainPanelProps) {
-  const { cardSkin } = useThemeContext();
-
   return (
     <div className="main-panel">
       <div
         className={clsx(
-          "border-gray-150 dark:border-dark-600/80 flex h-full w-full flex-col items-center bg-white ltr:border-r rtl:border-l",
-          cardSkin === "shadow" ? "dark:bg-dark-750" : "dark:bg-dark-900",
+          "border-gray-150 flex h-full w-full flex-col items-center bg-white ltr:border-r rtl:border-l",
         )}
       >
         {/* Application Logo */}
         <div className="flex pt-3.5">
           <Link to="/">
-            <Logo className="text-primary-600 dark:text-primary-400 size-10" />
+            <Logo className="text-primary-600 size-10" />
           </Link>
         </div>
 

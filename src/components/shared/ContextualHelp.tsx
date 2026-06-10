@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   Dialog,
   DialogPanel,
@@ -41,7 +41,7 @@ export function ContextualHelp(props: ContextualHelpProps) {
   useDidUpdate(() => closeModal(), [name]);
 
   const body = (
-    <div className="contextual-body pointer-events-auto mt-2 text-sm text-gray-500 dark:text-dark-200">
+    <div className="contextual-body pointer-events-auto mt-2 text-sm text-gray-500">
       {content}
     </div>
   );
@@ -72,7 +72,7 @@ export function ContextualHelp(props: ContextualHelpProps) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="absolute inset-0 bg-gray-900/50 transition-opacity dark:bg-black/40" />
+            <div className="absolute inset-0 bg-gray-900/50 transition-opacity" />
           </TransitionChild>
 
           <TransitionChild
@@ -84,11 +84,11 @@ export function ContextualHelp(props: ContextualHelpProps) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <DialogPanel className="scrollbar-sm relative flex max-w-xs flex-col overflow-y-auto rounded-lg bg-white p-4 transition-opacity duration-300 dark:bg-dark-700">
-              <div className="flex items-center justify-between border-b pb-2 dark:border-dark-600">
+            <DialogPanel className="scrollbar-sm relative flex max-w-xs flex-col overflow-y-auto rounded-lg bg-white p-4 transition-opacity duration-300">
+              <div className="flex items-center justify-between border-b pb-2">
                 <DialogTitle
                   as="h3"
-                  className="contextual-title text-base text-gray-800 dark:text-dark-100 ltr:mr-2 rtl:ml-2"
+                  className="contextual-title text-base text-gray-800 ltr:mr-2 rtl:ml-2"
                 >
                   {title}
                 </DialogTitle>
@@ -129,9 +129,9 @@ export function ContextualHelp(props: ContextualHelpProps) {
       >
         <PopoverPanel
           anchor={anchor}
-          className="pointer-events-auto z-100 w-80 rounded-md border border-gray-300 bg-white p-4 shadow-lg shadow-gray-200/50 outline-hidden ring-primary-500/50 focus-visible:outline-hidden focus-visible:ring-3 dark:border-dark-500 dark:bg-dark-750 dark:shadow-none"
+          className="pointer-events-auto z-100 w-80 rounded-md border border-gray-300 bg-white p-4 shadow-lg shadow-gray-200/50 outline-hidden ring-primary-500/50 focus-visible:outline-hidden focus-visible:ring-3"
         >
-          <h3 className="contextual-title text-base text-gray-800 dark:text-dark-100">
+          <h3 className="contextual-title text-base text-gray-800">
             {title}
           </h3>
           {body}
@@ -140,3 +140,4 @@ export function ContextualHelp(props: ContextualHelpProps) {
     </Popover>
   );
 }
+

@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { Fragment, useRef } from "react";
 import Cleave from "cleave.js/react";
 import {
@@ -27,10 +27,10 @@ import { InvoiceTable } from "../components/InvoiceTable";
 export default function Billing() {
   return (
     <div className="w-full 2xl:max-w-5xl">
-      <h5 className="dark:text-dark-50 text-lg font-medium text-gray-800">
+      <h5 className=" text-lg font-medium text-gray-800">
         Billing & Payments
       </h5>
-      <p className="dark:text-dark-200 mt-0.5 text-sm text-balance text-gray-500">
+      <p className=" mt-0.5 text-sm text-balance text-gray-500">
         Manage Your Billing and Payments from here. You can also manage your
         payment methods from here.
       </p>
@@ -39,7 +39,7 @@ export default function Billing() {
 
       <PaymentMethods />
 
-      <div className="dark:bg-dark-500 my-7 h-px bg-gray-200"></div>
+      <div className=" my-7 h-px bg-gray-200"></div>
 
       <InvoiceSection />
     </div>
@@ -48,10 +48,10 @@ export default function Billing() {
 
 function MemberPlan() {
   return (
-    <div className="dark:bg-dark-800 mt-5 rounded-lg bg-gray-100 p-4">
+    <div className=" mt-5 rounded-lg bg-gray-100 p-4">
       <div className="flex flex-col items-start justify-between sm:flex-row">
         <div>
-          <p className="dark:text-dark-100 text-lg font-medium text-gray-800">
+          <p className=" text-lg font-medium text-gray-800">
             Premium Plan
           </p>
           <div className="mt-2 flex items-center gap-2">
@@ -82,7 +82,7 @@ function PaymentMethods() {
       <div className="mt-4">
         <div className="flex justify-between">
           <div>
-            <p className="dark:text-dark-100 text-base font-medium text-gray-800">
+            <p className=" text-base font-medium text-gray-800">
               Payment Methods
             </p>
             <p className="mt-0.5 text-balance">
@@ -101,7 +101,7 @@ function PaymentMethods() {
 
       <div className="hide-scrollbar -mx-4 mt-4 flex items-start gap-3 overflow-x-auto px-4 sm:-mx-5 sm:px-5">
         <div className="w-72 shrink-0 rounded-lg bg-linear-to-br from-amber-400 to-orange-600 p-[3px]">
-          <div className="dark:bg-dark-700 rounded-lg bg-white p-4 pb-3">
+          <div className=" rounded-lg bg-white p-4 pb-3">
             <div className="flex items-start justify-between">
               <div>
                 <img
@@ -110,10 +110,10 @@ function PaymentMethods() {
                   alt="logo"
                 />
                 <div className="mt-2">
-                  <p className="dark:text-dark-100 font-medium text-gray-800">
+                  <p className=" font-medium text-gray-800">
                     Travis Fuller
                   </p>
-                  <p className="mt-0.5 text-xs">•••• 6988</p>
+                  <p className="mt-0.5 text-xs">â€¢â€¢â€¢â€¢ 6988</p>
                 </div>
               </div>
               <Badge
@@ -138,7 +138,7 @@ function PaymentMethods() {
           </div>
         </div>
         <div className="from-info to-info-darker w-72 shrink-0 rounded-lg bg-linear-to-br p-[3px]">
-          <div className="dark:bg-dark-700 rounded-lg bg-white p-4 pb-3">
+          <div className=" rounded-lg bg-white p-4 pb-3">
             <div className="flex items-start justify-between">
               <div>
                 <img
@@ -147,10 +147,10 @@ function PaymentMethods() {
                   alt="logo"
                 />
                 <div className="mt-2">
-                  <p className="dark:text-dark-100 font-medium text-gray-800">
+                  <p className=" font-medium text-gray-800">
                     Samantha Shelton
                   </p>
-                  <p className="mt-0.5 text-xs">•••• 6988</p>
+                  <p className="mt-0.5 text-xs">â€¢â€¢â€¢â€¢ 6988</p>
                 </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ function PaymentMethods() {
           </div>
         </div>
         <div className="w-72 shrink-0 rounded-lg bg-linear-to-br from-purple-500 to-indigo-600 p-[3px]">
-          <div className="dark:bg-dark-700 rounded-lg bg-white p-4 pb-3">
+          <div className=" rounded-lg bg-white p-4 pb-3">
             <div className="flex items-start justify-between">
               <div>
                 <img
@@ -178,7 +178,7 @@ function PaymentMethods() {
                   alt="logo"
                 />
                 <div className="mt-2">
-                  <p className="dark:text-dark-100 font-medium text-gray-800">
+                  <p className=" font-medium text-gray-800">
                     John Doe
                   </p>
                   <p className="mt-0.5 text-xs">John@gmail.com</p>
@@ -210,7 +210,7 @@ function InvoiceSection() {
   return (
     <>
       <div>
-        <p className="dark:text-dark-100 text-base font-medium text-gray-800">
+        <p className=" text-base font-medium text-gray-800">
           Invoices
         </p>
         <p className="mt-0.5 text-balance">
@@ -247,7 +247,7 @@ function AddPaymentModal({
           leave="ease-in duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="absolute inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity dark:bg-black/30"
+          className="absolute inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity"
         />
 
         <TransitionChild
@@ -258,12 +258,12 @@ function AddPaymentModal({
           leave="ease-in duration-200"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
-          className="dark:bg-dark-700 relative flex w-full max-w-lg origin-bottom flex-col overflow-hidden rounded-lg bg-white transition-all duration-300"
+          className=" relative flex w-full max-w-lg origin-bottom flex-col overflow-hidden rounded-lg bg-white transition-all duration-300"
         >
-          <div className="dark:bg-dark-800 flex items-center justify-between rounded-t-lg bg-gray-200 px-4 py-3 sm:px-5">
+          <div className=" flex items-center justify-between rounded-t-lg bg-gray-200 px-4 py-3 sm:px-5">
             <DialogTitle
               as="h3"
-              className="dark:text-dark-100 text-base font-medium text-gray-800"
+              className=" text-base font-medium text-gray-800"
             >
               Add Card
             </DialogTitle>
@@ -344,3 +344,4 @@ function AddPaymentModal({
     </Transition>
   );
 }
+

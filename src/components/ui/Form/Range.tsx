@@ -1,53 +1,59 @@
 // Import Dependencies
-import { InputHTMLAttributes, CSSProperties, forwardRef } from "react";
+import { forwardRef, ReactNode } from "react";
 import clsx from "clsx";
 
 // Local Imports
-import { setThisClass } from "@/utils/setThisClass";
-import { type ColorType } from "@/constants/app";
+import { useId } from "@/hooks";
 
 // ----------------------------------------------------------------------
 
-type RangeProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
-  color?: ColorType;
-  thumbSize?: string;
-  trackSize?: string;
-  style?: CSSProperties & {
-    "--thumb-size"?: string;
-    "--track-h"?: string;
+export interface RangeProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
+  label?: ReactNode;
+  description?: string;
+  classNames?: {
+    root?: string;
+    label?: string;
+    input?: string;
+    description?: string;
   };
-};
+  id?: string;
+}
 
+export const Range = forwardRef<HTMLInputElement, RangeProps>(
+  ({ label, description, className, classNames = {}, id, ...rest }, ref) => {
+    const inputId = useId(id, "range");
 
-const Range = forwardRef<HTMLInputElement, RangeProps>(({
-  className,
-  color = "neutral",
-  thumbSize,
-  trackSize,
-  style,
-  ...rest
-}, ref) => {
-  return (
-    <input
-      type="range"
-      className={clsx(
-        "form-range",
-        color === "neutral"
-          ? "text-gray-500 dark:text-dark-300"
-          : [setThisClass(color), "text-this dark:text-this-light"],
-        className,
-      )}
-      ref={ref}
-      style={{
-        "--thumb-size": thumbSize,
-        "--track-h": trackSize,
-        ...style,
-      }}
-      {...rest}
-    />
-  );
-});
+    return (
+      <div className={clsx("input-root", classNames.root)}>
+        {label && (
+          <label
+            htmlFor={inputId}
+            className={clsx("input-label", classNames.label)}
+          >
+            {label}
+          </label>
+        )}
+        <input
+          ref={ref}
+          type="range"
+          id={inputId}
+          className={clsx("form-range w-full", className, classNames.input)}
+          {...rest}
+        />
+        {description && (
+          <span
+            className={clsx(
+              "input-description mt-1 text-xs text-gray-400",
+              classNames.description,
+            )}
+          >
+            {description}
+          </span>
+        )}
+      </div>
+    );
+  },
+);
 
 Range.displayName = "Range";
-
-export { Range };

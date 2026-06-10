@@ -67,36 +67,36 @@ export function Declaration({
       autoComplete="off"
       className="max-w-3xl"
     >
-      <h6 className="dark:border-dark-500 dark:text-dark-200 mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
+      <h6 className=" mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
         Personal Information:
       </h6>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             First Name:
           </p>
           <p>{personalInfo.firstName}</p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Middle Name:
           </p>
           <p>{personalInfo.middleName || "---"}</p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Last Name:
           </p>
           <p>{personalInfo.lastName}</p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Email:
           </p>
           <p>{personalInfo.email}</p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Phone:
           </p>
           <p>
@@ -104,19 +104,19 @@ export function Declaration({
           </p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Gender:
           </p>
           <p>{personalInfo.gender}</p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Matrial Status:
           </p>
           <p>{personalInfo.matrialStatus}</p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Nationality:
           </p>
           <p>
@@ -124,20 +124,20 @@ export function Declaration({
           </p>
         </div>
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Date of Birth:
           </p>
           <p>{dayjs(personalInfo.dateOfBirth).format("DD.MM.YYYY")}</p>
         </div>
       </div>
 
-      <h6 className="dark:border-dark-500 dark:text-dark-200 mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
+      <h6 className=" mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
         Permanent Address:
       </h6>
 
       {getAddressNode(addressInfo.permanentAddress)}
 
-      <h6 className="dark:border-dark-500 dark:text-dark-200 mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
+      <h6 className=" mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
         Correspondence Address:
       </h6>
 
@@ -149,25 +149,25 @@ export function Declaration({
             : addressInfo.correspondenceAddress,
         )}
 
-      <h6 className="dark:border-dark-500 dark:text-dark-200 mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
+      <h6 className=" mt-8 border-b border-gray-200 pb-2 text-base font-semibold text-gray-700">
         Identification:
       </h6>
 
       <div className="mt-4">
         <div>
-          <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+          <p className=" text-sm font-medium text-gray-800">
             Document Type:
           </p>
           <p>{identifyDocument.type}</p>
         </div>
         <div className="mt-4 flex flex-col gap-4 sm:flex-row">
           <div>
-            <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+            <p className=" text-sm font-medium text-gray-800">
               {identifyDocument.type === "passport"
                 ? "Passport Cover:"
                 : "Front Image:"}
             </p>
-            <div className="dark:border-dark-500 mt-2 h-64 rounded-md border p-2">
+            <div className=" mt-2 h-64 rounded-md border p-2">
               <PreviewImg
                 file={identifyDocument.imageFront}
                 className="h-full w-full object-contain"
@@ -175,12 +175,12 @@ export function Declaration({
             </div>
           </div>
           <div>
-            <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+            <p className=" text-sm font-medium text-gray-800">
               {identifyDocument.type === "passport"
                 ? "Passport Page:"
                 : "Back Image:"}
             </p>
-            <div className="dark:border-dark-500 mt-2 h-64 rounded-md border p-2">
+            <div className=" mt-2 h-64 rounded-md border p-2">
               <PreviewImg
                 file={
                   identifyDocument.type === "passport"
@@ -202,7 +202,7 @@ export function Declaration({
                   I agree to the{" "}
                   <a
                     href="##"
-                    className="text-primary-600 dark:text-primary-400 hover:underline"
+                    className="text-primary-600 hover:underline"
                   >
                     terms and conditions
                   </a>
@@ -279,37 +279,37 @@ function getAddressNode(address: AddressDetails) {
   return (
     <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       <div>
-        <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+        <p className=" text-sm font-medium text-gray-800">
           Country:
         </p>
         <p>{countries.find((c) => c.code === address.country)?.name}</p>
       </div>
       <div>
-        <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+        <p className=" text-sm font-medium text-gray-800">
           City:
         </p>
         <p>{address.city}</p>
       </div>
       <div>
-        <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+        <p className=" text-sm font-medium text-gray-800">
           State:
         </p>
         <p>{address.state}</p>
       </div>
       <div>
-        <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+        <p className=" text-sm font-medium text-gray-800">
           Zipcode:
         </p>
         <p>{address.zipCode}</p>
       </div>
       <div>
-        <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+        <p className=" text-sm font-medium text-gray-800">
           Address Line 1:
         </p>
         <p>{address.addressLine1}</p>
       </div>
       <div>
-        <p className="dark:text-dark-100 text-sm font-medium text-gray-800">
+        <p className=" text-sm font-medium text-gray-800">
           Address Line 2:
         </p>
         <p>{address.addressLine2 || "---"}</p>

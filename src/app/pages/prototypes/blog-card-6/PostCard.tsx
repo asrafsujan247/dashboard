@@ -17,7 +17,7 @@ export function PostCard(props: Post & { query: string }) {
         <div className="line-clamp-3">
           <a
             href="##"
-            className="hover:text-primary-600 focus:text-primary-600 dark:text-dark-100 dark:hover:text-primary-400 dark:focus:text-primary-400 font-medium text-gray-700"
+            className="hover:text-primary-600 focus:text-primary-600   font-medium text-gray-700"
           >
             <Highlight query={query}>{title}</Highlight>
           </a>
@@ -35,7 +35,7 @@ export function PostCard(props: Post & { query: string }) {
               <p className="truncate text-xs font-medium">
                 <Highlight query={query}>{author.name}</Highlight>
               </p>
-              <p className="text-tiny-plus dark:text-dark-300 truncate text-gray-400">
+              <p className="text-tiny-plus truncate text-gray-400">
                 {readTime}
               </p>
             </div>

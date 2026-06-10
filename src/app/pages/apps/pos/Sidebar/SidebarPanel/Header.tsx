@@ -17,7 +17,7 @@ export function Header() {
         <Avatar size={9} initialColor="secondary" initialVariant="soft">
           <FaMoneyBillWave className="size-4.5" />
         </Avatar>
-        <p className="truncate text-base tracking-wider text-gray-800 dark:text-dark-100">
+        <p className="truncate text-base tracking-wider text-gray-800">
           POS
         </p>
       </div>

@@ -1,7 +1,7 @@
 export function Content() {
   return (
     <div className="grow">
-      <div className="my-5 h-px bg-gray-200 dark:bg-dark-500" />
+      <div className="my-5 h-px bg-gray-200" />
       <div>
         <div className="whitespace-pre-wrap">
           <p>

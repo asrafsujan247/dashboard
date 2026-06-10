@@ -18,9 +18,9 @@ export function Item({ data }: { data: Mail }) {
     <div
       className={clsx(
         isUnread
-          ? "dark:text-dark-50 font-bold text-gray-800"
-          : "dark:text-dark-200 text-gray-600",
-        "dark:border-dark-500 flex flex-col border-b p-2.5 font-semibold last:border-b-0 sm:flex-row sm:items-center",
+          ? " font-bold text-gray-800"
+          : " text-gray-600",
+        " flex flex-col border-b p-2.5 font-semibold last:border-b-0 sm:flex-row sm:items-center",
       )}
     >
       <div className="flex items-center justify-between gap-1">
@@ -32,7 +32,7 @@ export function Item({ data }: { data: Mail }) {
             <div className="flex max-sm:hidden">
               <Button isIcon variant="flat" className="size-8 rounded-full">
                 {isImportant ? (
-                  <StarIconSolid className="text-primary-600 dark:text-primary-400 size-5" />
+                  <StarIconSolid className="text-primary-600 size-5" />
                 ) : (
                   <StarIcon className="size-5" />
                 )}
@@ -58,8 +58,7 @@ export function Item({ data }: { data: Mail }) {
               <span
                 key={label.id}
                 className={clsx(
-                  "bg-this h-2 w-2 shrink-0 rounded-full lg:hidden",
-                  `this:${label.color}`,
+                  `bg-this-${label.color} h-2 w-2 shrink-0 rounded-full lg:hidden`,
                 )}
               />
             ))}
@@ -76,7 +75,7 @@ export function Item({ data }: { data: Mail }) {
         >
           <span className="truncate">
             <span>{title}</span>{" "}
-            <span className="dark:text-dark-200 font-normal text-gray-600">
+            <span className=" font-normal text-gray-600">
               {body}
             </span>
           </span>
@@ -94,7 +93,7 @@ export function Item({ data }: { data: Mail }) {
         <div className="flex sm:hidden">
           <Button isIcon variant="flat" className="size-8 rounded-full">
             {isImportant ? (
-              <StarIconSolid className="text-primary-600 dark:text-primary-400 size-5" />
+              <StarIconSolid className="text-primary-600 size-5" />
             ) : (
               <StarIcon className="size-5" />
             )}

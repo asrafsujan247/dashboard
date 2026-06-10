@@ -53,8 +53,8 @@ export function Item({
       className={clsx(
         "relative flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-lg outline-hidden transition-colors duration-200",
         isActive
-          ? "bg-primary-600/10 text-primary-600 dark:bg-primary-400/15 dark:text-primary-400"
-          : "hover:bg-primary-600/20 focus:bg-primary-600/20 active:bg-primary-600/25 dark:text-dark-200 dark:hover:bg-dark-300/20 dark:focus:bg-dark-300/20 dark:active:bg-dark-300/25 text-gray-500",
+          ? "bg-primary-600/10 text-primary-600"
+          : "hover:bg-primary-600/20 focus:bg-primary-600/20 active:bg-primary-600/25 text-gray-500",
       )}
       onKeyDown={createScopedKeydownHandler({
         siblingSelector: "[data-root-menu-item]",
@@ -70,7 +70,7 @@ export function Item({
       {info?.val && (
         <Badge
           color={info.color}
-          className="text-tiny-plus dark:ring-dark-800 absolute top-0 right-0 -m-1 h-4 min-w-[1rem] rounded-full px-1 py-0 ring-1 ring-white"
+          className="text-tiny-plus absolute top-0 right-0 -m-1 h-4 min-w-[1rem] rounded-full px-1 py-0 ring-1 ring-white"
         >
           <span>{info.val}</span>
         </Badge>

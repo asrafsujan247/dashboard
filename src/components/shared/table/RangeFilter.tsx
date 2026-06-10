@@ -46,7 +46,7 @@ export function RangeFilter({
 
           {selectedValues && selectedValues.length > 0 && (
             <>
-              <div className="dark:bg-dark-450 h-full w-px bg-gray-300" />
+              <div className=" h-full w-px bg-gray-300" />
               <span>
                 {buttonText({
                   min: selectedValues?.[0],
@@ -79,8 +79,8 @@ function FilterContent({
 
   return (
     <div className="sm:w-72">
-      <div className="bg-gray-150 dark:bg-dark-900 flex items-center justify-between px-2.5 py-2">
-        <p className="dark:text-dark-50 truncate py-1 text-start font-medium text-gray-800">
+      <div className="bg-gray-150 flex items-center justify-between px-2.5 py-2">
+        <p className=" truncate py-1 text-start font-medium text-gray-800">
           {title}
         </p>
         {selectedValues && (

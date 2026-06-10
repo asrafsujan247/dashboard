@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { Children, useMemo, forwardRef, ForwardedRef } from "react";
 import { setThisClass } from "@/utils/setThisClass";
 import { getPathStyles } from "./getPathStyles";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { randomId } from "@/utils/randomId";
 import { ColorType } from "@/constants/app";
 
@@ -189,14 +188,12 @@ export const Circlebar = forwardRef<HTMLDivElement, CirclebarProps>(({
     [gapDegree, offsetDegree, strokeWidth, value],
   );
 
-  const { cardSkin } = useThemeContext();
-
   const strokeClass = [
     variant === "gradient"
       ? ""
       : color === "neutral"
-        ? "stroke-gray-500 dark:stroke-dark-450"
-        : [setThisClass(color), "stroke-this dark:stroke-this-light"],
+        ? "stroke-gray-500"
+        : [setThisClass(color), "stroke-this"],
   ];
 
   return (
@@ -235,13 +232,10 @@ export const Circlebar = forwardRef<HTMLDivElement, CirclebarProps>(({
                 color === "neutral" || variant !== "soft"
                   ? [
                     "stroke-gray-150",
-                    cardSkin === "shadow"
-                      ? "dark:stroke-dark-900"
-                      : "dark:stroke-dark-700",
                   ]
                   : [
                     setThisClass(color),
-                    "stroke-this/[.15] dark:stroke-this-light/20",
+                    "stroke-this/[.15]",
                   ],
               ])}
             />
