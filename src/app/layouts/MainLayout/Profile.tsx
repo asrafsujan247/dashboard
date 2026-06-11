@@ -6,7 +6,6 @@ import {
   Transition,
 } from "@headlessui/react";
 import {
-  ArrowLeftStartOnRectangleIcon,
   ChatBubbleLeftIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/outline";
@@ -14,7 +13,7 @@ import { TbCoins, TbUser, TbUsersGroup } from "react-icons/tb";
 import { Link } from "react-router";
 
 // Local Imports
-import { Avatar, AvatarDot, Button } from "@/components/ui";
+import { Avatar, AvatarDot } from "@/components/ui";
 import { ColorType } from "@/constants/app";
 
 // Define Link Types
@@ -148,13 +147,6 @@ export function Profile() {
                   </Link>
                 ))}
 
-                {/* Logout Button */}
-                <div className="px-4 pt-4">
-                  <Button className="w-full gap-2">
-                    <ArrowLeftStartOnRectangleIcon className="size-4.5" />
-                    <span>Logout</span>
-                  </Button>
-                </div>
               </div>
             </>
           )}
