@@ -27,11 +27,11 @@ export default function SignInV2() {
             style={
               {
                 "--primary": "#F59E47",
-                "--illus-500": "oklch(92.9% 0.013 255.508)",
-                "--illus-600": "oklch(96.8% 0.007 247.896)",
-                "--illus-700": "oklch(86.9% 0.022 252.894)",
-                "--illus-450": "oklch(70.4% 0.04 256.788)",
-                "--illus-800": "oklch(70.4% 0.04 256.788)",
+                "--dark-500": "oklch(92.9% 0.013 255.508)",
+                "--dark-600": "oklch(96.8% 0.007 247.896)",
+                "--dark-700": "oklch(86.9% 0.022 252.894)",
+                "--dark-450": "oklch(70.4% 0.04 256.788)",
+                "--dark-800": "oklch(70.4% 0.04 256.788)",
               } as CSSProperties
             }
             className="w-full"

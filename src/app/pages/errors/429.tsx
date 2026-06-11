@@ -13,8 +13,8 @@ export default function Error429() {
             className="w-full"
             style={{
               ["--primary" as string]: "#F59E47",
-              ["--illus-700" as string]: "oklch(96.8% 0.007 247.896)",
-              ["--illus-800" as string]: "oklch(86.9% 0.022 252.894)",
+              ["--dark-700" as string]: "oklch(96.8% 0.007 247.896)",
+              ["--dark-800" as string]: "oklch(86.9% 0.022 252.894)",
             }}
           />
           <p className="pt-6 text-7xl font-bold text-primary-600">

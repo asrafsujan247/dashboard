@@ -31,8 +31,8 @@ export default function SignUpV2() {
             style={
               {
                 "--primary": "#F59E47",
-                "--illus-600": "oklch(37.2% 0.044 257.287)",
-                "--illus-450": "oklch(70.4% 0.04 256.788)",
+                "--dark-600": "oklch(37.2% 0.044 257.287)",
+                "--dark-450": "oklch(70.4% 0.04 256.788)",
               } as CSSProperties
             }
             className="w-full"

@@ -23,8 +23,8 @@ export default function Error404V2() {
               className="w-full"
               style={
                 {
-                  "--illus-100": "oklch(70.4% 0.04 256.788)",
-                  "--illus-500": "oklch(37.2% 0.044 257.287)",
+                  "--dark-100": "oklch(70.4% 0.04 256.788)",
+                  "--dark-500": "oklch(37.2% 0.044 257.287)",
                 } as CSSProperties
               }
             />

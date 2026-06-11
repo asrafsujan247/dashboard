@@ -13,7 +13,7 @@ export default function Error401() {
             className="w-full"
             style={{
               ["--primary" as string]: "#F59E47",
-              ["--illus-500" as string]: "oklch(37.2% 0.044 257.287)",
+              ["--dark-500" as string]: "oklch(37.2% 0.044 257.287)",
             }}
           />
           <p className="pt-4 text-7xl font-bold text-primary-600">

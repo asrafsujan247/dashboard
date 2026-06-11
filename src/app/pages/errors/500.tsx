@@ -13,8 +13,8 @@ export default function Error500() {
             className="w-full"
             style={{
               "--primary": "#F59E47",
-              "--illus-400": "oklch(55.4% 0.046 257.417)",
-              "--illus-600": "oklch(37.2% 0.044 257.287)",
+              "--dark-400": "oklch(55.4% 0.046 257.417)",
+              "--dark-600": "oklch(37.2% 0.044 257.287)",
             } as React.CSSProperties}
           />
           <p className="pt-8 text-7xl font-bold text-primary-600">

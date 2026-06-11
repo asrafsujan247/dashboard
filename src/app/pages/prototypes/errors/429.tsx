@@ -17,8 +17,8 @@ export default function Error429() {
             style={
               {
                 "--primary": "#F59E47",
-                "--illus-700": "oklch(96.8% 0.007 247.896)",
-                "--illus-800": "oklch(86.9% 0.022 252.894)",
+                "--dark-700": "oklch(96.8% 0.007 247.896)",
+                "--dark-800": "oklch(86.9% 0.022 252.894)",
               } as CSSProperties
             }
           />
