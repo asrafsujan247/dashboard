@@ -32,7 +32,7 @@ import { RangeFilter } from "@/components/shared/table/RangeFilter";
 import { RadioFilter } from "@/components/shared/table/RadioFilter";
 import { FilterSelector } from "@/components/shared/table/FilterSelector";
 import { Button, Input } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import {
   Course,
   courseStatusOptions,
@@ -45,7 +45,7 @@ import { formatNumber } from "@/utils/formatNumber";
 // ----------------------------------------------------------------------
 
 export function Toolbar({ table }: { table: Table<Course> }) {
-  const { isXs } = useBreakpointsContext();
+  const { isXs } = useBreakpointsStore();
   const isFullScreenEnabled = table.getState().tableSettings?.enableFullScreen;
 
   return (

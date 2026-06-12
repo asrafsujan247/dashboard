@@ -1,10 +1,10 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { Dispatch, ElementType, SetStateAction } from "react";
 import { Link } from "react-router";
 
 // Local Imports
 import { ScrollShadow } from "@/components/ui";
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
+import { useSidebarStore } from "@/app/store/sidebarStore";
 import { Item } from "./item";
 import { NavigationTree } from "@/@types/navigation";
 import { SegmentPath } from "../..";
@@ -22,7 +22,7 @@ export function Menu({
   setActiveSegmentPath,
   activeSegmentPath,
 }: MenuProps) {
-  const { isExpanded, open } = useSidebarContext();
+  const { isExpanded, open } = useSidebarStore();
 
   const handleSegmentSelect = (path: string) => {
     setActiveSegmentPath?.(path);

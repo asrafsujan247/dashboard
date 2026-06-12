@@ -1,7 +1,11 @@
 // Local Imports
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
+import { createStore, type StoreApi } from "zustand";
 import { useId, useUncontrolled } from "@/hooks";
-import { AccordionContextProvider } from "./Accordion.context";
+import {
+  AccordionContextType,
+  AccordionStoreContext,
+} from "./Accordion.context";
 import { PolymorphicComponentProps } from "@/@types/polymorphic";
 
 type AccordionProviderOwnProps = {
@@ -13,7 +17,7 @@ type AccordionProviderOwnProps = {
   id?: string;
   transitionDuration?: number;
   loop?: boolean;
-}
+};
 
 export type AccordionProviderProps =
   PolymorphicComponentProps<"div", AccordionProviderOwnProps>;
@@ -52,18 +56,25 @@ export function AccordionProvider({
     handleChange(nextValue);
   };
 
+  const contextValue: AccordionContextType = {
+    isItemActive,
+    onChange: handleItemChange,
+    buttonId: `${uid}-control`,
+    panelId: `${uid}-panel`,
+    transitionDuration,
+    loop,
+  };
+
+  const storeRef = useRef<StoreApi<AccordionContextType> | null>(null);
+  if (!storeRef.current) {
+    storeRef.current = createStore<AccordionContextType>(() => contextValue);
+  } else {
+    storeRef.current.setState(contextValue, true);
+  }
+
   return (
-    <AccordionContextProvider
-      value={{
-        isItemActive,
-        onChange: handleItemChange,
-        buttonId: `${uid}-control`,
-        panelId: `${uid}-panel`,
-        transitionDuration,
-        loop,
-      }}
-    >
+    <AccordionStoreContext.Provider value={storeRef.current}>
       {children}
-    </AccordionContextProvider>
+    </AccordionStoreContext.Provider>
   );
 }

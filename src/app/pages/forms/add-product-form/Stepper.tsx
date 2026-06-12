@@ -1,11 +1,11 @@
-// Import Dependencies
+﻿// Import Dependencies
 import clsx from "clsx";
 import { HiCheck } from "react-icons/hi";
 import { CSSProperties } from "react";
 
 // Local Imports
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
-import { useAddProductFormContext, StepStatus } from "./AddProductFormContext";
+import { useAddProductFormStore, StepStatus } from "./AddProductFormContext";
 import { Step } from ".";
 
 // ----------------------------------------------------------------------
@@ -19,7 +19,7 @@ export function Stepper({
   currentStep: number;
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const addProductFormCtx = useAddProductFormContext();
+  const addProductFormCtx = useAddProductFormStore();
 
   const stepStatus = addProductFormCtx.state.stepStatus;
 

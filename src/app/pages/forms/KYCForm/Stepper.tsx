@@ -1,13 +1,13 @@
-// Import Dependencies
+﻿// Import Dependencies
 import clsx from "clsx";
 import { HiCheck } from "react-icons/hi";
 
 // Local Imports
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
 import {
   StepKey,
-  useKYCFormContext,
+  useKYCFormStore,
 } from "./KYCFormContext";
 import { Step } from ".";
 
@@ -20,8 +20,8 @@ interface StepperProps {
 }
 
 export function Stepper({ steps, currentStep, setCurrentStep }: StepperProps) {
-  const { smAndUp } = useBreakpointsContext();
-  const kycFormCtx = useKYCFormContext();
+  const { smAndUp } = useBreakpointsStore();
+  const kycFormCtx = useKYCFormStore();
   const stepStatus = kycFormCtx.state.stepStatus;
   const stepKeys = Object.keys(kycFormCtx.state.formData) as StepKey[];
   

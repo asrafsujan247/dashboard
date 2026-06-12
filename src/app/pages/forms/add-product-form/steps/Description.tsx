@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm } from "react-hook-form";
 
@@ -6,7 +6,7 @@ import { Controller, useForm } from "react-hook-form";
 import { ContextualHelp } from "@/components/shared/ContextualHelp";
 import { TextEditor } from "@/components/shared/form/TextEditor";
 import { Button, Input, Textarea } from "@/components/ui";
-import { useAddProductFormContext } from "../AddProductFormContext";
+import { useAddProductFormStore } from "../AddProductFormContext";
 import { MetaTags } from "../components/MetaTags";
 import { descriptionSchema } from "../schema";
 import type { Delta } from "quill";
@@ -36,7 +36,7 @@ export function Description({
 }: {
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const addProductFormCtx = useAddProductFormContext();
+  const addProductFormCtx = useAddProductFormStore();
 
   const {
     register,

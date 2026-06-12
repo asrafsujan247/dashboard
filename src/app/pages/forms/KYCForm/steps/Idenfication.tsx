@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm, Resolver } from "react-hook-form";
@@ -8,7 +8,7 @@ import { IconType } from "react-icons";
 // Local Imports
 import { useDidUpdate } from "@/hooks";
 import { Button } from "@/components/ui";
-import { useKYCFormContext } from "../KYCFormContext";
+import { useKYCFormStore } from "../KYCFormContext";
 import { DocumentType } from "../components/DocumentType";
 import { DocumentUpload } from "../components/DocumentUpload";
 import {
@@ -69,7 +69,7 @@ interface IdenficationProps {
 }
 
 export function Idenfication({ setCurrentStep }: IdenficationProps) {
-  const kycFormCtx = useKYCFormContext();
+  const kycFormCtx = useKYCFormStore();
 
   const {
     handleSubmit,

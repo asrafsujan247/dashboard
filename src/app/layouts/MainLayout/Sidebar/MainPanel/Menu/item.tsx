@@ -1,10 +1,10 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { ElementType, ComponentPropsWithoutRef } from "react";
 import clsx from "clsx";
 import { type To, useRouteLoaderData } from "react-router";
 
 // Local Imports
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { Badge } from "@/components/ui";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
 import { ColorType } from "@/constants/app";
@@ -37,7 +37,7 @@ export function Item({
   }
 
   const Element = component || "button";
-  const { lgAndUp } = useBreakpointsContext();
+  const { lgAndUp } = useBreakpointsStore();
   const info = useRouteLoaderData("root")?.[id]?.info as
     | { val?: string; color?: ColorType }
     | undefined;

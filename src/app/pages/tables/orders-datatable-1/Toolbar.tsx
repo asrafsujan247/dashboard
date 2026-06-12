@@ -23,14 +23,14 @@ import { DateFilter } from "@/components/shared/table/DateFilter";
 import { FacedtedFilter } from "@/components/shared/table/FacedtedFilter";
 import { RangeFilter } from "@/components/shared/table/RangeFilter";
 import { Button, Input } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { Order, orderStatusOptions } from "./data";
 import { CSSProperties } from "react";
 
 // ----------------------------------------------------------------------
 
 export function Toolbar({ table }: { table: Table<Order> }) {
-  const { isXs } = useBreakpointsContext();
+  const { isXs } = useBreakpointsStore();
   const isFullScreenEnabled = table.getState().tableSettings?.enableFullScreen;
 
   return (

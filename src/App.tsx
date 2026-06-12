@@ -2,20 +2,16 @@
 import { RouterProvider } from "react-router";
 
 // Local Imports
-import { BreakpointProvider } from "@/app/contexts/breakpoint/Provider";
-import { SidebarProvider } from "@/app/contexts/sidebar/Provider";
 import router from "./app/router/router";
+
+// Ensure global stores initialize on app load
+import "@/app/store/breakpointStore";
+import "@/app/store/sidebarStore";
 
 // ----------------------------------------------------------------------
 
 function App() {
-  return (
-    <BreakpointProvider>
-      <SidebarProvider>
-        <RouterProvider router={router} />
-      </SidebarProvider>
-    </BreakpointProvider>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

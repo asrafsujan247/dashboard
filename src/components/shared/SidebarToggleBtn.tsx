@@ -1,13 +1,13 @@
-// Import Dependencies
+﻿// Import Dependencies
 import clsx from "clsx";
 
 // Local Imports
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
+import { useSidebarStore } from "@/app/store/sidebarStore";
 
 // ----------------------------------------------------------------------
 
 export function SidebarToggleBtn() {
-  const { toggle, isExpanded } = useSidebarContext();
+  const { toggle, isExpanded } = useSidebarStore();
 
   return (
     <button

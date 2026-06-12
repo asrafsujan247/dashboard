@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { UserIcon } from "@heroicons/react/20/solid";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -8,7 +8,7 @@ import { Controller, Resolver, useForm } from "react-hook-form";
 import { DatePicker } from "@/components/shared/form/Datepicker";
 import { Listbox } from "@/components/shared/form/StyledListbox";
 import { Button, Input, InputErrorMsg } from "@/components/ui";
-import { useKYCFormContext } from "../KYCFormContext";
+import { useKYCFormStore } from "../KYCFormContext";
 import { CountrySelect } from "../components/CountrySelect";
 import { PhoneDialCode } from "../components/PhoneDialCode";
 import { personalInfoSchema, PersonalInfoType } from "../schema";
@@ -58,7 +58,7 @@ export function PersonalInfo({
 }: {
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const kycFormCtx = useKYCFormContext();
+  const kycFormCtx = useKYCFormStore();
 
   const {
     register,

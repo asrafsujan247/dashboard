@@ -19,7 +19,7 @@ import { CSSProperties } from "react";
 
 // Local Imports
 import { Button, Input } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { rolesOptions, User } from "./data";
 import { RoleFilter } from "./RoleFilter";
 import { ItemViewTypeSelect } from "@/components/shared/table/ItemViewTypeSelect";
@@ -27,7 +27,7 @@ import { ItemViewTypeSelect } from "@/components/shared/table/ItemViewTypeSelect
 // ----------------------------------------------------------------------
 
 export function Toolbar({ table }: { table: Table<User> }) {
-  const { isXs } = useBreakpointsContext();
+  const { isXs } = useBreakpointsStore();
   const isFullScreenEnabled = table.getState().tableSettings?.enableFullScreen;
 
   return (

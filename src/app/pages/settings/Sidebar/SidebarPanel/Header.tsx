@@ -2,7 +2,7 @@
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 
 // Local Imports
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
+import { useSidebarStore } from "@/app/store/sidebarStore";
 import { Avatar, Button } from "@/components/ui";
 import { settings } from "@/app/navigation/segments/settings";
 import { navigationIcons } from "@/app/navigation/icons";
@@ -10,7 +10,7 @@ import { navigationIcons } from "@/app/navigation/icons";
 // ----------------------------------------------------------------------
 
 export function Header() {
-  const { close: closeSidebar } = useSidebarContext();
+  const { close: closeSidebar } = useSidebarStore();
 
   if (!settings.icon || !navigationIcons[settings.icon]) {
     throw new Error(`Icon ${settings.icon} not found in navigationIcons`);

@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, Resolver, useForm } from "react-hook-form";
 import { useState } from "react";
@@ -6,7 +6,7 @@ import { FileWithPath } from "react-dropzone";
 
 // Local Imports
 import { Button, GhostSpinner } from "@/components/ui";
-import { useAddProductFormContext } from "../AddProductFormContext";
+import { useAddProductFormStore } from "../AddProductFormContext";
 import { CoverImageUpload } from "../components/CoverImageUpload";
 import { GalleryImageUpload } from "../components/GalleryImageUpload";
 import { imageSchema, ImageType } from "../schema";
@@ -20,7 +20,7 @@ export function Images({
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   setFinished: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const addProductFormCtx = useAddProductFormContext();
+  const addProductFormCtx = useAddProductFormStore();
   const [loading, setLoading] = useState(false);
 
   const {

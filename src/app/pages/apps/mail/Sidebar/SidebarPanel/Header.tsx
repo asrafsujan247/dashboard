@@ -1,16 +1,16 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { ChevronLeftIcon } from "@heroicons/react/20/solid";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router";
 
 // Local Imports
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
+import { useSidebarStore } from "@/app/store/sidebarStore";
 import { Avatar, Button } from "@/components/ui";
 
 // ----------------------------------------------------------------------
 
 export function Header() {
-  const { close: closeSidebar } = useSidebarContext();
+  const { close: closeSidebar } = useSidebarStore();
 
   return (
     <div className="relative flex h-18 w-full shrink-0 items-center justify-between pl-4 pr-1 rtl:pl-1 rtl:pr-4">

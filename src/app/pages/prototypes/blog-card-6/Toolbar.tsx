@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   Dispatch,
   SetStateAction,
@@ -27,7 +27,7 @@ import clsx from "clsx";
 
 // Local Imports
 import { Button, Input } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 
 // ----------------------------------------------------------------------
 
@@ -41,7 +41,7 @@ export function Toolbar(props: ToolbarProps) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const mobileSearchRef = useRef<HTMLInputElement | null>(null);
 
-  const { isXs } = useBreakpointsContext();
+  const { isXs } = useBreakpointsStore();
 
   useLayoutEffect(() => {
     if (showMobileSearch) mobileSearchRef?.current?.focus();

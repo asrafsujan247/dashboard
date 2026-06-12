@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { yupResolver } from "@hookform/resolvers/yup";
 import dayjs from "dayjs";
 import { useState } from "react";
@@ -16,7 +16,7 @@ import {
   InputErrorMsg,
 } from "@/components/ui";
 import { countries } from "@/constants/countries";
-import { useKYCFormContext } from "../KYCFormContext";
+import { useKYCFormStore } from "../KYCFormContext";
 import { AddressDetails, declarationSchema, DeclarationType } from "../schema";
 
 // ----------------------------------------------------------------------
@@ -28,7 +28,7 @@ export function Declaration({
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   setFinished: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const kycFormCtx = useKYCFormContext();
+  const kycFormCtx = useKYCFormStore();
   const [loading, setLoading] = useState(false);
 
   const {
