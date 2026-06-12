@@ -63,7 +63,7 @@ export function Description({
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
       <div>
-        <h6 className="dark:text-dark-100 text-base font-medium text-gray-800">
+        <h6 className=" text-base font-medium text-gray-800">
           <span>Product Description</span>
         </h6>
         <div className="mt-3 space-y-4">
@@ -95,7 +95,7 @@ export function Description({
       </div>
 
       <div className="mt-4">
-        <h6 className="dark:text-dark-100 flex gap-1.5 text-base font-medium text-gray-800">
+        <h6 className=" flex gap-1.5 text-base font-medium text-gray-800">
           <span>SEO Meta Data</span>
           <ContextualHelp
             title="SEO Meta Data"

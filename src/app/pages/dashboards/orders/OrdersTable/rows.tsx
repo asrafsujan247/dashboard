@@ -23,7 +23,7 @@ import { type Order, OrderStatus, orderStatusOptions } from "./data";
 
 export function OrderIdCell({ getValue }: { getValue: Getter<any> }) {
   return (
-    <span className="text-primary-600 dark:text-primary-400 font-medium">
+    <span className="text-primary-600 font-medium">
       {getValue()}
     </span>
   );
@@ -36,7 +36,7 @@ export function DateCell({ getValue }: { getValue: Getter<any> }) {
   return (
     <>
       <p className="font-medium">{date}</p>
-      <p className="dark:text-dark-300 mt-0.5 text-xs text-gray-400">{time}</p>
+      <p className=" mt-0.5 text-xs text-gray-400">{time}</p>
     </>
   );
 }
@@ -67,7 +67,7 @@ export function CustomerCell({
           display: "mask is-squircle rounded-none text-sm",
         }}
       />
-      <span className="dark:text-dark-100 font-medium text-gray-800">
+      <span className=" font-medium text-gray-800">
         <Highlight query={[globalQuery, columnQuery]}>{name}</Highlight>
       </span>
     </div>
@@ -76,7 +76,7 @@ export function CustomerCell({
 
 export function TotalCell({ getValue }: { getValue: Getter<any> }) {
   return (
-    <p className="text-sm-plus dark:text-dark-100 font-medium text-gray-800">
+    <p className="text-sm-plus font-medium text-gray-800">
       ${getValue().toFixed(1)}
     </p>
   );
@@ -91,7 +91,7 @@ export function ProfitCell({
 }) {
   return (
     <div className="flex items-center gap-2">
-      <p className="dark:text-dark-100 text-gray-800">
+      <p className=" text-gray-800">
         ${getValue().toFixed(1)}
       </p>
       <Badge className="rounded-full" color="success" variant="soft">
@@ -142,7 +142,7 @@ export function OrderStatusCell({
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
         anchor={{ to: "bottom start", gap: "8px" }}
-        className="text-xs-plus shadow-soft dark:border-dark-500 dark:bg-dark-750 z-100 max-h-60 w-40 overflow-auto rounded-lg border border-gray-300 bg-white py-1 capitalize outline-hidden focus-visible:outline-hidden dark:shadow-none"
+        className="text-xs-plus shadow-soft  z-100 max-h-60 w-40 overflow-auto rounded-lg border border-gray-300 bg-white py-1 capitalize outline-hidden focus-visible:outline-hidden"
       >
         {orderStatusOptions.map((item) => (
           <ListboxOption
@@ -150,8 +150,8 @@ export function OrderStatusCell({
             value={item.value}
             className={({ focus }) =>
               clsx(
-                "dark:text-dark-100 relative flex cursor-pointer items-center justify-between gap-2 px-3 py-2 text-gray-800 outline-hidden transition-colors select-none",
-                focus && "dark:bg-dark-600 bg-gray-100",
+                " relative flex cursor-pointer items-center justify-between gap-2 px-3 py-2 text-gray-800 outline-hidden transition-colors select-none",
+                focus && " bg-gray-100",
               )
             }
           >

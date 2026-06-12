@@ -69,8 +69,8 @@ const InputInner = forwardRef(
     const affixClass = clsx(
       "absolute top-0 flex h-full w-9 items-center justify-center transition-colors",
       error
-        ? "text-error dark:text-error-light"
-        : "peer-focus:text-primary-600 dark:text-dark-300 dark:peer-focus:text-primary-500 text-gray-400",
+        ? "text-error"
+        : "peer-focus:text-primary-600 text-gray-400",
     );
 
     return (
@@ -102,10 +102,10 @@ const InputInner = forwardRef(
               !unstyled && [
                 "form-input",
                 error
-                  ? "border-error dark:border-error-lighter"
+                  ? "border-error"
                   : disabled
-                    ? "bg-gray-150 dark:border-dark-500 dark:bg-dark-600 cursor-not-allowed border-gray-300 opacity-60"
-                    : "peer focus:border-primary-600 dark:border-dark-450 dark:hover:border-dark-400 dark:focus:border-primary-500 border-gray-300 hover:border-gray-400",
+                    ? "bg-gray-150 cursor-not-allowed border-gray-300 opacity-60"
+                    : "peer focus:border-primary-600 border-gray-300 hover:border-gray-400",
               ],
               className,
               classNames.input,
@@ -148,7 +148,7 @@ const InputInner = forwardRef(
         {description && (
           <span
             className={clsx(
-              "input-description dark:text-dark-300 mt-1 text-xs text-gray-400",
+              "input-description mt-1 text-xs text-gray-400",
               classNames.description,
             )}
           >

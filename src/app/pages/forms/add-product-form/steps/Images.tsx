@@ -74,7 +74,7 @@ export function Images({
               label={
                 <p className="mb-1.5">
                   Image Gallery{" "}
-                  <span className="dark:text-dark-300 text-xs text-gray-400">
+                  <span className=" text-xs text-gray-400">
                     (Optional)
                   </span>
                 </p>

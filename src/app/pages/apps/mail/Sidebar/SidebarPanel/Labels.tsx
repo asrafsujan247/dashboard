@@ -50,7 +50,7 @@ export function Labels() {
               className="group w-full justify-between gap-2 p-2 text-xs-plus"
             >
               <div className="flex gap-2">
-                <StarIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500 dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200" />
+                <StarIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
                 <span>Important</span>
               </div>
             </Button>
@@ -61,7 +61,7 @@ export function Labels() {
               className="group w-full justify-between gap-2 p-2 text-xs-plus"
             >
               <div className="flex gap-2">
-                <StarIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500 dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200" />
+                <StarIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
                 <span>Saved</span>
               </div>
             </Button>
@@ -72,7 +72,7 @@ export function Labels() {
               className="group w-full justify-between gap-2 p-2 text-xs-plus"
             >
               <div className="flex gap-2">
-                <ArchiveBoxIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500 dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200" />
+                <ArchiveBoxIcon className="size-4.5 text-gray-400 transition-colors group-hover:text-gray-500 group-focus:text-gray-500" />
                 <span>Archive</span>
               </div>
             </Button>
@@ -83,7 +83,7 @@ export function Labels() {
               className="group w-full justify-between gap-2 p-2 text-xs-plus"
             >
               <div className="flex gap-2">
-                <HiOutlineTag className="this:secondary size-4.5 text-this dark:text-this-light" />
+                <HiOutlineTag className="size-4.5 text-this-secondary" />
                 <span>Work</span>
               </div>
             </Button>
@@ -94,7 +94,7 @@ export function Labels() {
               className="group w-full justify-between gap-2 p-2 text-xs-plus"
             >
               <div className="flex gap-2">
-                <HiOutlineTag className="this:info size-4.5 text-this dark:text-this-light" />
+                <HiOutlineTag className="size-4.5 text-this-info" />
                 <span>Personal</span>
               </div>
             </Button>

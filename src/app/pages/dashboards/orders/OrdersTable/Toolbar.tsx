@@ -20,7 +20,7 @@ export function Toolbar({ table }: { table: Table<Order> }) {
         isFullScreenEnabled && "px-4 sm:px-5",
       )}
     >
-      <h2 className="dark:text-dark-100 truncate text-base font-medium tracking-wide text-gray-800">
+      <h2 className=" truncate text-base font-medium tracking-wide text-gray-800">
         Orders Table
       </h2>
       <div

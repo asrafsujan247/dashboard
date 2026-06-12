@@ -42,11 +42,11 @@ export const PaginationControlInner = forwardRef(
           "pagination-control cursor-pointer",
           [
             active
-              ? "active this:primary bg-this disabled:bg-this-light dark:bg-this-light dark:disabled:bg-this-darker text-white disabled:cursor-not-allowed disabled:opacity-60"
+              ? "active bg-this disabled:bg-this-light text-white disabled:cursor-not-allowed disabled:opacity-60"
               : [
                   disabled
                     ? "disabled:cursor-not-allowed disabled:opacity-60"
-                    : "dark:hover:bg-surface-1 dark:focus-visible:bg-surface-1 dark:active:bg-surface-1/90 hover:bg-gray-300 focus-visible:bg-gray-300 active:bg-gray-300/80",
+                    : "  hover:bg-gray-300 focus-visible:bg-gray-300 active:bg-gray-300/80",
                 ],
           ],
           ctx.classNames?.control,

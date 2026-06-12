@@ -25,7 +25,6 @@ import { columns } from "./columns";
 import { Course, coursesList } from "./data";
 import { PaginationSection } from "@/components/shared/table/PaginationSection";
 import { SelectedRowsActions } from "./SelectedRowsActions";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { getUserAgentBrowser } from "@/utils/dom/getUserAgentBrowser";
 import { TableSettings } from "@/components/shared/table/TableSettings";
 
@@ -34,8 +33,6 @@ import { TableSettings } from "@/components/shared/table/TableSettings";
 const isSafari = getUserAgentBrowser() === "Safari";
 
 export default function CoursesDatatable() {
-  const { cardSkin } = useThemeContext();
-
   const [courses, setCourses] = useState<Course[]>([...coursesList]);
 
   const [tableSettings, setTableSettings] = useState<TableSettings>({
@@ -123,7 +120,7 @@ export default function CoursesDatatable() {
           className={clsx(
             "flex h-full w-full flex-col",
             tableSettings.enableFullScreen &&
-              "dark:bg-dark-900 fixed inset-0 z-61 bg-white pt-3",
+              " fixed inset-0 z-61 bg-white pt-3",
           )}
         >
           <Toolbar table={table} />
@@ -159,7 +156,7 @@ export default function CoursesDatatable() {
                             <Th
                               key={header.id}
                               className={clsx(
-                                "dark:bg-dark-800 dark:text-dark-100 bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-tl-lg last:ltr:rounded-tr-lg first:rtl:rounded-tr-lg last:rtl:rounded-tl-lg",
+                                " bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-tl-lg last:ltr:rounded-tr-lg first:rtl:rounded-tr-lg last:rtl:rounded-tl-lg",
                                 header.column.getCanPin() && [
                                   header.column.getIsPinned() === "left" &&
                                     "sticky z-2 ltr:left-0 rtl:right-0",
@@ -202,7 +199,7 @@ export default function CoursesDatatable() {
                         <Tr
                           key={row.id}
                           className={clsx(
-                            "dark:border-b-dark-500 relative border-y border-transparent border-b-gray-200",
+                            " relative border-y border-transparent border-b-gray-200",
                             row.getIsSelected() &&
                               !isSafari &&
                               "row-selected after:bg-primary-500/10 ltr:after:border-l-primary-500 rtl:after:border-r-primary-500 after:pointer-events-none after:absolute after:inset-0 after:z-2 after:h-full after:w-full after:border-3 after:border-transparent",
@@ -220,10 +217,6 @@ export default function CoursesDatatable() {
                                   key={cell.id}
                                   className={clsx(
                                     "relative",
-                                    cardSkin === "shadow"
-                                      ? "dark:bg-dark-700"
-                                      : "dark:bg-dark-900",
-
                                     cell.column.getCanPin() && [
                                       cell.column.getIsPinned() === "left" &&
                                         "sticky z-2 ltr:left-0 rtl:right-0",
@@ -235,7 +228,7 @@ export default function CoursesDatatable() {
                                   {cell.column.getIsPinned() && (
                                     <div
                                       className={clsx(
-                                        "dark:border-dark-500 pointer-events-none absolute inset-0 border-gray-200",
+                                        " pointer-events-none absolute inset-0 border-gray-200",
                                         cell.column.getIsPinned() === "left"
                                           ? "ltr:border-r rtl:border-l"
                                           : "ltr:border-l rtl:border-r",
@@ -261,7 +254,7 @@ export default function CoursesDatatable() {
                   className={clsx(
                     "px-4 pb-4 sm:px-5 sm:pt-4",
                     tableSettings.enableFullScreen &&
-                      "dark:bg-dark-800 bg-gray-50",
+                      " bg-gray-50",
                     !(
                       table.getIsSomeRowsSelected() ||
                       table.getIsAllRowsSelected()

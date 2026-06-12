@@ -41,16 +41,16 @@ const Spinner = forwardRef(({
             variant === "default"
               ? [
                 color === "neutral"
-                  ? "border-gray-500 dark:border-dark-400"
-                  : [setThisClass(color), "border-this dark:border-this-light"],
-                "border-r-transparent dark:border-r-transparent",
+                  ? "border-gray-500"
+                  : [setThisClass(color), "border-this"],
+                "border-r-transparent"
               ]
               : [
                 color === "neutral"
-                  ? "border-gray-150 border-r-gray-500 dark:border-dark-500 dark:border-r-dark-400"
+                  ? "border-gray-150 border-r-gray-500"
                   : [
                     setThisClass(color),
-                    "border-this/30 border-r-this dark:border-this-light/30 dark:border-r-this-light",
+                    "border-this/30 border-r-this"
                   ],
               ],
           ],
@@ -72,8 +72,8 @@ const Spinner = forwardRef(({
         disabled && "opacity-50",
         !unstyled && [
           color === "neutral"
-            ? "text-gray-500 dark:text-dark-400"
-            : [setThisClass(color), "text-this dark:text-this-light"],
+            ? "text-gray-500"
+            : [setThisClass(color), "text-this"]
         ],
         className,
       )}

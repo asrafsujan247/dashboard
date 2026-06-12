@@ -194,9 +194,9 @@ const sellers: Seller[] = [
 
 export function TopSellers() {
   return (
-    <div className="bg-gray-150 dark:bg-dark-800 mt-4 grid grid-cols-12 gap-4 py-5 sm:mt-5 sm:gap-5 lg:mt-6 lg:gap-6">
+    <div className="bg-gray-150 mt-4 grid grid-cols-12 gap-4 py-5 sm:mt-5 sm:gap-5 lg:mt-6 lg:gap-6">
       <div className="transition-content col-span-12 flex flex-col px-(--margin-x) lg:col-span-3 lg:ltr:pr-0 lg:rtl:pl-0">
-        <h2 className="dark:text-dark-100 truncate text-base font-medium tracking-wide text-gray-800 lg:text-xl">
+        <h2 className=" truncate text-base font-medium tracking-wide text-gray-800 lg:text-xl">
           Top Sellers
         </h2>
 
@@ -211,7 +211,7 @@ export function TopSellers() {
             <Avatar size={7} initialColor="success" initialVariant="soft">
               <ArrowUpIcon className="size-4" />
             </Avatar>
-            <p className="dark:text-dark-100 text-base font-medium text-gray-800">
+            <p className=" text-base font-medium text-gray-800">
               $2,225.22
             </p>
           </div>

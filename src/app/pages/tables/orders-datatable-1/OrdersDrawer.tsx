@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   Dialog,
   DialogPanel,
@@ -58,7 +58,7 @@ export function OrdersDrawer({
           leave="ease-in duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
-          className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity dark:bg-black/40"
+          className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity"
         />
 
         <TransitionChild
@@ -69,12 +69,12 @@ export function OrdersDrawer({
           leave="ease-in transform-gpu transition-transform duration-200"
           leaveFrom="translate-x-0"
           leaveTo="translate-x-full"
-          className="dark:bg-dark-700 fixed top-0 right-0 flex h-full w-full max-w-xl transform-gpu flex-col bg-white py-4 transition-transform duration-200"
+          className=" fixed top-0 right-0 flex h-full w-full max-w-xl transform-gpu flex-col bg-white py-4 transition-transform duration-200"
         >
           <div className="flex justify-between px-4 sm:px-5">
             <div>
               <div className="font-semibold">Order ID:</div>
-              <div className="text-primary-600 dark:text-primary-400 text-xl font-medium">
+              <div className="text-primary-600 text-xl font-medium">
                 {row.original.order_id} &nbsp;
                 <Badge
                   className="align-text-bottom"
@@ -109,7 +109,7 @@ export function OrdersDrawer({
                 }}
               />
 
-              <div className="dark:text-dark-50 mt-1.5 text-lg font-medium text-gray-800">
+              <div className=" mt-1.5 text-lg font-medium text-gray-800">
                 {row.original.customer.name}
               </div>
             </div>
@@ -117,7 +117,7 @@ export function OrdersDrawer({
               <div className="font-semibold">Date:</div>
               <div className="mt-1.5">
                 <p className="font-medium">{date}</p>
-                <p className="dark:text-dark-300 mt-0.5 text-xs text-gray-400">
+                <p className=" mt-0.5 text-xs text-gray-400">
                   {time}
                 </p>
               </div>
@@ -132,11 +132,11 @@ export function OrdersDrawer({
           </div>
 
           <hr
-            className="border-gray-150 dark:border-dark-500 mx-4 my-4 h-px sm:mx-5"
+            className="border-gray-150 mx-4 my-4 h-px sm:mx-5"
             role="none"
           />
 
-          <p className="dark:text-dark-100 px-4 font-medium text-gray-800 sm:px-5">
+          <p className=" px-4 font-medium text-gray-800 sm:px-5">
             Customer orders:
           </p>
 
@@ -146,11 +146,11 @@ export function OrdersDrawer({
               className="text-xs-plus w-full text-left rtl:text-right [&_.table-td]:py-2"
             >
               <THead>
-                <Tr className="dark:border-b-dark-500 border-y border-transparent border-b-gray-200">
+                <Tr className=" border-y border-transparent border-b-gray-200">
                   {cols.map((title, index) => (
                     <Th
                       key={index}
-                      className="dark:text-dark-100 py-2 font-semibold text-gray-800 uppercase first:px-0 last:px-0"
+                      className=" py-2 font-semibold text-gray-800 uppercase first:px-0 last:px-0"
                     >
                       {title}
                     </Th>
@@ -161,7 +161,7 @@ export function OrdersDrawer({
                 {row.original.products.map((tr) => (
                   <Tr
                     key={tr.sku}
-                    className="dark:border-b-dark-500 border-y border-transparent border-b-gray-200"
+                    className=" border-y border-transparent border-b-gray-200"
                   >
                     <Td className="px-0 font-medium ltr:rounded-l-lg rtl:rounded-r-lg">
                       <div className="flex items-center space-x-2">
@@ -179,7 +179,7 @@ export function OrdersDrawer({
                     <Td>{tr.price}</Td>
                     <Td>{tr.qty}</Td>
                     <Td>{tr.discount}</Td>
-                    <Td className="dark:text-dark-100 px-0 font-medium text-gray-800 ltr:rounded-r-lg rtl:rounded-l-lg">
+                    <Td className=" px-0 font-medium text-gray-800 ltr:rounded-r-lg rtl:rounded-l-lg">
                       {tr.total}
                     </Td>
                   </Tr>
@@ -195,7 +195,7 @@ export function OrdersDrawer({
                   <Tr>
                     <Td>Summary :</Td>
                     <Td>
-                      <span className="dark:text-dark-100 font-medium text-gray-800">
+                      <span className=" font-medium text-gray-800">
                         ${row.original.subtotal}
                       </span>
                     </Td>
@@ -203,7 +203,7 @@ export function OrdersDrawer({
                   <Tr>
                     <Td>Delivery fee :</Td>
                     <Td>
-                      <span className="dark:text-dark-100 font-medium text-gray-800">
+                      <span className=" font-medium text-gray-800">
                         ${row.original.delivery_fee}
                       </span>
                     </Td>
@@ -211,12 +211,12 @@ export function OrdersDrawer({
                   <Tr>
                     <Td>Tax :</Td>
                     <Td>
-                      <span className="dark:text-dark-100 font-medium text-gray-800">
+                      <span className=" font-medium text-gray-800">
                         ${row.original.tax}
                       </span>
                     </Td>
                   </Tr>
-                  <Tr className="text-primary-600 dark:text-primary-400 text-lg">
+                  <Tr className="text-primary-600 text-lg">
                     <Td>Total :</Td>
                     <Td>
                       <span className="font-medium">${row.original.total}</span>
@@ -243,3 +243,4 @@ export function OrdersDrawer({
     </Transition>
   );
 }
+

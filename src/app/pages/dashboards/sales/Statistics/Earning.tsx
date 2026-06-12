@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 
@@ -80,10 +80,10 @@ const chartConfig: ApexOptions = {
 export function Earning() {
   return (
     <Card className="row-span-2 flex flex-col px-4 sm:px-5">
-      <h2 className="min-w-0 pt-3 font-medium tracking-wide text-gray-800 dark:text-dark-100">
+      <h2 className="min-w-0 pt-3 font-medium tracking-wide text-gray-800">
         Earning
       </h2>
-      <p className="grow mt-1 text-xl font-semibold text-gray-800 dark:text-dark-100">
+      <p className="grow mt-1 text-xl font-semibold text-gray-800">
         $16.4k
       </p>
       <div>
@@ -92,3 +92,4 @@ export function Earning() {
     </Card>
   );
 }
+

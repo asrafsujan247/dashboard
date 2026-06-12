@@ -3,7 +3,6 @@ import clsx from "clsx";
 import { PlusIcon } from "@heroicons/react/24/outline";
 
 // Local Imports
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { Button, ScrollShadow } from "@/components/ui";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -13,21 +12,15 @@ import { Labels } from "./Labels";
 // ----------------------------------------------------------------------
 
 export function SidebarPanel() {
-  const { cardSkin } = useThemeContext();
-
   return (
     <div
       className={clsx(
-        "prime-panel flex flex-col",
-        cardSkin === "shadow"
-          ? "shadow-soft dark:shadow-dark-900/60"
-          : "dark:border-dark-600/80 ltr:border-r rtl:border-l",
+        "prime-panel flex flex-col border-r border-gray-150",
       )}
     >
       <div
         className={clsx(
           "flex h-full grow flex-col bg-white ltr:pl-(--main-panel-width) rtl:pr-(--main-panel-width)",
-          cardSkin === "shadow" ? "dark:bg-dark-750" : "dark:bg-dark-900",
         )}
       >
         <Header />
@@ -40,7 +33,7 @@ export function SidebarPanel() {
             </Button>
           </div>
           <Navigation />
-          <div className="dark:bg-dark-500 mx-4 my-3 h-px bg-gray-200" />
+          <div className="mx-4 my-3 h-px bg-gray-200" />
           <Labels />
         </ScrollShadow>
         <Footer />

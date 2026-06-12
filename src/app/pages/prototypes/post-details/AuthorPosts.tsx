@@ -51,7 +51,7 @@ const posts: Post[] = [
 export function AuthorPosts() {
   return (
     <div className="mt-5">
-      <p className="dark:border-dark-600 dark:text-dark-100 border-b border-gray-200 pb-2 text-base text-gray-800">
+      <p className=" border-b border-gray-200 pb-2 text-base text-gray-800">
         More from Travis Fuller
       </p>
       <div className="mt-3 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-1">
@@ -62,10 +62,10 @@ export function AuthorPosts() {
                 <p className="truncate text-xs font-medium">
                   {post.created_at}
                 </p>
-                <div className="dark:text-dark-100 mt-1 line-clamp-3 text-gray-800">
+                <div className=" mt-1 line-clamp-3 text-gray-800">
                   <a
                     href="##"
-                    className="hover:text-primary-600 focus:text-primary-600 dark:text-dark-100 dark:hover:text-primary-400 dark:focus:text-primary-400 font-medium text-gray-700"
+                    className="hover:text-primary-600 focus:text-primary-600   font-medium text-gray-700"
                   >
                     {post.title}
                   </a>

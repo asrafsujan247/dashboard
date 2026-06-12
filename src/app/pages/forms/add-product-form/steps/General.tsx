@@ -176,8 +176,8 @@ export function General({
             className={clsx(
               "mt-1.5 flex flex-col space-y-4 rounded-lg border px-3 py-4",
               errors?.selling_type
-                ? "border-error dark:border-error-lighter"
-                : "dark:border-dark-450 border-gray-300",
+                ? "border-error"
+                : "border-gray-300",
             )}
           >
             <Radio

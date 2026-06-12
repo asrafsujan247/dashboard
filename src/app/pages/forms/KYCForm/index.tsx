@@ -71,10 +71,10 @@ const KYCForm = () => {
       </div>
       <div className="col-span-12 sm:col-span-8 lg:col-span-9">
         <Card className="h-full p-4 sm:p-5">
-          <h5 className="dark:text-dark-100 text-lg font-medium text-gray-800">
+          <h5 className=" text-lg font-medium text-gray-800">
             {steps[currentStep].label}
           </h5>
-          <p className="dark:text-dark-200 text-sm text-gray-500">
+          <p className=" text-sm text-gray-500">
             {steps[currentStep].description}
           </p>
           {!finished && (
@@ -91,7 +91,7 @@ const KYCForm = () => {
   return (
     <Page title="eKYC Form">
       <div className="transition-content grid w-full grid-rows-[auto_1fr] px-(--margin-x) pb-8">
-        <h2 className="dark:text-dark-50 py-5 text-xl font-medium tracking-wide text-gray-800 lg:py-6 lg:text-2xl">
+        <h2 className=" py-5 text-xl font-medium tracking-wide text-gray-800 lg:py-6 lg:text-2xl">
           eKYC Form
         </h2>
 

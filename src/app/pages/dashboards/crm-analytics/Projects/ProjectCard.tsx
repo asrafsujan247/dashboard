@@ -21,15 +21,15 @@ export function ProjectCard({
   return (
     <Box
       className={clsx(
-        `this:${color}`,
-        "border-l-this dark:border-l-this-light flex flex-col justify-between border-4 border-transparent px-4",
+        `border-l-this-${color}`,
+        "flex flex-col justify-between border-4 border-transparent px-4",
       )}
     >
       <div>
-        <p className="dark:text-dark-100 text-base font-medium text-gray-800">
+        <p className=" text-base font-medium text-gray-800">
           {name}
         </p>
-        <p className="dark:text-dark-300 text-xs text-gray-400">
+        <p className=" text-xs text-gray-400">
           {description}
         </p>
         <Badge color={color} variant="outlined" className="mt-2">
@@ -39,7 +39,7 @@ export function ProjectCard({
       <div className="mt-8">
         <div>
           <p>
-            <span className="dark:text-dark-100 text-2xl font-medium text-gray-800">
+            <span className=" text-2xl font-medium text-gray-800">
               %{progressParts[0]}.
             </span>
             <span className="text-xs">{progressParts[1]}</span>
@@ -57,7 +57,7 @@ export function ProjectCard({
               size={7}
               classNames={{
                 root: "origin-bottom transition-transform hover:z-10 hover:scale-125",
-                display: "dark:ring-dark-700 text-xs ring-2 ring-white",
+                display: " text-xs ring-2 ring-white",
               }}
               initialColor="auto"
             />

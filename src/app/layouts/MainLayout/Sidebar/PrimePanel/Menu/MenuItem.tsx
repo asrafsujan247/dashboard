@@ -33,8 +33,8 @@ export function MenuItem({ data }: { data: NavigationTree  }) {
         clsx(
           "outline-hidden transition-colors duration-300 ease-in-out",
           isActive
-            ? "font-medium text-primary-600 dark:text-primary-400"
-            : "text-gray-600 hover:text-gray-900 dark:text-dark-200 dark:hover:text-dark-50",
+            ? "font-medium text-primary-600"
+            : "text-gray-600 hover:text-gray-900"
         )
       }
     >

@@ -73,12 +73,12 @@ export function WalletCard({
         <img src={image} alt={wallet} className="size-6" />
         <div>
           <span>{wallet}</span>{" "}
-          <span className="dark:text-dark-300 text-xs text-gray-400 uppercase">
+          <span className=" text-xs text-gray-400 uppercase">
             {abbr}
           </span>
         </div>
       </div>
-      <div className="dark:bg-surface-3 mt-2.5 flex justify-between rounded-lg bg-gray-50 py-3 ltr:pr-3 rtl:pl-3">
+      <div className=" mt-2.5 flex justify-between rounded-lg bg-gray-50 py-3 ltr:pr-3 rtl:pl-3">
         <div className="ax-transparent-gridline">
           <Chart
             options={{
@@ -96,14 +96,14 @@ export function WalletCard({
             type="line"
           />
         </div>
-        <div className="dark:bg-surface-2 flex w-36 flex-col items-center rounded-lg bg-gray-100 py-2">
-          <p className="dark:text-dark-100 truncate text-xl font-medium text-gray-800">
+        <div className=" flex w-36 flex-col items-center rounded-lg bg-gray-100 py-2">
+          <p className=" truncate text-xl font-medium text-gray-800">
             {amount}
           </p>
           <div
             className={clsx(
-              `this:${impession > 0 ? "success" : "error"}`,
-              "text-this dark:text-this-lighter mt-1 flex items-center gap-0.5 text-xs",
+              `text-this-${impession > 0 ? "success" : "error"}`,
+              "mt-1 flex items-center gap-0.5 text-xs",
             )}
           >
             {impession > 0 ? (

@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { Fragment } from "react";
 import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/20/solid";
@@ -25,7 +25,7 @@ function MobileView() {
 
   return (
     <>
-      <div className="fixed bottom-3 right-3 rounded-full bg-white dark:bg-dark-700">
+      <div className="fixed bottom-3 right-3 rounded-full bg-white">
         <Button
           onClick={open}
           isIcon
@@ -46,7 +46,7 @@ function MobileView() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <div className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity dark:bg-black/40" />
+            <div className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm transition-opacity" />
           </TransitionChild>
 
           <TransitionChild
@@ -58,7 +58,7 @@ function MobileView() {
             leaveFrom="translate-y-0"
             leaveTo="translate-y-full"
           >
-            <DialogPanel className="fixed bottom-0 left-0 flex h-[calc(100%-2.5rem)] w-full transform-gpu flex-col rounded-t-2xl bg-white px-4 py-3 transition-transform duration-200 dark:bg-dark-700">
+            <DialogPanel className="fixed bottom-0 left-0 flex h-[calc(100%-2.5rem)] w-full transform-gpu flex-col rounded-t-2xl bg-white px-4 py-3 transition-transform duration-200">
               <div className="-mx-1 flex items-center justify-between">
                 <div className="flex gap-1">
                   <Button
@@ -99,3 +99,4 @@ function DesktopView() {
     </div>
   );
 }
+

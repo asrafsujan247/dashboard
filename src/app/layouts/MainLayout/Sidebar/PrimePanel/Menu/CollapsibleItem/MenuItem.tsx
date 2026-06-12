@@ -31,8 +31,8 @@ export function MenuItem({ data }: { data: NavigationTree }) {
         clsx(
           "text-xs-plus flex items-center justify-between px-2 tracking-wide outline-hidden transition-[color,padding-left,padding-right] duration-300 ease-in-out hover:ltr:pl-4 hover:rtl:pr-4",
           isActive
-            ? "text-primary-600 dark:text-primary-400 font-medium"
-            : "dark:text-dark-200 dark:hover:text-dark-50 dark:focus:text-dark-50 text-gray-600 hover:text-gray-900 focus:text-gray-900",
+            ? "text-primary-600 font-medium"
+            : "  text-gray-600 hover:text-gray-900 focus:text-gray-900",
         )
       }
     >
@@ -46,7 +46,7 @@ export function MenuItem({ data }: { data: NavigationTree }) {
             <div
               className={clsx(
                 isActive
-                  ? "bg-primary-600 dark:bg-primary-400 opacity-80"
+                  ? "bg-primary-600 opacity-80"
                   : "opacity-50 transition-all",
                 "size-1.5 rounded-full border border-current",
               )}

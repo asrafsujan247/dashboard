@@ -49,14 +49,14 @@ dayjs.extend(relativeTime);
 
 // Style variants based on the timeline's selected variant
 const variants = {
-  filled: "bg-this dark:bg-this-light",
-  outlined: "border-2 border-this dark:border-this-light",
+  filled: "bg-this",
+  outlined: "border-2 border-this",
 };
 
 // Neutral color variants
 const neutralVariant = {
-  filled: "bg-gray-300 dark:bg-dark-400",
-  outlined: "border-2 border-gray-300 dark:border-dark-400",
+  filled: "bg-gray-300",
+  outlined: "border-2 border-gray-300",
 };
 
 /**
@@ -114,7 +114,7 @@ const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(({
           {title && (
             <h3
               className={clsx(
-                "dark:text-dark-100 pb-1.5 leading-none font-medium text-gray-600",
+                " pb-1.5 leading-none font-medium text-gray-600",
                 classNames?.title,
               )}
             >
@@ -124,7 +124,7 @@ const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(({
           {time && (
             <span
               className={clsx(
-                "dark:text-dark-300 text-xs text-gray-400",
+                " text-xs text-gray-400",
                 classNames?.time,
               )}
             >

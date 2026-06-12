@@ -35,7 +35,7 @@ export function PartnerCell({
           className="h-full w-full"
         />
       </div>
-      <p className="dark:text-dark-100 font-medium text-gray-800">{val}</p>
+      <p className=" font-medium text-gray-800">{val}</p>
     </div>
   );
 }
@@ -58,7 +58,7 @@ export function CollaboratorsCell({ row }: { row: Row<Project> }) {
           initialColor="auto"
           classNames={{
             root: "origin-bottom transition-transform hover:z-10 hover:scale-125",
-            display: "dark:ring-dark-700 text-xs ring-3 ring-white",
+            display: " text-xs ring-3 ring-white",
           }}
         />
       ))}
@@ -75,7 +75,7 @@ export function ProjectNameCell({
 }) {
   return (
     <div className="line-clamp-2 w-72 whitespace-normal">
-      <span className="dark:text-dark-100 font-semibold text-gray-800">
+      <span className=" font-semibold text-gray-800">
         {getValue()}:{" "}
       </span>{" "}
       <span title={row.original.project_desc}>{row.original.project_desc}</span>
@@ -111,7 +111,7 @@ export function StartedDateCell({
     <div>
       <p>{dayjs(getValue()).format("DD MMM YYYY")}</p>
       <p className="mt-1 text-xs">
-        <span className="dark:text-error-lighter font-semibold text-gray-700">
+        <span className=" font-semibold text-gray-700">
           Deadline:
         </span>{" "}
         {dayjs(row.original.deadline).format("DD MMM YYYY")}
@@ -130,7 +130,7 @@ export function ProgressCell({ getValue }: { getValue: Getter<any> }) {
       value={val}
       color={getColorProgress(val)}
     >
-      <div className="text-tiny-plus dark:text-dark-100 font-semibold text-gray-800">
+      <div className="text-tiny-plus font-semibold text-gray-800">
         {val}%
       </div>
     </Circlebar>

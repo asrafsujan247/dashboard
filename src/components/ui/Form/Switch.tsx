@@ -34,13 +34,13 @@ export type SwitchProps = Omit<
 };
 
 const disabledClass =
-  "before:bg-gray-400 bg-gray-150 border border-gray-200 pointer-events-none select-none opacity-70 dark:bg-dark-450 dark:border-dark-450 dark:before:bg-dark-800 dark:opacity-60";
+  "before:bg-gray-400 bg-gray-150 border border-gray-200 pointer-events-none select-none opacity-70";
 
 const variants: Record<SwitchVariant, string> = {
   basic:
-    "bg-gray-300 before:bg-gray-50 checked:bg-this checked:before:bg-white dark:bg-surface-1 dark:before:bg-dark-50 dark:checked:bg-this-light dark:checked:before:bg-white focus-visible:ring-3 focus-visible:ring-this/50 dark:focus-visible:ring-this-light/50",
+    "bg-gray-300 before:bg-gray-50 checked:bg-this checked:before:bg-white focus-visible:ring-3 focus-visible:ring-this/50",
   outlined:
-    "is-outline border-gray-400/70 border before:bg-gray-300 checked:border-this checked:before:bg-this dark:border-dark-400 dark:before:bg-dark-300 dark:checked:border-this-light dark:checked:before:bg-this-light focus-visible:ring-3 focus-visible:ring-this/50 dark:focus-visible:ring-this-light/50",
+    "is-outline border-gray-400/70 border before:bg-gray-300 checked:border-this checked:before:bg-this focus-visible:ring-3 focus-visible:ring-this/50",
 };
 
 const Switch = forwardRef(

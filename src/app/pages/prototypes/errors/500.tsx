@@ -4,18 +4,10 @@ import { CSSProperties } from "react";
 // Local Imports
 import RepairServer from "@/assets/illustrations/repair-server.svg?react";
 import { Page } from "@/components/shared/Page";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ----------------------------------------------------------------------
 
 export default function Error500() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-    darkColorScheme: dark,
-    isDark,
-  } = useThemeContext();
-
   return (
     <Page title="Error 500">
       <main className="min-h-100vh relative grid w-full grow grid-cols-1 place-items-center p-4">
@@ -24,19 +16,19 @@ export default function Error500() {
             className="w-full"
             style={
               {
-                "--primary": primary[500],
-                "--dark-400": isDark ? dark[400] : light[500],
-                "--dark-600": isDark ? dark[600] : light[700],
+                "--primary": "#F59E47",
+                "--dark-400": "oklch(55.4% 0.046 257.417)",
+                "--dark-600": "oklch(37.2% 0.044 257.287)",
               } as CSSProperties
             }
           />
-          <p className="text-primary-600 dark:text-primary-500 pt-8 text-7xl font-bold">
+          <p className="text-primary-600 pt-8 text-7xl font-bold">
             500
           </p>
-          <p className="dark:text-dark-50 pt-4 text-xl font-semibold text-gray-800">
+          <p className=" pt-4 text-xl font-semibold text-gray-800">
             Internal Server Error
           </p>
-          <p className="dark:text-dark-200 pt-2 text-balance text-gray-500">
+          <p className=" pt-2 text-balance text-gray-500">
             The server has been deserted for a while. Please be patient or try
             again later
           </p>

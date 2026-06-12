@@ -107,7 +107,7 @@ const NewPostFrom = () => {
         <div className="flex flex-col items-center justify-between space-y-4 py-5 sm:flex-row sm:space-y-0 lg:py-6">
           <div className="flex items-center gap-1">
             <DocumentPlusIcon className="size-6" />
-            <h2 className="dark:text-dark-50 line-clamp-1 text-xl font-medium text-gray-700">
+            <h2 className=" line-clamp-1 text-xl font-medium text-gray-700">
               New Post
             </h2>
           </div>
@@ -133,7 +133,7 @@ const NewPostFrom = () => {
           <div className="grid grid-cols-12 place-content-start gap-4 sm:gap-5 lg:gap-6">
             <div className="col-span-12 lg:col-span-8">
               <Card className="p-4 sm:px-5">
-                <h3 className="dark:text-dark-100 text-base font-medium text-gray-800">
+                <h3 className=" text-base font-medium text-gray-800">
                   General
                 </h3>
                 <div className="mt-5 space-y-5">
@@ -270,7 +270,7 @@ const NewPostFrom = () => {
               </Card>
 
               <Card className="p-4 sm:px-5">
-                <h6 className="dark:text-dark-100 flex space-x-1.5 text-base font-medium text-gray-800">
+                <h6 className=" flex space-x-1.5 text-base font-medium text-gray-800">
                   <span>SEO Meta Data</span>
                   <ContextualHelp
                     title="SEO Meta Data"

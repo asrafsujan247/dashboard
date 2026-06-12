@@ -24,14 +24,14 @@ export function AuthorInfo() {
           size={20}
           classNames={{
             root: "-mt-12",
-            display: "dark:border-dark-700 border-2 border-white",
+            display: " border-2 border-white",
           }}
           src="/images/avatar/avatar-19.jpg"
         />
-        <h3 className="dark:text-dark-100 pt-2 text-lg font-medium text-gray-800">
+        <h3 className=" pt-2 text-lg font-medium text-gray-800">
           Travis Fuller
         </h3>
-        <p className="text-xs-plus dark:text-dark-300 text-gray-400">
+        <p className="text-xs-plus text-gray-400">
           1,596 followers
         </p>
         <p className="mt-3">

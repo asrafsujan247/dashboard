@@ -4,18 +4,10 @@ import { CSSProperties } from "react";
 // Local Imports
 import WindowCrash from "@/assets/illustrations/window-crash.svg?react";
 import { Page } from "@/components/shared/Page";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ----------------------------------------------------------------------
 
 export default function Error429() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-    darkColorScheme: dark,
-    isDark,
-  } = useThemeContext();
-
   return (
     <Page title="Error 429">
       <main className="min-h-100vh relative grid w-full grow grid-cols-1 place-items-center p-4">
@@ -24,19 +16,19 @@ export default function Error429() {
             className="w-full"
             style={
               {
-                "--primary": primary[500],
-                "--dark-700": isDark ? dark[700] : light[100],
-                "--dark-800": isDark ? dark[800] : light[300],
+                "--primary": "#F59E47",
+                "--dark-700": "oklch(96.8% 0.007 247.896)",
+                "--dark-800": "oklch(86.9% 0.022 252.894)",
               } as CSSProperties
             }
           />
-          <p className="text-primary-600 dark:text-primary-500 pt-6 text-7xl font-bold">
+          <p className="text-primary-600 pt-6 text-7xl font-bold">
             429
           </p>
-          <p className="dark:text-dark-50 pt-4 text-xl font-semibold text-gray-800">
+          <p className=" pt-4 text-xl font-semibold text-gray-800">
             Too many requests
           </p>
-          <p className="dark:text-dark-200 pt-2 text-balance text-gray-500">
+          <p className=" pt-2 text-balance text-gray-500">
             The user has send too many requests in a given amount of time.
             Intended for use with rate limiting schemas
           </p>

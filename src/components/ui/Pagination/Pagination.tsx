@@ -85,7 +85,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
         <div
           ref={ref}
           className={clsx(
-            "pagination hide-scrollbar max-w-full overflow-x-auto",
+            "this:primary pagination hide-scrollbar max-w-full overflow-x-auto",
             className,
             classNames?.root,
           )}

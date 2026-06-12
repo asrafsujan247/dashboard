@@ -42,7 +42,7 @@ export function Header() {
       </div>
 
       <div className="flex justify-between">
-        <div className="text-lg font-medium text-gray-800 dark:text-dark-100 sm:hidden">
+        <div className="text-lg font-medium text-gray-800 sm:hidden">
           Inbox
         </div>
         <div className="flex items-center space-x-1">
@@ -86,7 +86,7 @@ function ActionMenu() {
         leave="transition ease-in"
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
-        className="absolute z-100 mt-1.5 min-w-[11rem] rounded-lg border border-gray-300 bg-white py-1 font-medium shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden dark:border-dark-500 dark:bg-dark-700 dark:shadow-none ltr:left-0 rtl:right-0"
+        className="absolute z-100 mt-1.5 min-w-[11rem] rounded-lg border border-gray-300 bg-white py-1 font-medium shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden   ltr:left-0 rtl:right-0"
       >
         <MenuItem>
           {({ focus }) => (
@@ -94,7 +94,7 @@ function ActionMenu() {
               className={clsx(
                 "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                 focus &&
-                  "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                  "bg-gray-100 text-gray-800"
               )}
             >
               <span>All</span>
@@ -107,7 +107,7 @@ function ActionMenu() {
               className={clsx(
                 "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                 focus &&
-                  "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                  "bg-gray-100 text-gray-800"
               )}
             >
               <span>None</span>
@@ -120,7 +120,7 @@ function ActionMenu() {
               className={clsx(
                 "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                 focus &&
-                  "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                  "bg-gray-100 text-gray-800"
               )}
             >
               <span>Read</span>
@@ -133,7 +133,7 @@ function ActionMenu() {
               className={clsx(
                 "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                 focus &&
-                  "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                  "bg-gray-100 text-gray-800"
               )}
             >
               <span>Starred</span>
@@ -146,7 +146,7 @@ function ActionMenu() {
               className={clsx(
                 "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                 focus &&
-                  "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                  "bg-gray-100 text-gray-800"
               )}
             >
               <span>Unread</span>
@@ -159,7 +159,7 @@ function ActionMenu() {
               className={clsx(
                 "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                 focus &&
-                  "bg-gray-100 text-gray-800 dark:bg-dark-600 dark:text-dark-100",
+                  "bg-gray-100 text-gray-800"
               )}
             >
               <span>Unstarred</span>

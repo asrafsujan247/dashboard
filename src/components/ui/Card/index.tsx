@@ -7,7 +7,6 @@ import {
   PolymorphicComponentProps,
   PolymorphicRef,
 } from "@/@types/polymorphic";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ------------------------------------------------------------------------
 
@@ -28,8 +27,7 @@ const CardInner = forwardRef(
     const { component, className, children, skin, ...rest } =
       props as CardProps<E>;
 
-    const { cardSkin } = useThemeContext();
-    const appliedSkin = skin ?? cardSkin;
+    const appliedSkin = skin ?? "bordered";
 
     const Component = component || "div";
 
@@ -40,9 +38,9 @@ const CardInner = forwardRef(
           "card rounded-lg",
           appliedSkin !== "none" && [
             appliedSkin === "bordered" &&
-              "dark:border-dark-600 border border-gray-200 print:border-0",
+              " border border-gray-200 print:border-0",
             appliedSkin === "shadow" &&
-              "shadow-soft dark:bg-dark-700 bg-white dark:shadow-none print:shadow-none",
+              "shadow-soft bg-white  print:shadow-none",
           ],
           className,
         )}

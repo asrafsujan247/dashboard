@@ -95,9 +95,9 @@ const CountrySelect = forwardRef<HTMLElement, CountrySelectProps>(({ onChange, v
               leaveTo="opacity-0 translate-y-2"
               afterLeave={() => setQuery("")}
             >
-              <ComboboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden dark:border-dark-500 dark:bg-dark-750 dark:shadow-none">
+              <ComboboxOptions className="absolute z-10 mt-1 max-h-60 w-full overflow-y-auto overflow-x-hidden rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden">
                 {filteredData.length === 0 && query !== "" ? (
-                  <div className="relative cursor-default select-none px-4 py-2 text-gray-800 dark:text-dark-100">
+                  <div className="relative cursor-default select-none px-4 py-2 text-gray-800">
                     Nothing found for {query}
                   </div>
                 ) : (
@@ -107,10 +107,10 @@ const CountrySelect = forwardRef<HTMLElement, CountrySelectProps>(({ onChange, v
                       className={({ selected, active }) =>
                         clsx(
                           "relative cursor-pointer select-none px-4 py-2 outline-hidden transition-colors",
-                          active && !selected && "bg-gray-100 dark:bg-dark-600",
+                          active && !selected && "bg-gray-100",
                           selected
-                            ? "bg-primary-600 text-white dark:bg-primary-500"
-                            : "text-gray-800 dark:text-dark-100",
+                            ? "bg-primary-600 text-white"
+                            : "text-gray-800",
                         )
                       }
                       value={country}

@@ -59,12 +59,12 @@ export function Transactions() {
   return (
     <div className="col-span-12 flex flex-col sm:col-span-6 lg:col-span-4">
       <div className="flex min-w-0 items-center justify-between">
-        <h2 className="dark:text-dark-100 font-medium tracking-wide text-gray-800">
+        <h2 className=" font-medium tracking-wide text-gray-800">
           Transactions
         </h2>
         <a
           href="##"
-          className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70 dark:text-primary-400 dark:hover:text-primary-400/70 dark:focus:text-primary-400/70 border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
+          className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70   border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
         >
           View All
         </a>

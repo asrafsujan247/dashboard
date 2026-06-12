@@ -109,7 +109,7 @@ export function RowActions({
             leave="transition ease-in"
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-2"
-            className="dark:border-dark-500 dark:bg-dark-750 absolute z-100 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden dark:shadow-none"
+            className=" absolute z-100 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden"
           >
             <MenuItem>
               {({ focus }) => (
@@ -117,7 +117,7 @@ export function RowActions({
                   className={clsx(
                     "flex h-9 w-full items-center space-x-3 px-3 tracking-wide outline-hidden transition-colors",
                     focus &&
-                      "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                      " bg-gray-100 text-gray-800",
                   )}
                 >
                   <EyeIcon className="size-4.5 stroke-1" />
@@ -131,7 +131,7 @@ export function RowActions({
                   className={clsx(
                     "flex h-9 w-full items-center space-x-3 px-3 tracking-wide outline-hidden transition-colors",
                     focus &&
-                      "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                      " bg-gray-100 text-gray-800",
                   )}
                 >
                   <PencilIcon className="size-4.5 stroke-1" />
@@ -144,8 +144,8 @@ export function RowActions({
                 <button
                   onClick={openModal}
                   className={clsx(
-                    "this:error text-this dark:text-this-light flex h-9 w-full items-center space-x-3 px-3 tracking-wide outline-hidden transition-colors",
-                    focus && "bg-this/10 dark:bg-this-light/10",
+                    "flex h-9 w-full items-center space-x-3 px-3 tracking-wide outline-hidden transition-colors text-this-error",
+                    focus && "bg-this-error/10"
                   )}
                 >
                   <TrashIcon className="size-4.5 stroke-1" />

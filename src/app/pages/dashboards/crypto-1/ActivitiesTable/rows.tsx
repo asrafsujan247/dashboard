@@ -55,10 +55,10 @@ export function ActivityCell({
       </Avatar>
 
       <div>
-        <p className="dark:text-dark-100 truncate font-medium text-gray-800">
+        <p className=" truncate font-medium text-gray-800">
           {getValue()}
         </p>
-        <p className="dark:text-dark-300 mt-0.5 text-xs text-gray-400">
+        <p className=" mt-0.5 text-xs text-gray-400">
           {row.original.activity_type.title}
         </p>
       </div>
@@ -68,7 +68,7 @@ export function ActivityCell({
 
 export function AccountNameCell({ getValue }: { getValue: Getter<any> }) {
   return (
-    <span className="dark:text-dark-100 font-medium text-gray-800">
+    <span className=" font-medium text-gray-800">
       {getValue()} Wallet
     </span>
   );
@@ -96,8 +96,8 @@ export function AmountCell({
       className={clsx(
         "font-semibold",
         val > 0
-          ? "text-success dark:text-success-light"
-          : "text-error dark:text-error-light",
+          ? "text-success"
+          : "text-error"
       )}
     >
       {val} {row.original.account_name}

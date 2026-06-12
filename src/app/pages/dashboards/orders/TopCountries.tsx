@@ -75,19 +75,19 @@ export function TopCountries() {
   return (
     <Card className="px-4 pb-5 sm:px-5">
       <div className="flex h-14 min-w-0 items-center justify-between py-3">
-        <h2 className="dark:text-dark-100 truncate font-medium tracking-wide text-gray-800">
+        <h2 className=" truncate font-medium tracking-wide text-gray-800">
           Top Countries
         </h2>
         <a
           href="##"
-          className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70 dark:text-primary-400 dark:hover:text-primary-400/70 dark:focus:text-primary-400/70 border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
+          className="text-xs-plus text-primary-600 hover:text-primary-600/70 focus:text-primary-600/70   border-b border-dotted border-current pb-0.5 font-medium outline-hidden transition-colors duration-300"
         >
           View All
         </a>
       </div>
       <div>
         <p>
-          <span className="dark:text-dark-100 text-2xl text-gray-800">64</span>
+          <span className=" text-2xl text-gray-800">64</span>
         </p>
         <p className="text-xs-plus">Countries</p>
       </div>
@@ -107,13 +107,13 @@ export function TopCountries() {
               </a>
             </div>
             <div className="flex items-center gap-2">
-              <p className="text-sm-plus dark:text-dark-100 text-gray-800">
+              <p className="text-sm-plus text-gray-800">
                 {country.sales}
               </p>
               {country.impression > 0 ? (
-                <ArrowUpIcon className="this:success text-this dark:text-this-lighter size-4" />
+                <ArrowUpIcon className="size-4 text-this-success" />
               ) : (
-                <ArrowDownIcon className="this:error text-this dark:text-this-lighter size-4" />
+                <ArrowDownIcon className="size-4 text-this-error" />
               )}
             </div>
           </div>

@@ -45,19 +45,19 @@ export function Stepper({ steps, currentStep, setCurrentStep }: StepperProps) {
               "step",
               currentStep > i
                 ? "before:bg-primary-500"
-                : "dark:before:bg-dark-500 before:bg-gray-200",
+                : " before:bg-gray-200",
               smAndUp && "items-center pb-8",
             )}
             key={step.key}
           >
             <button
               className={clsx(
-                "step-header rounded-full outline-hidden dark:text-white",
+                "step-header rounded-full outline-hidden",
                 isClickable && "cursor-pointer",
                 currentStep === i && "ring-primary-500 ring-2",
                 stepStatus[step.key].isDone
-                  ? "bg-primary-600 dark:bg-primary-500 dark:ring-offset-dark-900 text-white ring-offset-[3px] ring-offset-gray-100"
-                  : "dark:bg-dark-500 bg-gray-200 text-gray-950",
+                  ? "bg-primary-600  text-white ring-offset-[3px] ring-offset-gray-100"
+                  : " bg-gray-200 text-gray-950",
               )}
               {...{
                 onClick: isClickable
@@ -81,7 +81,7 @@ export function Stepper({ steps, currentStep, setCurrentStep }: StepperProps) {
             </button>
             <h3
               className={clsx(
-                "dark:text-dark-100 text-gray-800 sm:text-start",
+                " text-gray-800 sm:text-start",
                 smAndUp && "ltr:ml-4 rtl:mr-4",
               )}
             >

@@ -1,217 +1,122 @@
 // Import Dependencies
+import { ReactNode } from "react";
 import {
   Dialog,
   DialogPanel,
+  DialogTitle,
   Transition,
   TransitionChild,
 } from "@headlessui/react";
-import {
-  ExclamationTriangleIcon,
-  XCircleIcon,
-} from "@heroicons/react/24/outline";
-import clsx from "clsx";
-import merge from "lodash/merge";
-import { ElementType, useRef } from "react";
+import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
+import { Fragment } from "react";
 
 // Local Imports
-import { Button, GhostSpinner } from "@/components/ui";
-import { AnimatedTick } from "./AnimatedTick";
+import { Button } from "@/components/ui";
 
 // ----------------------------------------------------------------------
 
-export type ModalState = "pending" | "success" | "error";
-
-interface MessageConfig {
-  Icon: ElementType;
-  iconClassName?: string;
-  title: string;
-  description: string;
-  actionText: string;
+interface ConfirmMessageContent {
+  title?: string;
+  description?: ReactNode;
 }
 
-interface Messages {
-  pending: MessageConfig;
-  success: MessageConfig;
-  error: MessageConfig;
+export interface ConfirmMessages {
+  pending?: ConfirmMessageContent;
+  success?: ConfirmMessageContent;
+  error?: ConfirmMessageContent;
 }
 
-export interface ConfirmProps {
-  onOk: () => void;
+interface ConfirmModalProps {
+  show: boolean;
   onClose: () => void;
-  state: ModalState;
   messages?: ConfirmMessages;
+  onOk?: () => void;
   confirmLoading?: boolean;
+  state?: "pending" | "success" | "error";
 }
-
-export type ConfirmMessages = {
-  [K in ModalState]?: Partial<MessageConfig>;
-};
-
-const defaultMessages: Messages = {
-  pending: {
-    Icon: ExclamationTriangleIcon,
-    iconClassName: "text-warning",
-    title: "Are you sure?",
-    description:
-      "Are you sure you want to delete this record? Once deleted, it cannot be restored.",
-    actionText: "Delete",
-  },
-  success: {
-    Icon: AnimatedTick,
-    iconClassName: "text-success",
-    title: "Record Deleted",
-    description: "You have successfully deleted the record from the database.",
-    actionText: "Done",
-  },
-  error: {
-    Icon: XCircleIcon,
-    title: "Opps... Something failed.",
-    description:
-      "Ensure internet is on and retry. Contact support if issue remains.",
-    actionText: "Retry",
-    iconClassName: "text-error",
-  },
-};
 
 export function ConfirmModal({
   show,
   onClose,
+  messages,
   onOk,
   confirmLoading,
-  className,
-  state,
-  messages,
-}: ConfirmProps & { show: boolean; className?: string }) {
-  const focusRef = useRef<HTMLButtonElement>(null);
+  state = "pending",
+}: ConfirmModalProps) {
+  const current = messages?.[state];
 
-  const dialogProps = confirmLoading
-    ? {
-        onClose: () => {},
-        static: true,
-      }
-    : {
-        onClose,
-      };
+  const defaultMessages: Record<string, ConfirmMessageContent> = {
+    pending: { title: "Confirm Delete", description: "Are you sure you want to delete this item? This action cannot be undone." },
+    success: { title: "Deleted", description: "The item has been successfully deleted." },
+    error: { title: "Error", description: "An error occurred. Please try again." },
+  };
+
+  const title = current?.title ?? defaultMessages[state]?.title;
+  const description = current?.description ?? defaultMessages[state]?.description;
 
   return (
-    <Transition
-      appear
-      show={show}
-      as={Dialog}
-      initialFocus={focusRef}
-      className="fixed inset-0 z-100 flex flex-col items-center justify-center overflow-hidden px-4 py-6 sm:px-5"
-      {...dialogProps}
-    >
-      <TransitionChild
-        as="div"
-        enter="ease-out duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="ease-in duration-200"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-        className="absolute inset-0 bg-gray-900/50 transition-opacity dark:bg-black/40"
-      />
-
-      <TransitionChild
-        as={DialogPanel}
-        enter="ease-out duration-300"
-        enterFrom="opacity-0"
-        enterTo="opacity-100"
-        leave="ease-in duration-200"
-        leaveFrom="opacity-100"
-        leaveTo="opacity-0"
-        className={clsx(
-          "scrollbar-sm relative flex w-full max-w-md flex-col overflow-y-auto rounded-lg bg-white px-4 py-6 text-center transition-opacity duration-300 dark:bg-dark-700 sm:px-5",
-          className,
-        )}
-      >
-        <Confirm
-          {...{
-            onOk,
-            state,
-            messages,
-            confirmLoading,
-            onClose,
-            focusRef,
-          }}
-        />
-      </TransitionChild>
-    </Transition>
-  );
-}
-
-function Confirm({
-  onOk,
-  state,
-  messages,
-  confirmLoading,
-  onClose,
-  focusRef,
-}: ConfirmProps & { focusRef: React.RefObject<HTMLButtonElement | null> }) {
-  const mergedMessages = merge(defaultMessages, messages);
-  const Icon = mergedMessages[state].Icon;
-  const spinner = <GhostSpinner variant="soft" className="size-4 border-2" />;
-
-  return (
-    <>
-      <Icon
-        className={clsx(
-          "mx-auto size-24 shrink-0",
-          mergedMessages[state].iconClassName,
-        )}
-      />
-      <div className="mt-4">
-        <h3 className="text-xl text-gray-800 dark:text-dark-100">
-          {mergedMessages[state].title}
-        </h3>
-        <p className="mx-auto mt-2 max-w-xs">
-          {mergedMessages[state].description}
-        </p>
-
-        {state === "success" ? (
-          <Button
-            onClick={onClose}
-            color="success"
-            className="mt-12 h-9 min-w-[7rem]"
-          >
-            {mergedMessages[state].actionText}
-          </Button>
-        ) : (
-          <div className="mt-12 flex justify-center space-x-3 rtl:space-x-reverse">
-            <Button
-              onClick={onClose}
-              variant="outlined"
-              className="h-9 min-w-[7rem]"
+    <Transition appear show={show} as={Fragment}>
+      <Dialog as="div" className="relative z-[200]" onClose={onClose}>
+        <TransitionChild
+          as={Fragment}
+          enter="ease-out duration-200"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-150"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-gray-900/50 backdrop-blur-sm" />
+        </TransitionChild>
+        <div className="fixed inset-0 overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4">
+            <TransitionChild
+              as={Fragment}
+              enter="ease-out duration-200"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-150"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
             >
-              Cancel
-            </Button>
-
-            {state === "pending" && (
-              <Button
-                ref={focusRef}
-                onClick={onOk}
-                color="primary"
-                className="h-9 min-w-[7rem] space-x-2 rtl:space-x-reverse"
-              >
-                {confirmLoading && spinner}
-                <span> {mergedMessages[state].actionText}</span>
-              </Button>
-            )}
-
-            {state === "error" && (
-              <Button
-                onClick={onOk}
-                color="error"
-                className="h-9 min-w-[7rem] space-x-2 rtl:space-x-reverse"
-              >
-                {confirmLoading && spinner}
-                <span> {mergedMessages[state].actionText}</span>
-              </Button>
-            )}
+              <DialogPanel className="w-full max-w-md rounded-2xl bg-white p-6 shadow-xl">
+                <div className="flex flex-col items-center text-center">
+                  {state === "success" && (
+                    <CheckCircleIcon className="mb-3 size-12 text-success" />
+                  )}
+                  {state === "error" && (
+                    <XCircleIcon className="mb-3 size-12 text-error" />
+                  )}
+                  <DialogTitle className="text-lg font-semibold text-gray-800">
+                    {title}
+                  </DialogTitle>
+                  {description && (
+                    <p className="mt-2 text-sm text-gray-500">{description}</p>
+                  )}
+                </div>
+                <div className="mt-6 flex justify-end gap-3">
+                  {state === "pending" && (
+                    <>
+                      <Button variant="flat" onClick={onClose}>
+                        Cancel
+                      </Button>
+                      <Button
+                        color="error"
+                        onClick={onOk}
+                      >
+                        {confirmLoading ? "Deleting..." : "Delete"}
+                      </Button>
+                    </>
+                  )}
+                  {(state === "success" || state === "error") && (
+                    <Button onClick={onClose}>Close</Button>
+                  )}
+                </div>
+              </DialogPanel>
+            </TransitionChild>
           </div>
-        )}
-      </div>
-    </>
+        </div>
+      </Dialog>
+    </Transition>
   );
 }

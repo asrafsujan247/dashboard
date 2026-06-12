@@ -96,7 +96,7 @@ export function Categories() {
       >
         <span slot="container-start">
           <div className="flex min-w-0 items-center justify-between pb-3">
-            <p className="dark:text-dark-100 truncate text-base font-medium text-gray-800">
+            <p className=" truncate text-base font-medium text-gray-800">
               Categories
             </p>
             <div className="flex">
@@ -122,7 +122,7 @@ export function Categories() {
           <Fragment key={uid}>
             {/* @ts-expect-error - Swiper web components */}
             <swiper-slide class="w-24">
-              <Card className="dark:text-dark-100 w-full shrink-0 cursor-pointer px-2 py-4 text-center text-gray-800">
+              <Card className=" w-full shrink-0 cursor-pointer px-2 py-4 text-center text-gray-800">
                 <img
                   alt={name}
                   src={image}

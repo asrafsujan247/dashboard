@@ -3,7 +3,7 @@ export function Footer() {
     <footer className="mt-4 flex flex-col space-y-1 px-5 text-xs sm:flex-row sm:justify-between sm:space-y-0">
       <a
         href="##"
-        className="hover:text-gray-700 hover:underline dark:hover:text-dark-100"
+        className="hover:text-gray-700 hover:underline"
       >
         Term &amp; Privacy
       </a>

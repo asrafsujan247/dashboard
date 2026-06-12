@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import clsx from "clsx";
 import { toast } from "sonner";
 import { useCallback, useState } from "react";
@@ -121,18 +121,18 @@ function Item({ row, table }: { row: Row<User>; table: Table<User> }) {
         }}
       />
 
-      <h3 className="dark:text-dark-100 mt-2 text-base font-medium text-gray-800">
+      <h3 className=" mt-2 text-base font-medium text-gray-800">
         {row.original.name}
       </h3>
       <div className="mx-auto mt-4 inline-grid grid-cols-1 gap-3">
         <div className="flex min-w-0 items-center gap-2">
-          <div className="bg-primary-600/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400 flex size-6 items-center justify-center rounded-lg">
+          <div className="bg-primary-600/10 text-primary-600  flex size-6 items-center justify-center rounded-lg">
             <PhoneIcon className="size-3.5" />
           </div>
           <p className="truncate"> {row.original.phone}</p>
         </div>
         <div className="flex min-w-0 items-center gap-2">
-          <div className="bg-primary-600/10 text-primary-600 dark:bg-primary-400/10 dark:text-primary-400 flex size-6 items-center justify-center rounded-lg">
+          <div className="bg-primary-600/10 text-primary-600  flex size-6 items-center justify-center rounded-lg">
             <EnvelopeIcon className="size-3.5" />
           </div>
           <p className="truncate"> {row.original.email}</p>
@@ -203,7 +203,7 @@ function Actions({ row, table }: { row: Row<User>; table: Table<User> }) {
             leave="transition ease-in"
             leaveFrom="opacity-100 translate-y-0"
             leaveTo="opacity-0 translate-y-2"
-            className="dark:border-dark-500 dark:bg-dark-750 absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0 dark:shadow-none"
+            className="absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0"
           >
             <MenuItem>
               {({ focus }) => (
@@ -211,7 +211,7 @@ function Actions({ row, table }: { row: Row<User>; table: Table<User> }) {
                   className={clsx(
                     "flex h-9 w-full items-center gap-3 px-3 tracking-wide outline-hidden transition-colors",
                     focus &&
-                      "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                      " bg-gray-100 text-gray-800",
                   )}
                 >
                   <EyeIcon className="size-4.5 stroke-1" />
@@ -225,7 +225,7 @@ function Actions({ row, table }: { row: Row<User>; table: Table<User> }) {
                   className={clsx(
                     "flex h-9 w-full items-center gap-3 px-3 tracking-wide outline-hidden transition-colors",
                     focus &&
-                      "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                      " bg-gray-100 text-gray-800",
                   )}
                 >
                   <PencilIcon className="size-4.5 stroke-1" />
@@ -238,8 +238,8 @@ function Actions({ row, table }: { row: Row<User>; table: Table<User> }) {
                 <button
                   onClick={openModal}
                   className={clsx(
-                    "this:error text-this dark:text-this-light flex h-9 w-full items-center gap-3 px-3 tracking-wide outline-hidden transition-colors",
-                    focus && "bg-this/10 dark:bg-this-light/10",
+                    "flex h-9 w-full items-center gap-3 px-3 tracking-wide outline-hidden transition-colors text-this-error",
+                    focus && "bg-this-error/10",
                   )}
                 >
                   <TrashIcon className="size-4.5 stroke-1" />
@@ -262,3 +262,4 @@ function Actions({ row, table }: { row: Row<User>; table: Table<User> }) {
     </>
   );
 }
+

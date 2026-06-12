@@ -57,7 +57,7 @@ export function RadioFilter({
           <span> {title} </span>
           {selectedItem && (
             <>
-              <div className="dark:bg-dark-450 h-full w-px bg-gray-300" />
+              <div className=" h-full w-px bg-gray-300" />
               <Badge>{selectedItem.label}</Badge>
             </>
           )}
@@ -102,7 +102,7 @@ function Content({ column, title, options }: ContentProps) {
       }}
     >
       <div className="relative">
-        <div className="dark:bg-dark-900 relative bg-gray-100 py-1">
+        <div className=" relative bg-gray-100 py-1">
           <ComboboxInput
             as={Input}
             className="border-none"
@@ -121,7 +121,7 @@ function Content({ column, title, options }: ContentProps) {
           className="max-h-72 w-full overflow-y-auto py-1 outline-hidden"
         >
           {filteredItems.length === 0 && query !== "" ? (
-            <div className="dark:text-dark-100 relative cursor-default px-2.5 py-2 text-gray-800 select-none">
+            <div className=" relative cursor-default px-2.5 py-2 text-gray-800 select-none">
               Nothing found for {query}
             </div>
           ) : (
@@ -130,8 +130,8 @@ function Content({ column, title, options }: ContentProps) {
                 key={refIndex}
                 className={({ focus }) =>
                   clsx(
-                    "dark:text-dark-100 relative cursor-pointer px-2.5 py-2 text-gray-800 outline-hidden transition-colors select-none",
-                    focus && "dark:bg-dark-600 bg-gray-100",
+                    " relative cursor-pointer px-2.5 py-2 text-gray-800 outline-hidden transition-colors select-none",
+                    focus && " bg-gray-100",
                   )
                 }
                 value={item}

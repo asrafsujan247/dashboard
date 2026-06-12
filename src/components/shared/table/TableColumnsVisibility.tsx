@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   Popover,
   PopoverButton,
@@ -44,14 +44,14 @@ export function TableColumnVisibility({
       >
         <PopoverPanel
           anchor={{ to: "bottom end", gap: 8 }}
-          className="ring-primary-500/50 dark:border-dark-500 dark:bg-dark-750 absolute z-100 w-60 rounded-md border border-gray-300 bg-white shadow-lg shadow-gray-200/50 outline-hidden focus-visible:ring-3 focus-visible:outline-hidden dark:shadow-none"
+          className="ring-primary-500/50  absolute z-100 w-60 rounded-md border border-gray-300 bg-white shadow-lg shadow-gray-200/50 outline-hidden focus-visible:ring-3 focus-visible:outline-hidden "
         >
           <div className="p-4">
-            <h3 className="dark:text-dark-100 -mt-1 text-base font-medium tracking-wide text-gray-800">
+            <h3 className=" -mt-1 text-base font-medium tracking-wide text-gray-800">
               {header}
             </h3>
             <p className="text-xs-plus mt-1 opacity-80">{description}</p>
-            <div className="dark:text-dark-100 mt-4 flex flex-col space-y-4 text-gray-600">
+            <div className=" mt-4 flex flex-col space-y-4 text-gray-600">
               {table.getAllLeafColumns().map((column) => (
                 <Checkbox
                   key={column.id}
@@ -64,7 +64,7 @@ export function TableColumnVisibility({
           </div>
           <Button
             variant="flat"
-            className="text-xs-plus dark:border-dark-500 h-9 w-full rounded-t-none border-t border-gray-300 leading-none"
+            className="text-xs-plus h-9 w-full rounded-t-none border-t border-gray-300 leading-none"
             onClick={() => table.resetColumnVisibility()}
           >
             Show All
@@ -74,3 +74,5 @@ export function TableColumnVisibility({
     </Popover>
   );
 }
+
+

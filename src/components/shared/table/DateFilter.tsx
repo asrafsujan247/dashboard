@@ -47,7 +47,7 @@ export const DateFilter = React.memo(({
 
           {selectedValues && (
             <>
-              <div className="dark:bg-dark-450 h-full w-px bg-gray-300" />
+              <div className=" h-full w-px bg-gray-300" />
               <span>
                 {dayjs(selectedValues[0]).format("DD MMM YYYY")}{" "}
                 -{" "}
@@ -62,11 +62,11 @@ export const DateFilter = React.memo(({
         className={clsx(
           "mx-auto flex w-full items-center justify-between",
           smAndDown
-            ? "dark:border-dark-500 mt-1 mb-2 h-10 w-full max-w-xs border-b border-gray-200 py-3"
-            : "bg-gray-150 dark:bg-dark-900 px-2.5 py-2",
+            ? " mt-1 mb-2 h-10 w-full max-w-xs border-b border-gray-200 py-3"
+            : "bg-gray-150 px-2.5 py-2",
         )}
       >
-        <p className="dark:text-dark-50 truncate text-start text-base font-medium text-gray-800 sm:py-1 sm:text-sm">
+        <p className=" truncate text-start text-base font-medium text-gray-800 sm:py-1 sm:text-sm">
           {title}
         </p>
         {selectedValues && (

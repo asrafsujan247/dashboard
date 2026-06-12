@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   Popover,
   PopoverButton,
@@ -38,9 +38,9 @@ export function TableConfig({ table }: { table: Table<Order> }) {
         leaveTo="opacity-0 translate-y-2"
         style={{ width: "16rem", maxHeight: "27rem" }}
         anchor={{ to: "bottom end", gap: 12 }}
-        className="text-xs-plus ring-primary-500/50 dark:border-dark-500 dark:bg-dark-750 absolute z-100 flex flex-col rounded-md border border-gray-300 bg-white shadow-lg shadow-gray-200/50 outline-hidden focus-visible:ring-3 focus-visible:outline-hidden dark:shadow-none"
+        className="text-xs-plus ring-primary-500/50  absolute z-100 flex flex-col rounded-md border border-gray-300 bg-white shadow-lg shadow-gray-200/50 outline-hidden focus-visible:ring-3 focus-visible:outline-hidden "
       >
-        <h3 className="text-sm-plus dark:text-dark-100 px-3 pt-2.5 font-medium tracking-wide text-gray-800">
+        <h3 className="text-sm-plus px-3 pt-2.5 font-medium tracking-wide text-gray-800">
           Table Settings
         </h3>
 
@@ -49,3 +49,5 @@ export function TableConfig({ table }: { table: Table<Order> }) {
     </Popover>
   );
 }
+
+

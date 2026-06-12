@@ -1,46 +1,34 @@
 // Import Dependencies
-import { ReactNode, forwardRef, ForwardedRef, ComponentPropsWithoutRef } from "react";
+import { ElementType, forwardRef } from "react";
 import clsx from "clsx";
 
 // Local Imports
 import { setThisClass } from "@/utils/setThisClass";
 import { ColorType } from "@/constants/app";
 
-// ------------------------------------------------------------------------
+// ----------------------------------------------------------------------
 
-export type AvatarDotProps = {
-  color?: ColorType;
-  isPing?: boolean;
-  children?: ReactNode;
-} & ComponentPropsWithoutRef<"div">;
+export interface AvatarDotProps {
+  component?: ElementType;
+  color?: ColorType | "neutral";
+  className?: string;
+  [key: string]: any;
+}
 
-const AvatarDot = forwardRef<HTMLDivElement, AvatarDotProps>(({
-  color = "neutral",
-  isPing,
-  className,
-  children,
-  ...rest
-}, ref: ForwardedRef<HTMLDivElement>) => {
-  return (
-    <div
-      className={clsx(
-        "avatar-dot absolute rounded-full",
-        color === "neutral"
-          ? "bg-gray-300 dark:bg-dark-200"
-          : [setThisClass(color), "bg-this dark:bg-this-light"],
-        className,
-      )}
-      {...rest}
-      ref={ref}
-    >
-      {isPing && (
-        <span className="absolute inset-0 inline-flex h-full w-full animate-ping rounded-full bg-inherit opacity-80" />
-      )}
-      {children}
-    </div>
-  );
-});
+export const AvatarDot = forwardRef<HTMLElement, AvatarDotProps>(
+  ({ component: Component = "span", color = "neutral", className, ...rest }, ref) => {
+    return (
+      <Component
+        ref={ref}
+        className={clsx(
+          "absolute block size-2.5 rounded-full border-2 border-white",
+          color === "neutral" ? "bg-gray-400" : ["bg-this", setThisClass(color as Exclude<typeof color, "neutral">)],
+          className,
+        )}
+        {...rest}
+      />
+    );
+  },
+);
 
 AvatarDot.displayName = "AvatarDot";
-
-export { AvatarDot };

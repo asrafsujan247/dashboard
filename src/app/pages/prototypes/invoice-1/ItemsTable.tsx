@@ -61,19 +61,19 @@ export function ItemsTable() {
       <Table zebra className="w-full text-left rtl:text-right">
         <THead>
           <Tr>
-            <Th className="dark:bg-dark-800 dark:text-dark-100 bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
+            <Th className=" bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
               #
             </Th>
-            <Th className="dark:bg-dark-800 dark:text-dark-100 bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
+            <Th className=" bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
               DESCRIPTION
             </Th>
-            <Th className="dark:bg-dark-800 dark:text-dark-100 bg-gray-200 text-end font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
+            <Th className=" bg-gray-200 text-end font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
               HRS
             </Th>
-            <Th className="dark:bg-dark-800 dark:text-dark-100 bg-gray-200 text-end font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
+            <Th className=" bg-gray-200 text-end font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
               RATE
             </Th>
-            <Th className="dark:bg-dark-800 dark:text-dark-100 bg-gray-200 text-end font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
+            <Th className=" bg-gray-200 text-end font-semibold text-gray-800 uppercase first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg">
               SUBTOTAL
             </Th>
           </Tr>
@@ -84,7 +84,7 @@ export function ItemsTable() {
               <Td className="ltr:rounded-l-lg rtl:rounded-r-lg">{tr.uid}</Td>
               <Td className="whitespace-normal">
                 <div className="min-w-[16rem]">
-                  <p className="dark:text-dark-100 truncate font-medium text-gray-800">
+                  <p className=" truncate font-medium text-gray-800">
                     {tr.title}
                   </p>
                   <p className="text-xs-plus line-clamp-2">{tr.desc}</p>

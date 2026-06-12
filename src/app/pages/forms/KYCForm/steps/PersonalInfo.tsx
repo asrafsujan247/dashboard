@@ -108,7 +108,7 @@ export function PersonalInfo({
           label={
             <>
               Middle Name{" "}
-              <span className="dark:text-dark-300 text-xs text-gray-400">
+              <span className=" text-xs text-gray-400">
                 (Optional)
               </span>
             </>

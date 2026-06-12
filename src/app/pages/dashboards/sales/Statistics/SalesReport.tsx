@@ -164,7 +164,7 @@ export function SalesReport() {
     <Card className="col-span-12 sm:col-span-6 lg:col-span-7 xl:col-span-8">
       <div className="mt-3 flex flex-col justify-between gap-2 px-4 sm:flex-row sm:items-center sm:px-5">
         <div className="flex flex-1 items-center justify-between space-x-2 sm:flex-initial">
-          <h2 className="text-sm-plus dark:text-dark-100 font-medium tracking-wide text-gray-800">
+          <h2 className="text-sm-plus font-medium tracking-wide text-gray-800">
             Sales Report
           </h2>
           <ActionMenu />
@@ -181,8 +181,8 @@ export function SalesReport() {
             value="daily"
             className={({ checked }: { checked: boolean }) =>
               clsx(
-                "text-xs-plus dark:border-dark-450 dark:text-dark-100 h-8 border border-gray-300 px-3 text-gray-800 first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg",
-                checked && "dark:bg-surface-2 bg-gray-200",
+                "text-xs-plus  h-8 border border-gray-300 px-3 text-gray-800 first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg",
+                checked && " bg-gray-200",
               )
             }
           >
@@ -194,8 +194,8 @@ export function SalesReport() {
             value="monthly"
             className={({ checked }: { checked: boolean }) =>
               clsx(
-                "text-xs-plus dark:border-dark-450 dark:text-dark-100 h-8 border border-gray-300 px-3 text-gray-800 first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg",
-                checked && "dark:bg-surface-2 bg-gray-200",
+                "text-xs-plus  h-8 border border-gray-300 px-3 text-gray-800 first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg",
+                checked && " bg-gray-200",
               )
             }
           >
@@ -207,8 +207,8 @@ export function SalesReport() {
             value="yearly"
             className={({ checked }: { checked: boolean }) =>
               clsx(
-                "text-xs-plus dark:border-dark-450 dark:text-dark-100 h-8 border border-gray-300 px-3 text-gray-800 first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg",
-                checked && "dark:bg-surface-2 bg-gray-200",
+                "text-xs-plus  h-8 border border-gray-300 px-3 text-gray-800 first:ltr:rounded-l-lg last:ltr:rounded-r-lg first:rtl:rounded-r-lg last:rtl:rounded-l-lg",
+                checked && " bg-gray-200",
               )
             }
           >
@@ -251,14 +251,14 @@ function ActionMenu() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
       >
-        <MenuItems className="dark:border-dark-500 dark:bg-dark-700 absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 sm:ltr:left-0 rtl:left-0 sm:rtl:right-0 dark:shadow-none">
+        <MenuItems className=" absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 sm:ltr:left-0 rtl:left-0 sm:rtl:right-0">
           <MenuItem>
             {({ focus }) => (
               <button
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Action</span>
@@ -271,7 +271,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Another action</span>
@@ -284,7 +284,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Other action</span>
@@ -292,7 +292,7 @@ function ActionMenu() {
             )}
           </MenuItem>
 
-          <hr className="border-gray-150 dark:border-dark-500 mx-3 my-1.5 h-px" />
+          <hr className="border-gray-150 mx-3 my-1.5 h-px" />
 
           <MenuItem>
             {({ focus }) => (
@@ -300,7 +300,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Separated action</span>

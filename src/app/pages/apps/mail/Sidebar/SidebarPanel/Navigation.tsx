@@ -86,13 +86,13 @@ export function Navigation() {
                   "size-4.5 transition-colors",
                   item.id !== selectedId &&
                     item.color === "neutral" &&
-                    "dark:text-dark-300 dark:group-hover:text-dark-200 dark:group-focus:text-dark-200 text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500",
+                    "  text-gray-400 group-hover:text-gray-500 group-focus:text-gray-500",
                 )}
               />
               <span className="truncate">{item.name}</span>
             </div>
             {item.messageCount > 0 && (
-              <span className="text-primary-600 dark:text-primary-400">
+              <span className="text-primary-600">
                 {item.messageCount}
               </span>
             )}

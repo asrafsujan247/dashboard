@@ -52,7 +52,7 @@ export function Header() {
         </Button>
         <div
           role="none"
-          className="m-1 w-px shrink-0 bg-gray-200 dark:bg-dark-500"
+          className="m-1 w-px shrink-0 bg-gray-200"
         />
         <Button
           data-tooltip
@@ -85,7 +85,7 @@ export function Header() {
         </Button>
         <div
           role="none"
-          className="m-1 w-px shrink-0 bg-gray-200 dark:bg-dark-500"
+          className="m-1 w-px shrink-0 bg-gray-200"
         />
         <Button isIcon variant="flat" className="size-8">
           <EllipsisVerticalIcon className="size-4.5" />

@@ -48,12 +48,12 @@ export type AvatarProps<E extends ElementType = "div"> =
 
 const variants = {
   filled: "bg-this text-white",
-  soft: "text-this-darker bg-this-darker/10 dark:text-this-lighter dark:bg-this-lighter/10",
+  soft: "text-this-darker bg-this-darker/10",
 };
 
 const neutralVariants = {
-  filled: "bg-gray-200 text-gray-700 dark:bg-surface-2 dark:text-dark-100",
-  soft: "bg-gray-200/30 text-gray-700 dark:bg-surface-2/30 dark:text-dark-100",
+  filled: "bg-gray-200 text-gray-700",
+  soft: "bg-gray-200/30 text-gray-700",
 };
 
 export const AvatarInner = forwardRef(
@@ -104,7 +104,7 @@ export const AvatarInner = forwardRef(
         {src || srcSet ? (
           <ImgComponent
             className={clsx(
-              "avatar-image avatar-display before:bg-gray-150 dark:before:bg-dark-600 relative h-full w-full before:absolute before:inset-0 before:rounded-[inherit]",
+              "avatar-image avatar-display before:bg-gray-150 relative h-full w-full before:absolute before:inset-0 before:rounded-[inherit]",
               classNames?.display,
               classNames?.image,
             )}

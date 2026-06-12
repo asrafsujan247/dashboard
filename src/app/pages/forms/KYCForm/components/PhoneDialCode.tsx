@@ -67,7 +67,7 @@ export function PhoneDialCode({
                   <ComboboxButton className="z-1">
                     <ChevronDownIcon
                       className={clsx(
-                        "dark:text-dark-300 size-5 text-gray-400 transition-transform",
+                        " size-5 text-gray-400 transition-transform",
                         open && "rotate-180",
                       )}
                       aria-hidden="true"
@@ -96,9 +96,9 @@ export function PhoneDialCode({
               leaveTo="opacity-0 translate-y-2"
               afterLeave={() => setQuery("")}
             >
-              <ComboboxOptions className="dark:border-dark-500 dark:bg-dark-750 absolute z-10 mt-1 max-h-60 min-w-full overflow-x-hidden overflow-y-auto rounded-lg border border-gray-300 bg-white py-1 whitespace-nowrap shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden dark:shadow-none">
+              <ComboboxOptions className="absolute z-10 mt-1 max-h-60 min-w-full overflow-x-hidden overflow-y-auto rounded-lg border border-gray-300 bg-white py-1 whitespace-nowrap shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden">
                 {filteredValues.length === 0 && query !== "" ? (
-                  <div className="dark:text-dark-100 relative cursor-default px-3 py-2 text-gray-800 select-none">
+                  <div className="relative cursor-default px-3 py-2 text-gray-800 select-none">
                     Nothing found for {query}
                   </div>
                 ) : (
@@ -109,10 +109,10 @@ export function PhoneDialCode({
                       className={({ selected, focus }) =>
                         clsx(
                           "relative cursor-pointer px-3 py-2 outline-hidden transition-colors select-none",
-                          focus && !selected && "dark:bg-dark-600 bg-gray-100",
+                          focus && !selected && "bg-gray-100",
                           selected
-                            ? "bg-primary-600 dark:bg-primary-500 text-white"
-                            : "dark:text-dark-100 text-gray-800",
+                            ? "bg-primary-600 text-white"
+                            : " text-gray-800",
                         )
                       }
                       value={country}

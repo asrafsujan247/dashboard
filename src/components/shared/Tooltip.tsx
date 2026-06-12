@@ -21,11 +21,6 @@ const css = `
   --rt-opacity: 1;
   --rt-transition-show-delay: 0.15s;
   --rt-transition-closing-delay: 0.15s;
-}
-
-:root.dark {
-  --rt-color-white: var(--color-dark-50) !important;
-  --rt-color-dark: var(--color-dark-500) !important;
 }`;
 
 const sheet = makeStyleTag();

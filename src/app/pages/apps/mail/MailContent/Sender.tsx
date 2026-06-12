@@ -16,10 +16,10 @@ export function Sender() {
           }}
         />
         <div>
-          <div className="font-bold text-gray-800 dark:text-dark-100">
+          <div className="font-bold text-gray-800">
             Henry Curtis
           </div>
-          <div className="mt-1 text-xs text-gray-800 dark:text-dark-100">
+          <div className="mt-1 text-xs text-gray-800">
             Reply-To:{" "}
             <a
               href="mailto:henrycurtis@example.com"

@@ -1,18 +1,10 @@
 // Local Imports
 import WindowCrash from "@/assets/illustrations/window-crash.svg?react";
 import { Page } from "@/components/shared/Page";
-import { useThemeContext } from "@/app/contexts/theme/context";
 
 // ----------------------------------------------------------------------
 
 export default function Error429() {
-  const {
-    primaryColorScheme: primary,
-    lightColorScheme: light,
-    darkColorScheme: dark,
-    isDark,
-  } = useThemeContext();
-
   return (
     <Page title="Error 429">
       <main className="min-h-100vh relative grid w-full grow grid-cols-1 place-items-center p-4">
@@ -20,18 +12,18 @@ export default function Error429() {
           <WindowCrash
             className="w-full"
             style={{
-              ["--primary" as string]: primary[500],
-              ["--dark-700" as string]: isDark ? dark[700] : light[100],
-              ["--dark-800" as string]: isDark ? dark[800] : light[300],
+              ["--primary" as string]: "#F59E47",
+              ["--dark-700" as string]: "oklch(96.8% 0.007 247.896)",
+              ["--dark-800" as string]: "oklch(86.9% 0.022 252.894)",
             }}
           />
-          <p className="pt-6 text-7xl font-bold text-primary-600 dark:text-primary-500">
+          <p className="pt-6 text-7xl font-bold text-primary-600">
             429
           </p>
-          <p className="pt-4 text-xl font-semibold text-gray-800 dark:text-dark-50">
+          <p className="pt-4 text-xl font-semibold text-gray-800">
             Too many requests
           </p>
-          <p className="text-balance pt-2 text-gray-500 dark:text-dark-200">
+          <p className="text-balance pt-2 text-gray-500">
             The user has send too many requests in a given amount of time.
             Intended for use with rate limiting schemas
           </p>

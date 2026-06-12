@@ -31,7 +31,7 @@ export function InvoiceName({
   const columnQuery = ensureString(column.getFilterValue());
 
   return (
-    <p className="dark:text-dark-100 font-medium text-gray-800">
+    <p className=" font-medium text-gray-800">
       <Highlight query={columnQuery}>{getValue()}</Highlight>
     </p>
   );
@@ -63,7 +63,7 @@ export function Download() {
     <div className="text-end">
       <a
         href="##"
-        className="text-primary-600 dark:text-primary-400 mx-auto border-b border-dashed border-current pb-0.5"
+        className="text-primary-600 mx-auto border-b border-dashed border-current pb-0.5"
       >
         Download
       </a>

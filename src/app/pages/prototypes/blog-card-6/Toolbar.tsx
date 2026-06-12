@@ -69,14 +69,14 @@ export function Toolbar(props: ToolbarProps) {
                 setShowMobileSearch(false);
               }}
             >
-              <XMarkIcon className="dark:text-dark-200 size-4.5 text-gray-500" />
+              <XMarkIcon className=" size-4.5 text-gray-500" />
             </Button>
           }
         />
       ) : (
         <>
           <div className="flex min-w-0 items-center space-x-1">
-            <h2 className="dark:text-dark-50 truncate text-xl font-medium text-gray-700 lg:text-2xl">
+            <h2 className=" truncate text-xl font-medium text-gray-700 lg:text-2xl">
               Blog Cards
             </h2>
             <ActionMenu />
@@ -142,14 +142,14 @@ function ActionMenu() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
       >
-        <MenuItems className="dark:border-dark-500 dark:bg-dark-700 absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 whitespace-nowrap shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0 dark:shadow-none">
+        <MenuItems className="absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 whitespace-nowrap shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0">
           <MenuItem>
             {({ focus }) => (
               <button
                 className={clsx(
                   "flex h-9 w-full items-center space-x-2 px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <PlusIcon className="size-4.5 stroke-2" />
@@ -163,7 +163,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center space-x-2 px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <ArrowDownTrayIcon className="size-4.5 stroke-2" />
@@ -177,7 +177,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center space-x-2 px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <Cog8ToothIcon className="size-4.5 stroke-2" />

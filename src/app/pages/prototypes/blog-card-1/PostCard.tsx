@@ -44,7 +44,7 @@ export function PostCard({
       <div className="flex w-full grow flex-col p-4 sm:px-5">
         <div className="-mt-2 flex items-center justify-between ltr:-mr-1.5 rtl:-ml-1.5">
           <a
-            className="text-xs-plus text-info dark:text-info-lighter"
+            className="text-xs-plus text-info"
             href="##"
           >
             <Highlight query={query}>{category}</Highlight>
@@ -59,7 +59,7 @@ export function PostCard({
         <div>
           <a
             href="##"
-            className="hover:text-primary-600 focus:text-primary-600 dark:text-dark-100 dark:hover:text-primary-400 dark:focus:text-primary-400 text-lg font-medium text-gray-700"
+            className="hover:text-primary-600 focus:text-primary-600   text-lg font-medium text-gray-700"
           >
             <Highlight query={query}>{title}</Highlight>
           </a>
@@ -69,7 +69,7 @@ export function PostCard({
           <div className="flex items-center text-xs">
             <a
               href="##"
-              className="dark:hover:text-dark-100 flex min-w-0 items-center space-x-2 hover:text-gray-800"
+              className=" flex min-w-0 items-center space-x-2 hover:text-gray-800"
             >
               <Avatar
                 size={6}
@@ -82,8 +82,8 @@ export function PostCard({
                 <Highlight query={query}>{author_name}</Highlight>
               </span>
             </a>
-            <div className="dark:bg-dark-500 mx-3 my-1 w-px self-stretch bg-gray-200"></div>
-            <span className="dark:text-dark-300 shrink-0 text-gray-400">
+            <div className=" mx-3 my-1 w-px self-stretch bg-gray-200"></div>
+            <span className=" shrink-0 text-gray-400">
               {created_at}
             </span>
           </div>
@@ -113,14 +113,14 @@ function ActionMenu() {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-2"
       >
-        <MenuItems className="dark:border-dark-500 dark:bg-dark-700 absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0 dark:shadow-none">
+        <MenuItems className="absolute z-100 mt-1.5 min-w-[10rem] rounded-lg border border-gray-300 bg-white py-1 shadow-lg shadow-gray-200/50 outline-hidden focus-visible:outline-hidden ltr:right-0 rtl:left-0">
           <MenuItem>
             {({ focus }) => (
               <button
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Action</span>
@@ -133,7 +133,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Another action</span>
@@ -146,7 +146,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Other action</span>
@@ -154,7 +154,7 @@ function ActionMenu() {
             )}
           </MenuItem>
 
-          <hr className="border-gray-150 dark:border-dark-500 mx-3 my-1.5 h-px" />
+          <hr className="border-gray-150 mx-3 my-1.5 h-px" />
 
           <MenuItem>
             {({ focus }) => (
@@ -162,7 +162,7 @@ function ActionMenu() {
                 className={clsx(
                   "flex h-9 w-full items-center px-3 tracking-wide outline-hidden transition-colors",
                   focus &&
-                    "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                    " bg-gray-100 text-gray-800",
                 )}
               >
                 <span>Separated action</span>

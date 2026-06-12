@@ -86,7 +86,7 @@ export function ProductsTable() {
   return (
     <div className="col-span-12 flex flex-col lg:col-span-8 xl:col-span-9">
       <div className="table-toolbar flex items-center justify-between">
-        <h2 className="dark:text-dark-100 truncate text-base font-medium tracking-wide text-gray-800">
+        <h2 className=" truncate text-base font-medium tracking-wide text-gray-800">
           Products Table
         </h2>
         <div className="flex">
@@ -107,7 +107,7 @@ export function ProductsTable() {
                   {headerGroup.headers.map((header) => (
                     <Th
                       key={header.id}
-                      className="dark:bg-dark-800 dark:text-dark-100 bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-tl-lg last:ltr:rounded-tr-lg first:rtl:rounded-tr-lg last:rtl:rounded-tl-lg"
+                      className=" bg-gray-200 font-semibold text-gray-800 uppercase first:ltr:rounded-tl-lg last:ltr:rounded-tr-lg first:rtl:rounded-tr-lg last:rtl:rounded-tl-lg"
                     >
                       {header.column.getCanSort() ? (
                         <div
@@ -141,7 +141,7 @@ export function ProductsTable() {
                   <Tr
                     key={row.id}
                     className={clsx(
-                      "dark:border-b-dark-500 relative border-y border-transparent border-b-gray-200",
+                      " relative border-y border-transparent border-b-gray-200",
                       row.getIsSelected() &&
                         !isSafari &&
                         "row-selected after:bg-primary-500/10 ltr:after:border-l-primary-500 rtl:after:border-r-primary-500 after:pointer-events-none after:absolute after:inset-0 after:z-2 after:h-full after:w-full after:border-3 after:border-transparent",

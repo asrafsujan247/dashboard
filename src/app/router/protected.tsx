@@ -1,17 +1,10 @@
 import { Navigate, RouteObject } from "react-router";
 
-import AuthGuard from "@/middleware/AuthGuard";
 import { DynamicLayout } from "../layouts/DynamicLayout";
 import { AppLayout } from "../layouts/AppLayout";
 
-/**
- * Protected routes configuration
- * These routes require authentication to access
- * Uses AuthGuard middleware to verify user authentication
- */
 const protectedRoutes: RouteObject = {
   id: "protected",
-  Component: AuthGuard,
   children: [
     {
       Component: DynamicLayout,

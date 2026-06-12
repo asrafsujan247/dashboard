@@ -45,7 +45,7 @@ export function NameCell({
           <Avatar
             size={10}
             classNames={{
-              root: "dark:group-hover/tr:border-dark-300 rounded-full border-2 border-dashed border-transparent p-0.5 transition-colors group-hover/tr:border-gray-400",
+              root: " rounded-full border-2 border-dashed border-transparent p-0.5 transition-colors group-hover/tr:border-gray-400",
               display: "text-xs-plus",
             }}
             src={row.original.avatar}
@@ -55,7 +55,7 @@ export function NameCell({
         </SwapOff>
       </Swap>
 
-      <div className="dark:text-dark-100 font-medium text-gray-800">
+      <div className=" font-medium text-gray-800">
         <Highlight query={[globalQuery, columnQuery]}>{getValue()}</Highlight>
       </div>
     </div>

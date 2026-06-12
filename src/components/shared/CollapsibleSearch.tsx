@@ -41,7 +41,7 @@ export function CollapsibleSearch({
             isExpanded ? "w-32 lg:w-48" : "w-0",
           ),
           input: clsx(
-            "dark:placeholder:text-dark-200 text-end placeholder:font-light placeholder:text-gray-600",
+            " text-end placeholder:font-light placeholder:text-gray-600",
             className,
           ),
         }}

@@ -121,7 +121,7 @@ export function Idenfication({ setCurrentStep }: IdenficationProps) {
           defaultValue="passport"
         />
 
-        <p className="dark:text-dark-100 mt-6 text-base font-medium text-gray-800">
+        <p className=" mt-6 text-base font-medium text-gray-800">
           To complete your upload and verify your account, please follow these
           steps:
         </p>

@@ -5,13 +5,11 @@ import { Link } from "react-router";
 import Error404Magnify from "@/assets/illustrations/error-404-magnify.svg?react";
 import { Page } from "@/components/shared/Page";
 import { Button } from "@/components/ui";
-import { useThemeContext } from "@/app/contexts/theme/context";
 import { useHover } from "@/hooks";
 
 // ----------------------------------------------------------------------
 
 export default function Error404() {
-  const { primaryColorScheme: primary, isDark } = useThemeContext();
   const [btnRef, btnHovered] = useHover();
 
   return (
@@ -21,14 +19,14 @@ export default function Error404() {
           <Error404Magnify
             className="w-full"
             style={{
-              ["--primary" as string]: isDark ? primary[500] : primary[600],
-              ["--primary-light" as string]: primary[300],
+              ["--primary" as string]: "oklch(66.6% 0.179 58.318)",
+              ["--primary-light" as string]: "oklch(87.9% 0.169 91.605)",
             } as React.CSSProperties}
           />
-          <p className="pt-4 text-xl font-semibold text-gray-800 dark:text-dark-50">
+          <p className="pt-4 text-xl font-semibold text-gray-800">
             Oops. This Page Not Found.
           </p>
-          <p className="pt-2 text-gray-500 dark:text-dark-200">
+          <p className="pt-2 text-gray-500">
             This page you are looking not available. Please back to home
           </p>
           <div className="mt-8">

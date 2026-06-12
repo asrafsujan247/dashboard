@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   Menu,
   MenuButton,
@@ -52,7 +52,7 @@ export function SelectedRowsActions({ table }: { table: Table<User> }) {
     >
       <div className="pointer-events-none sticky inset-x-0 bottom-0 z-5 flex items-center justify-end">
         <div className="w-full pt-2">
-          <div className="dark:bg-dark-50 dark:text-dark-900 pointer-events-auto flex items-center justify-between rounded-lg bg-gray-800 px-3 py-2 font-medium text-gray-100 sm:px-4 sm:py-3">
+          <div className=" pointer-events-auto flex items-center justify-between rounded-lg bg-gray-800 px-3 py-2 font-medium text-gray-100 sm:px-4 sm:py-3">
             <p>
               <span>{selectedRows.length} Selected</span>
               <span className="max-sm:hidden">
@@ -99,7 +99,7 @@ export function SelectedRowsActions({ table }: { table: Table<User> }) {
                   leave="transition ease-in"
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-2"
-                  className="text-xs-plus shadow-soft dark:border-dark-500 dark:bg-dark-750 dark:text-dark-200 absolute z-100 w-[10rem] rounded-lg border border-gray-300 bg-white py-1 text-gray-600 outline-hidden focus-visible:outline-hidden dark:shadow-none"
+                  className="text-xs-plus shadow-soft   absolute z-100 w-[10rem] rounded-lg border border-gray-300 bg-white py-1 text-gray-600 outline-hidden focus-visible:outline-hidden "
                   anchor={{ to: "top end", gap: 8 }}
                 >
                   <MenuItem>
@@ -108,7 +108,7 @@ export function SelectedRowsActions({ table }: { table: Table<User> }) {
                         className={clsx(
                           "flex h-9 w-full items-center space-x-3 px-3 tracking-wide outline-hidden transition-colors",
                           focus &&
-                            "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                            " bg-gray-100 text-gray-800",
                         )}
                       >
                         <ArrowUpTrayIcon className="size-4.5" />
@@ -122,7 +122,7 @@ export function SelectedRowsActions({ table }: { table: Table<User> }) {
                         className={clsx(
                           "flex h-9 w-full items-center space-x-3 px-3 tracking-wide outline-hidden transition-colors",
                           focus &&
-                            "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                            " bg-gray-100 text-gray-800",
                         )}
                       >
                         <ArrowUpTrayIcon className="size-4.5" />
@@ -136,7 +136,7 @@ export function SelectedRowsActions({ table }: { table: Table<User> }) {
                         className={clsx(
                           "flex h-9 w-full items-center space-x-3 px-3 tracking-wide outline-hidden transition-colors",
                           focus &&
-                            "dark:bg-dark-600 dark:text-dark-100 bg-gray-100 text-gray-800",
+                            " bg-gray-100 text-gray-800",
                         )}
                       >
                         <CiViewTable className="size-4.5" />
@@ -153,3 +153,5 @@ export function SelectedRowsActions({ table }: { table: Table<User> }) {
     </Transition>
   );
 }
+
+

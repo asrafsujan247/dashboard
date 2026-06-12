@@ -14,14 +14,6 @@
   @apply h-(--track-h) w-full rounded-full bg-gray-150;
 }
 
-.dark .form-range::-moz-range-track {
-  @apply bg-dark-500;
-}
-
 .form-range::-webkit-slider-runnable-track {
   @apply h-(--track-h) w-full rounded-full bg-gray-150;
-}
-
-.dark .form-range::-webkit-slider-runnable-track {
-  @apply bg-dark-500;
 }

@@ -57,7 +57,7 @@ const DocumentType = forwardRef<HTMLElement, DocumentTypeProps>(
                   focus && "ring-primary-500/50 ring-2",
                   checked
                     ? "bg-primary-500 text-white"
-                    : "bg-gray-150 dark:bg-dark-600",
+                    : "bg-gray-150",
                   "relative flex cursor-pointer rounded-lg px-3 py-4 outline-hidden transition-colors",
                 )
               }
@@ -72,7 +72,7 @@ const DocumentType = forwardRef<HTMLElement, DocumentTypeProps>(
                         className={`truncate font-medium ${
                           checked
                             ? "text-white"
-                            : "dark:text-dark-50 text-gray-900"
+                            : " text-gray-900"
                         }`}
                       >
                         {type.label}
@@ -82,7 +82,7 @@ const DocumentType = forwardRef<HTMLElement, DocumentTypeProps>(
                         className={`mt-0.5 truncate text-xs ${
                           checked
                             ? "text-primary-100"
-                            : "dark:text-dark-200 text-gray-500"
+                            : " text-gray-500"
                         }`}
                       >
                         {type.description}

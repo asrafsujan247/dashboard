@@ -74,13 +74,13 @@ export function SellerCard({
   chartData,
 }: Seller) {
   return (
-    <Box className="dark:bg-surface-3 w-56 shrink-0 rounded-xl bg-gray-50 p-4">
+    <Box className=" w-56 shrink-0 rounded-xl bg-gray-50 p-4">
       <div className="flex flex-col items-center space-y-3 text-center">
         <Avatar
           size={16}
           classNames={{
             root: "rounded-full bg-linear-to-r from-sky-400 to-blue-600 p-0.5",
-            display: "dark:border-dark-700 border-2 border-white text-lg",
+            display: " border-2 border-white text-lg",
           }}
           name={name}
           src={avatar}
@@ -88,10 +88,10 @@ export function SellerCard({
         />
 
         <div>
-          <p className="dark:text-dark-100 text-base font-medium text-gray-800">
+          <p className=" text-base font-medium text-gray-800">
             {name}
           </p>
-          <p className="text-xs-plus dark:text-dark-300 text-gray-400">
+          <p className="text-xs-plus text-gray-400">
             Saleswoman
           </p>
         </div>
@@ -100,13 +100,13 @@ export function SellerCard({
         <div>
           <p>Sales</p>
           <div className="mt-0.5 flex gap-2">
-            <p className="dark:text-dark-100 text-xl font-semibold text-gray-800">
+            <p className=" text-xl font-semibold text-gray-800">
               {sales}
             </p>
             <p
               className={clsx(
-                `this:${impression > 0 ? "success" : "error"}`,
-                "this:success text-this dark:text-this-lighter flex items-center space-x-0.5 text-xs",
+                `text-this-${impression > 0 ? "success" : "error"}`,
+                "flex items-center space-x-0.5 text-xs",
               )}
             >
               {impression > 0 ? (

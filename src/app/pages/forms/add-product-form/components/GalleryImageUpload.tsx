@@ -45,7 +45,7 @@ function validateFileSize(file: File): FileError | null {
 function showToast(file: FileWithPath, errors: readonly FileError[]): void {
   toast(`File ${file.path} rejected`, {
     description: errors.map((error: FileError) => error.message).join(", "),
-    descriptionClassName: "text-gray-600 dark:text-dark-200 text-xs mt-0.5",
+    descriptionClassName: "text-gray-600 text-xs mt-0.5",
   });
 }
 
@@ -85,12 +85,12 @@ const GalleryImageUpload = forwardRef<
           "w-full rounded-lg border-2 border-dashed border-current outline-hidden",
           !isDragAccept &&
             (isDragReject || error) &&
-            "text-error dark:text-error-light",
-          isDragAccept && "text-primary-600 dark:text-primary-500",
+            "text-error",
+          isDragAccept && "text-primary-600",
           !isDragReject &&
             !isDragAccept &&
             !error &&
-            "dark:text-dark-450 text-gray-300",
+            " text-gray-300",
           classNames?.box,
         )}
       >
@@ -108,7 +108,7 @@ const GalleryImageUpload = forwardRef<
                 key={i}
                 title={file.name}
                 onClick={(event) => event.stopPropagation()}
-                className="group ring-primary-600 dark:border-dark-450 dark:ring-primary-500 dark:ring-offset-dark-700 relative size-24 rounded-lg border border-gray-300 ring-offset-4 ring-offset-white transition-all hover:ring-3"
+                className="group ring-primary-600   relative size-24 rounded-lg border border-gray-300 ring-offset-4 ring-offset-white transition-all hover:ring-3"
               >
                 <div className="h-full w-full overflow-hidden p-1">
                   <PreviewImg
@@ -118,10 +118,10 @@ const GalleryImageUpload = forwardRef<
                   />
                 </div>
 
-                <div className="dark:bg-dark-700 absolute -top-4 -right-3 flex items-center justify-center rounded-full bg-white opacity-0 transition-opacity group-hover:opacity-100">
+                <div className=" absolute -top-4 -right-3 flex items-center justify-center rounded-full bg-white opacity-0 transition-opacity group-hover:opacity-100">
                   <Button
                     onClick={() => onRemove(i)}
-                    className="dark:border-dark-450 size-6 shrink-0 rounded-full border p-0"
+                    className=" size-6 shrink-0 rounded-full border p-0"
                   >
                     <XMarkIcon className="size-4" />
                   </Button>
@@ -131,8 +131,8 @@ const GalleryImageUpload = forwardRef<
           </div>
 
           <CloudArrowUpIcon className="pointer-events-none size-12" />
-          <span className="dark:text-dark-200 pointer-events-none mt-2 text-gray-600">
-            <span className="text-primary-600 dark:text-primary-400">
+          <span className="pointer-events-none mt-2 text-gray-600">
+            <span className="text-primary-600">
               Browse
             </span>
             <span> or drop your files here</span>

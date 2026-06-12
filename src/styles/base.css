@@ -1,26 +1,18 @@
 /* Basic styles */
 html {
-  @apply h-full [--surface-1:var(--color-dark-450)] [--surface-2:var(--color-dark-500)] [--surface-3:var(--color-dark-600)] [-webkit-tap-highlight-color:transparent] [text-rendering:optimizeLegibility];
+  @apply h-full [--surface-1:var(--color-gray-50)] [--surface-2:var(--color-gray-100)] [--surface-3:var(--color-gray-200)] [-webkit-tap-highlight-color:transparent] [text-rendering:optimizeLegibility];
 }
 
 html[data-card-skin="bordered"] {
-  @apply [--surface-1:var(--color-dark-500)] [--surface-2:var(--color-dark-600)] [--surface-3:var(--color-dark-700)];
-}
-
-html.dark {
-  @apply [color-scheme:dark];
+  @apply [--surface-1:var(--color-gray-100)] [--surface-2:var(--color-gray-150)] [--surface-3:var(--color-gray-200)];
 }
 
 body {
-  @apply h-full bg-gray-50 font-sans text-sm leading-5 text-gray-700 antialiased [text-rendering:optimizeLegibility] dark:bg-dark-900 dark:text-dark-200 dark:[color-scheme:dark];
+  @apply h-full bg-gray-50 font-sans text-sm leading-5 text-gray-700 antialiased [text-rendering:optimizeLegibility];
 }
 
 [data-card-skin="bordered"] body {
-  @apply bg-white dark:bg-dark-900;
-}
-
-.dark[data-card-skin="bordered"] body {
-  @apply bg-dark-900;
+  @apply bg-white;
 }
 
 .transition-content {
@@ -72,7 +64,7 @@ body {
 }
 
 .inline-code code {
-  @apply rounded-sm bg-gray-100 px-1 py-0.5 text-xs-plus text-secondary dark:bg-dark-800 dark:text-secondary-lighter;
+  @apply rounded-sm bg-gray-100 px-1 py-0.5 text-xs-plus text-secondary;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -95,25 +87,13 @@ body {
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-gray-300/80;
-  }
-
-  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-dark-400;
-  }
-
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    @apply bg-clip-content;
+    @apply bg-gray-300/80 bg-clip-content;
     border-left: var(--margin-scroll) solid transparent;
     border-right: var(--margin-scroll) solid transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-400;
-  }
-
-  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    @apply bg-dark-300;
   }
 }
 

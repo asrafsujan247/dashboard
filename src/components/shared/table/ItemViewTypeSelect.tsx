@@ -18,7 +18,7 @@ export function ItemViewTypeSelect({ table }: { table: Table<any> }) {
   return (
     <div
       data-tab
-      className="text-xs-plus dark:bg-dark-700 dark:text-dark-200 flex rounded-md bg-gray-200 px-1 py-1 text-gray-800"
+      className="text-xs-plus  flex rounded-md bg-gray-200 px-1 py-1 text-gray-800"
     >
       <Button
         data-tooltip
@@ -27,8 +27,8 @@ export function ItemViewTypeSelect({ table }: { table: Table<any> }) {
         className={clsx(
           "shrink-0 rounded-sm px-1.5 py-1 font-medium whitespace-nowrap",
           viewType === "list"
-            ? "dark:bg-dark-500 dark:text-dark-100 bg-white shadow-sm"
-            : "dark:hover:text-dark-100 dark:focus:text-dark-100 hover:text-gray-900 focus:text-gray-900",
+            ? " bg-white shadow-sm"
+            : " hover:text-gray-900 focus:text-gray-900",
         )}
         unstyled
         onKeyDown={createScopedKeydownHandler({
@@ -50,8 +50,8 @@ export function ItemViewTypeSelect({ table }: { table: Table<any> }) {
         className={clsx(
           "shrink-0 rounded-sm px-1.5 py-1 font-medium whitespace-nowrap",
           viewType === "grid"
-            ? "dark:bg-dark-500 dark:text-dark-100 bg-white shadow-sm"
-            : "dark:hover:text-dark-100 dark:focus:text-dark-100 hover:text-gray-900 focus:text-gray-900",
+            ? " bg-white shadow-sm"
+            : " hover:text-gray-900 focus:text-gray-900",
         )}
         unstyled
         onKeyDown={createScopedKeydownHandler({
