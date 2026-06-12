@@ -9,7 +9,7 @@ import {
   ChatBubbleLeftIcon,
   Cog6ToothIcon,
 } from "@heroicons/react/24/outline";
-import { TbCoins, TbUser, TbUsersGroup } from "react-icons/tb";
+import { TbCoins, TbUser } from "react-icons/tb";
 import { Link } from "react-router";
 
 // Local Imports
@@ -42,14 +42,6 @@ const links: LinkItem[] = [
     to: "/apps/chat",
     Icon: ChatBubbleLeftIcon,
     color: "info",
-  },
-  {
-    id: "3",
-    title: "Team",
-    description: "Your team members",
-    to: "#",
-    Icon: TbUsersGroup,
-    color: "secondary",
   },
   {
     id: "4",
