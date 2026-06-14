@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { type Table } from "@tanstack/react-table";
 
 // Local Imports
@@ -9,13 +9,13 @@ import {
   PaginationPrevious,
   Select,
 } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 
 // ----------------------------------------------------------------------
 
 export function PaginationSection({ table }: { table: Table<any> }) {
   const paginationState = table.getState().pagination;
-  const { isXl, is2xl } = useBreakpointsContext();
+  const { isXl, is2xl } = useBreakpointsStore();
 
   return (
     <div className="flex flex-col justify-between space-y-4 sm:flex-row sm:items-center sm:space-y-0">

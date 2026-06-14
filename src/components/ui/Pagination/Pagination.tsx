@@ -1,9 +1,10 @@
 // Import Dependencies
-import { ReactNode, forwardRef } from "react";
+import { ReactNode, forwardRef, useRef } from "react";
+import { createStore, type StoreApi } from "zustand";
 import clsx from "clsx";
 
 // Local Imports
-import { PaginationProvider } from "./Pagination.context";
+import { PaginationContextType, PaginationStoreContext } from "./Pagination.context";
 import { usePagination } from "./usePagination";
 import { createEventHandler } from "@/utils/createEventHandler";
 
@@ -17,7 +18,7 @@ export type PaginationProps = {
   disabled?: boolean;
   getItemProps?: (page: number) => Record<string, unknown>;
   className?: string;
-  classNames?: Record<string, string>; // TODO: Add type
+  classNames?: Record<string, string>;
   siblings?: number;
   boundaries?: number;
   children?: ReactNode;
@@ -66,22 +67,29 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
       return null;
     }
 
+    const contextValue: PaginationContextType = {
+      total,
+      range,
+      active,
+      disabled,
+      classNames,
+      onChange: setPage,
+      onNext: handleNextPage,
+      onPrevious: handlePreviousPage,
+      onFirst: handleFirstPage,
+      onLast: handleLastPage,
+      getItemProps,
+    };
+
+    const storeRef = useRef<StoreApi<PaginationContextType> | null>(null);
+    if (!storeRef.current) {
+      storeRef.current = createStore<PaginationContextType>(() => contextValue);
+    } else {
+      storeRef.current.setState(contextValue, true);
+    }
+
     return (
-      <PaginationProvider
-        value={{
-          total,
-          range,
-          active,
-          disabled,
-          classNames,
-          onChange: setPage,
-          onNext: handleNextPage,
-          onPrevious: handlePreviousPage,
-          onFirst: handleFirstPage,
-          onLast: handleLastPage,
-          getItemProps,
-        }}
-      >
+      <PaginationStoreContext.Provider value={storeRef.current}>
         <div
           ref={ref}
           className={clsx(
@@ -92,7 +100,7 @@ export const Pagination = forwardRef<HTMLDivElement, PaginationProps>(
         >
           {children}
         </div>
-      </PaginationProvider>
+      </PaginationStoreContext.Provider>
     );
   },
 );

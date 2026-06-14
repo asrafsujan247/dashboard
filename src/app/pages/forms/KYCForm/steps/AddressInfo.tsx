@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Controller, useForm, Resolver } from "react-hook-form";
 import TextareaAutosize from "react-textarea-autosize";
@@ -6,7 +6,7 @@ import TextareaAutosize from "react-textarea-autosize";
 // Local Imports
 import { ContextualHelp } from "@/components/shared/ContextualHelp";
 import { Button, Checkbox, Collapse, Input, Textarea } from "@/components/ui";
-import { useKYCFormContext } from "../KYCFormContext";
+import { useKYCFormStore } from "../KYCFormContext";
 import { CountrySelect } from "../components/CountrySelect";
 import { addressInfoSchema, AddressInfoType } from "../schema";
 
@@ -17,7 +17,7 @@ export function AddressInfo({
 }: {
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const kycFormCtx = useKYCFormContext();
+  const kycFormCtx = useKYCFormStore();
 
   const {
     register,

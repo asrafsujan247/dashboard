@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import clsx from "clsx";
@@ -6,7 +6,7 @@ import clsx from "clsx";
 // Local Imports
 import { Listbox } from "@/components/shared/form/StyledListbox";
 import { Button, Input, InputErrorMsg, Radio, Switch } from "@/components/ui";
-import { useAddProductFormContext } from "../AddProductFormContext";
+import { useAddProductFormStore } from "../AddProductFormContext";
 import { generalSchema } from "../schema";
 
 // ----------------------------------------------------------------------
@@ -83,7 +83,7 @@ export function General({
   setCurrentStep: React.Dispatch<React.SetStateAction<number>>;
   setFinished?: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
-  const addProductFormCtx = useAddProductFormContext();
+  const addProductFormCtx = useAddProductFormStore();
 
   const {
     register,

@@ -1,33 +1,20 @@
 // Import Dependencies
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, ReactNode, useRef } from "react";
+import { createStore, type StoreApi } from "zustand";
 import clsx from "clsx";
 
 // Local Imports
-import { TimelineContext, TimelineVariant } from "./context";
+import { TimelineContextType, TimelineStoreContext, TimelineVariant } from "./context";
 
 // ----------------------------------------------------------------------
 
-/**
- * Timeline component that provides vertical connected timeline visualization
- */
-
-/**
- * Props definition for the Timeline component
- */
 export interface TimelineProps {
-  /** Additional CSS class names */
   className?: string;
-  /** Size of the timeline point/dot (CSS value) */
   pointSize?: string;
-  /** Width of the timeline connecting line (CSS value) */
   lineWidth?: string;
-  /** Visual style variant */
   variant?: TimelineVariant;
-  /** Space between timeline items (CSS value) */
   lineSpace?: string;
-  /** Additional inline styles */
   style?: CSSProperties;
-  /** Child components */
   children?: ReactNode;
 }
 
@@ -42,8 +29,17 @@ const Timeline = (props: TimelineProps) => {
     children,
   } = props;
 
+  const contextValue: TimelineContextType = { variant };
+
+  const storeRef = useRef<StoreApi<TimelineContextType> | null>(null);
+  if (!storeRef.current) {
+    storeRef.current = createStore<TimelineContextType>(() => contextValue);
+  } else {
+    storeRef.current.setState(contextValue, true);
+  }
+
   return (
-    <TimelineContext value={{ variant }}>
+    <TimelineStoreContext.Provider value={storeRef.current}>
       <div
         className={clsx(
           "timeline flex flex-col",
@@ -61,7 +57,7 @@ const Timeline = (props: TimelineProps) => {
       >
         {children}
       </div>
-    </TimelineContext>
+    </TimelineStoreContext.Provider>
   );
 };
 

@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { FunnelIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import { useEffect, useRef } from "react";
@@ -13,7 +13,7 @@ import invariant from "tiny-invariant";
 
 // Local Imports
 import { Badge, Button, Checkbox, Input } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { useFuse } from "@/hooks";
 import { ResponsiveFilter } from "./ResponsiveFilter";
 
@@ -68,7 +68,7 @@ function Content({
 }) {
   const selectedValues = table?.getState()?.toolbarFilters || [];
   const inputRef = useRef<HTMLInputElement>(null);
-  const { smAndUp } = useBreakpointsContext();
+  const { smAndUp } = useBreakpointsStore();
   const setToolbarFilters = table?.options?.meta?.setToolbarFilters;
 
   invariant(setToolbarFilters, "setToolbarFilters is required");

@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { useCallback, useEffect } from "react";
 import { CalendarIcon } from "@heroicons/react/20/solid";
 import clsx from "clsx";
@@ -9,7 +9,7 @@ import React from "react";
 // Local Imports
 import { Button } from "@/components/ui";
 import { DatePicker } from "../form/Datepicker";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { ResponsiveFilter } from "./ResponsiveFilter";
 import { BaseOptions, DateOption } from "../form/Flatpickr";
 
@@ -26,7 +26,7 @@ export const DateFilter = React.memo(({
 }) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => () => column?.setFilterValue(undefined), []);
-  const { smAndDown } = useBreakpointsContext();
+  const { smAndDown } = useBreakpointsStore();
   const selectedValues = column?.getFilterValue() as DateOption[] | undefined;
 
   const handleDateChange = useCallback((date: Date[]) => {

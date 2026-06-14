@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import clsx from "clsx";
 import { NavLink, To } from "react-router";
 
@@ -6,8 +6,8 @@ import { NavLink, To } from "react-router";
 import { Header } from "./Header";
 import { Button, ScrollShadow } from "@/components/ui";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useSidebarStore } from "@/app/store/sidebarStore";
 import { settings } from "@/app/navigation/segments/settings";
 import { navigationIcons } from "@/app/navigation/icons";
 
@@ -58,8 +58,8 @@ function MenuItem({
   icon: string;
   path: To;
 }) {
-  const { lgAndDown } = useBreakpointsContext();
-  const { close } = useSidebarContext();
+  const { lgAndDown } = useBreakpointsStore();
+  const { close } = useSidebarStore();
 
   if (!icon || !navigationIcons[icon]) {
     throw new Error(`Icon ${icon} not found in navigationIcons`);

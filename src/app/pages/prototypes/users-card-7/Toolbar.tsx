@@ -27,7 +27,7 @@ import clsx from "clsx";
 
 // Local Imports
 import { Button, Input } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 
 // ----------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ export function Toolbar({ query, setQuery }: ToolbarProps) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const mobileSearchRef = useRef<HTMLInputElement>(null);
 
-  const { isXs } = useBreakpointsContext();
+  const { isXs } = useBreakpointsStore();
 
   useEffect(() => {
     if (showMobileSearch) setTimeout(() => mobileSearchRef?.current?.focus());

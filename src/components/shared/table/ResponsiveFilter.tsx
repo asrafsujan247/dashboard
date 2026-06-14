@@ -9,7 +9,7 @@ import {
   TransitionChild,
   type PopoverPanelProps,
 } from "@headlessui/react";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import clsx from "clsx";
 import { ReactNode } from "react";
 
@@ -45,7 +45,7 @@ export const ResponsiveFilter = ({
   anchor,
   classNames,
 }: ResponsiveFilterProps) => {
-  const { smAndDown } = useBreakpointsContext();
+  const { smAndDown } = useBreakpointsStore();
 
   const View = smAndDown ? MobileView : DesktopView;
 

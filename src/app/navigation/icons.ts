@@ -127,7 +127,6 @@ export const navigationIcons: Record<string, ElementType> = {
   "forms.file-upload": ActtachmentIcon,
   "forms.form-validation": ValidationIcon,
   "forms.text-editor": TextareaIcon,
-  "forms.filepond": ActtachmentIcon,
   "forms.datepicker": CalendarIcon,
   "settings.general": HiUserIcon,
   "settings.appearance": TbPalette,

@@ -1,10 +1,10 @@
-// Import Dependencies
+﻿// Import Dependencies
 import clsx from "clsx";
 import { NavLink, useRouteLoaderData } from "react-router";
 
 // Local Imports
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useSidebarStore } from "@/app/store/sidebarStore";
 import { Badge } from "@/components/ui";
 import { NavigationTree } from "@/@types/navigation";
 
@@ -12,8 +12,8 @@ import { NavigationTree } from "@/@types/navigation";
 
 export function MenuItem({ data }: { data: NavigationTree }) {
   const { path, id } = data;
-  const { lgAndDown } = useBreakpointsContext();
-  const { close } = useSidebarContext();
+  const { lgAndDown } = useBreakpointsStore();
+  const { close } = useSidebarStore();
 
   const title = data.title;
   const info = useRouteLoaderData("root")?.[id]?.info;

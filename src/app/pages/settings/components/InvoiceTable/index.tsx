@@ -27,7 +27,7 @@ import {
   PaginationNext,
 } from "@/components/ui";
 import { fuzzyFilter } from "@/utils/react-table/fuzzyFilter";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { columns } from "./columns";
 import { invoiceList } from "./invoiceList";
 import { Toolbar } from "./Toolbar";
@@ -36,7 +36,7 @@ import { Toolbar } from "./Toolbar";
 
 export function InvoiceTable() {
   const [invoices] = useState([...invoiceList]);
-  const { isXl, is2xl } = useBreakpointsContext();
+  const { isXl, is2xl } = useBreakpointsStore();
 
   const [globalFilter, setGlobalFilter] = useState("");
   const [sorting, setSorting] = useState<SortingState>([]);

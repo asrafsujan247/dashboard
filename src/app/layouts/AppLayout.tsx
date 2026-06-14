@@ -1,16 +1,16 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { Outlet } from "react-router";
 import { useLayoutEffect } from "react";
 
 // Local Imports
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useSidebarStore } from "@/app/store/sidebarStore";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 
 // ----------------------------------------------------------------------
 
 export function AppLayout() {
-  const { close, open } = useSidebarContext();
-  const { lgAndDown, xlAndUp } = useBreakpointsContext();
+  const { close, open } = useSidebarStore();
+  const { lgAndDown, xlAndUp } = useBreakpointsStore();
 
   useLayoutEffect(() => {
     if (xlAndUp) open();

@@ -1,10 +1,10 @@
-// Import Dependencies
+﻿// Import Dependencies
 import { useMemo, useState } from "react";
 import { useLocation } from "react-router";
 
 // Local Imports
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
-import { useSidebarContext } from "@/app/contexts/sidebar/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useSidebarStore } from "@/app/store/sidebarStore";
 import { navigation } from "@/app/navigation";
 import { useDidUpdate } from "@/hooks";
 import { isRouteActive } from "@/utils/isRouteActive";
@@ -17,8 +17,8 @@ export type SegmentPath = string | undefined;
 
 export function Sidebar() {
   const { pathname } = useLocation();
-  const { name, lgAndDown } = useBreakpointsContext();
-  const { isExpanded, close } = useSidebarContext();
+  const { name, lgAndDown } = useBreakpointsStore();
+  const { isExpanded, close } = useSidebarStore();
 
   const initialSegment = useMemo(
     () => navigation.find((item) => isRouteActive(item.path, pathname)),

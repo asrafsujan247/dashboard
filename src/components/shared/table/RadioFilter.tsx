@@ -1,4 +1,4 @@
-// Import Dependencies
+﻿// Import Dependencies
 import {
   Combobox,
   ComboboxInput,
@@ -12,7 +12,7 @@ import { Column } from "@tanstack/react-table";
 
 // Local Imports
 import { Badge, Button, Input, Radio } from "@/components/ui";
-import { useBreakpointsContext } from "@/app/contexts/breakpoint/context";
+import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { useFuse } from "@/hooks";
 import { ResponsiveFilter } from "./ResponsiveFilter";
 import { compareArrays } from "@/utils/compareArrays";
@@ -71,7 +71,7 @@ export function RadioFilter({
 
 function Content({ column, title, options }: ContentProps) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const { smAndDown } = useBreakpointsContext();
+  const { smAndDown } = useBreakpointsStore();
 
   const {
     result: filteredItems,
