@@ -37,7 +37,7 @@ export function Item({
   }
 
   const Element = component || "button";
-  const { lgAndUp } = useBreakpointsStore();
+  const { xlAndUp } = useBreakpointsStore();
   const info = useRouteLoaderData("root")?.[id]?.info as
     | { val?: string; color?: ColorType }
     | undefined;
@@ -47,7 +47,7 @@ export function Item({
   return (
     <Element
       data-root-menu-item
-      data-tooltip={lgAndUp ? true : undefined}
+      data-tooltip={xlAndUp ? true : undefined}
       data-tooltip-content={title}
       data-tooltip-place="right"
       className={clsx(
