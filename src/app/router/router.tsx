@@ -280,15 +280,6 @@ const router = createBrowserRouter([
               },
               {
                 path: "apps",
-              },
-            ],
-          },
-          // The app layout supports only the main layout. Avoid using it for other layouts.
-          {
-            Component: AppLayout,
-            children: [
-              {
-                path: "apps",
                 children: [
                   {
                     path: "pos",
@@ -298,10 +289,6 @@ const router = createBrowserRouter([
                   },
                   {
                     path: "mail",
-                    lazy: async () => ({
-                      Component: (await import("@/app/pages/apps/mail/Layout"))
-                        .default,
-                    }),
                     children: [
                       {
                         index: true,
@@ -322,6 +309,12 @@ const router = createBrowserRouter([
                   },
                 ],
               },
+            ],
+          },
+          // The app layout supports only the main layout. Avoid using it for other layouts.
+          {
+            Component: AppLayout,
+            children: [
               {
                 path: "settings",
                 lazy: async () => ({
