@@ -4,8 +4,7 @@ import { RouterProvider } from "react-router";
 // Local Imports
 import router from "./app/router/router";
 
-// Ensure global stores initialize on app load
-import "@/app/store/breakpointStore";
+// Ensure global store initializes on app load
 import "@/app/store/sidebarStore";
 
 // ----------------------------------------------------------------------

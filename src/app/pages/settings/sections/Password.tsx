@@ -1,10 +1,14 @@
 // Local Imports
-import { Button, Input } from "@/components/ui";
+import { Button, Card, Input } from "@/components/ui";
+import { Page } from "@/components/shared/Page";
 
 // ----------------------------------------------------------------------
 
 export default function Password() {
   return (
+    <Page title="Settings">
+      <div className="transition-content grid flex-1 grid-cols-1 place-content-start px-(--margin-x) py-6">
+        <Card className="h-full w-full p-4 sm:px-5 2xl:mx-auto 2xl:max-w-5xl">
     <div className="w-full max-w-3xl 2xl:max-w-5xl">
       <h5 className=" text-lg font-medium text-gray-800">
         Password
@@ -52,5 +56,8 @@ export default function Password() {
         </div>
       </div>
     </div>
+        </Card>
+      </div>
+    </Page>
   );
 }

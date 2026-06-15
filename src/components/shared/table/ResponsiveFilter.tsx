@@ -9,7 +9,7 @@ import {
   TransitionChild,
   type PopoverPanelProps,
 } from "@headlessui/react";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useMediaQuery } from "@/hooks";
 import clsx from "clsx";
 import { ReactNode } from "react";
 
@@ -45,7 +45,7 @@ export const ResponsiveFilter = ({
   anchor,
   classNames,
 }: ResponsiveFilterProps) => {
-  const { smAndDown } = useBreakpointsStore();
+  const smAndDown = !useMediaQuery("(min-width: 768px)");
 
   const View = smAndDown ? MobileView : DesktopView;
 

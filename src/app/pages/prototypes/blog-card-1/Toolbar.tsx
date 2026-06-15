@@ -27,7 +27,7 @@ import clsx from "clsx";
 
 // Local Imports
 import { Button, Input } from "@/components/ui";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useMediaQuery } from "@/hooks";
 
 // ----------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ export function Toolbar({ query, setQuery }: ToolbarProps) {
   const [showMobileSearch, setShowMobileSearch] = useState(false);
   const mobileSearchRef = useRef<HTMLInputElement>(null);
 
-  const { isXs } = useBreakpointsStore();
+  const isXs = !useMediaQuery("(min-width: 640px)");
 
   useLayoutEffect(() => {
     if (showMobileSearch) mobileSearchRef?.current?.focus();

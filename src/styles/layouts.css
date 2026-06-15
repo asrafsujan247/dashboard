@@ -22,15 +22,15 @@
 }
 
 [data-layout="main-layout"] .prime-panel {
-  @apply invisible fixed top-0 z-30 h-full w-[calc(var(--main-panel-width)+var(--prime-panel-width))] -translate-x-full transform-gpu transition-[transform,translate,visibility] delay-150 duration-[.25s] ease-in md:delay-[unset] ltr:left-0 rtl:right-0 rtl:translate-x-full;
+  @apply invisible fixed top-0 z-30 h-full w-[calc(var(--main-panel-width)+var(--prime-panel-width))] -translate-x-full transform-gpu transition-[transform,translate,visibility] delay-150 duration-[.25s] ease-out md:delay-[unset] ltr:left-0 rtl:right-0 rtl:translate-x-full;
 }
 
 [data-layout="main-layout"].is-sidebar-open .prime-panel {
-  @apply visible translate-x-0 ease-out;
+  @apply visible translate-x-0;
 }
 
 [data-layout="main-layout"] .main-panel {
-  @apply invisible fixed top-0 z-40 h-full w-(--main-panel-width) shrink-0 -translate-x-full transform-gpu transition-[transform,visibility] duration-200 ease-in md:visible md:z-60 md:translate-x-0 ltr:left-0 rtl:right-0 rtl:translate-x-full md:rtl:translate-x-0;
+  @apply invisible fixed top-0 z-40 h-full w-(--main-panel-width) shrink-0 -translate-x-full transform-gpu transition-[transform,visibility] duration-200 ease-out md:visible md:z-60 md:translate-x-0 ltr:left-0 rtl:right-0 rtl:translate-x-full md:rtl:translate-x-0;
 }
 
 [data-layout="main-layout"].is-sidebar-open .main-panel {

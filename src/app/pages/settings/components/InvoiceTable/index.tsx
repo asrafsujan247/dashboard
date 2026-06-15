@@ -27,7 +27,7 @@ import {
   PaginationNext,
 } from "@/components/ui";
 import { fuzzyFilter } from "@/utils/react-table/fuzzyFilter";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useMediaQuery } from "@/hooks";
 import { columns } from "./columns";
 import { invoiceList } from "./invoiceList";
 import { Toolbar } from "./Toolbar";
@@ -36,7 +36,8 @@ import { Toolbar } from "./Toolbar";
 
 export function InvoiceTable() {
   const [invoices] = useState([...invoiceList]);
-  const { isXl, is2xl } = useBreakpointsStore();
+  const is2xl = useMediaQuery("(min-width: 1536px)");
+  const isXlAndUp = useMediaQuery("(min-width: 1280px)");
 
   const [globalFilter, setGlobalFilter] = useState("");
   const [sorting, setSorting] = useState<SortingState>([]);
@@ -143,8 +144,8 @@ export function InvoiceTable() {
                   total={table.getPageCount()}
                   value={paginationState.pageIndex + 1}
                   onChange={(page) => table.setPageIndex(page - 1)}
-                  siblings={isXl ? 2 : is2xl ? 3 : 1}
-                  boundaries={isXl ? 2 : 1}
+                  siblings={is2xl ? 3 : isXlAndUp ? 2 : 1}
+                  boundaries={isXlAndUp ? 2 : 1}
                 >
                   <PaginationPrevious />
                   <PaginationItems />

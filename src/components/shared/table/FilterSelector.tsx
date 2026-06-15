@@ -13,7 +13,6 @@ import invariant from "tiny-invariant";
 
 // Local Imports
 import { Badge, Button, Checkbox, Input } from "@/components/ui";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { useFuse } from "@/hooks";
 import { ResponsiveFilter } from "./ResponsiveFilter";
 
@@ -68,7 +67,6 @@ function Content({
 }) {
   const selectedValues = table?.getState()?.toolbarFilters || [];
   const inputRef = useRef<HTMLInputElement>(null);
-  const { smAndUp } = useBreakpointsStore();
   const setToolbarFilters = table?.options?.meta?.setToolbarFilters;
 
   invariant(setToolbarFilters, "setToolbarFilters is required");
@@ -84,7 +82,9 @@ function Content({
   });
 
   useEffect(() => {
-    if (smAndUp && inputRef.current) inputRef.current.focus();
+    if (window.matchMedia("(min-width: 640px)").matches && inputRef.current) {
+      inputRef.current.focus();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 

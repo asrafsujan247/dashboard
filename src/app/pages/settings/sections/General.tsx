@@ -6,7 +6,8 @@ import { HiPencil } from "react-icons/hi";
 
 // Local Imports
 import { PreviewImg } from "@/components/shared/PreviewImg";
-import { Avatar, Button, Input, Upload } from "@/components/ui";
+import { Avatar, Button, Card, Input, Upload } from "@/components/ui";
+import { Page } from "@/components/shared/Page";
 
 // ----------------------------------------------------------------------
 
@@ -14,6 +15,9 @@ export default function General() {
   const [avatar, setAvatar] = useState<File | null>(null);
 
   return (
+    <Page title="Settings">
+      <div className="transition-content grid flex-1 grid-cols-1 place-content-start px-(--margin-x) py-6">
+        <Card className="h-full w-full p-4 sm:px-5 2xl:mx-auto 2xl:max-w-5xl">
     <div className="w-full max-w-3xl 2xl:max-w-5xl">
       <h5 className=" text-lg font-medium text-gray-800">
         General
@@ -181,5 +185,8 @@ export default function General() {
         </Button>
       </div>
     </div>
+        </Card>
+      </div>
+    </Page>
   );
 }

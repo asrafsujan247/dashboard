@@ -13,7 +13,6 @@ import { useEffect, useRef, ElementType, ReactElement } from "react";
 import { Badge, Button, Checkbox, Input } from "@/components/ui";
 import { useFuse } from "@/hooks";
 import { ResponsiveFilter } from "./ResponsiveFilter";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { Column } from "@tanstack/react-table";
 
 // ----------------------------------------------------------------------
@@ -119,12 +118,11 @@ function ComboboxFilter({
     matchAllOnEmptyQuery: true,
   });
 
-  const { smAndUp } = useBreakpointsStore();
   const facets = column?.getFacetedUniqueValues();
   const selectedValues = column?.getFilterValue() as string[] || [];
 
   useEffect(() => {
-    if (smAndUp && inputRef.current) {
+    if (window.matchMedia("(min-width: 640px)").matches && inputRef.current) {
       inputRef.current.focus();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

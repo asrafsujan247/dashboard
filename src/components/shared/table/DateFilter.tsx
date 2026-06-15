@@ -1,7 +1,6 @@
 ﻿// Import Dependencies
 import { useCallback, useEffect } from "react";
 import { CalendarIcon } from "@heroicons/react/20/solid";
-import clsx from "clsx";
 import dayjs from "dayjs";
 import { Column } from "@tanstack/react-table";
 import React from "react";
@@ -9,7 +8,6 @@ import React from "react";
 // Local Imports
 import { Button } from "@/components/ui";
 import { DatePicker } from "../form/Datepicker";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { ResponsiveFilter } from "./ResponsiveFilter";
 import { BaseOptions, DateOption } from "../form/Flatpickr";
 
@@ -26,7 +24,6 @@ export const DateFilter = React.memo(({
 }) => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => () => column?.setFilterValue(undefined), []);
-  const { smAndDown } = useBreakpointsStore();
   const selectedValues = column?.getFilterValue() as DateOption[] | undefined;
 
   const handleDateChange = useCallback((date: Date[]) => {
@@ -59,12 +56,7 @@ export const DateFilter = React.memo(({
       }
     >
       <div
-        className={clsx(
-          "mx-auto flex w-full items-center justify-between",
-          smAndDown
-            ? " mt-1 mb-2 h-10 w-full max-w-xs border-b border-gray-200 py-3"
-            : "bg-gray-150 px-2.5 py-2",
-        )}
+        className="mx-auto flex w-full items-center justify-between max-md:mt-1 max-md:mb-2 max-md:h-10 max-md:max-w-xs max-md:border-b max-md:border-gray-200 max-md:py-3 md:bg-gray-150 md:px-2.5 md:py-2"
       >
         <p className=" truncate text-start text-base font-medium text-gray-800 sm:py-1 sm:text-sm">
           {title}

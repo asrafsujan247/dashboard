@@ -12,7 +12,6 @@ import { Column } from "@tanstack/react-table";
 
 // Local Imports
 import { Badge, Button, Input, Radio } from "@/components/ui";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { useFuse } from "@/hooks";
 import { ResponsiveFilter } from "./ResponsiveFilter";
 import { compareArrays } from "@/utils/compareArrays";
@@ -71,7 +70,6 @@ export function RadioFilter({
 
 function Content({ column, title, options }: ContentProps) {
   const inputRef = useRef<HTMLInputElement>(null);
-  const { smAndDown } = useBreakpointsStore();
 
   const {
     result: filteredItems,
@@ -86,7 +84,7 @@ function Content({ column, title, options }: ContentProps) {
   const selectedValue = (column?.getFilterValue() || []) as any[];
 
   useEffect(() => {
-    if (!smAndDown && inputRef.current) {
+    if (window.matchMedia("(min-width: 768px)").matches && inputRef.current) {
       inputRef.current.focus();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -16,7 +16,8 @@ import { Link } from "react-router";
 import { Avatar, AvatarDot } from "@/components/ui";
 import { ColorType } from "@/constants/app";
 
-// Define Link Types
+// ----------------------------------------------------------------------
+
 interface LinkItem {
   id: string;
   title: string;
@@ -76,7 +77,6 @@ export function Profile() {
           <AvatarDot color="success" className="ltr:right-0 rtl:left-0" />
         }
         className="cursor-pointer"
-
       />
       <Transition
         enter="duration-200 ease-out"
@@ -92,7 +92,6 @@ export function Profile() {
         >
           {({ close }) => (
             <>
-              {/* User Info */}
               <div className="flex items-center gap-4 rounded-t-lg bg-gray-100 px-4 py-5">
                 <Avatar
                   size={14}
@@ -106,13 +105,9 @@ export function Profile() {
                   >
                     Travis Fuller
                   </Link>
-                  <p className="mt-0.5 text-xs text-gray-400">
-                    Product Designer
-                  </p>
+                  <p className="mt-0.5 text-xs text-gray-400">Product Designer</p>
                 </div>
               </div>
-
-              {/* Navigation Links */}
               <div className="flex flex-col pb-5 pt-2">
                 {links.map((link) => (
                   <Link
@@ -138,7 +133,6 @@ export function Profile() {
                     </div>
                   </Link>
                 ))}
-
               </div>
             </>
           )}

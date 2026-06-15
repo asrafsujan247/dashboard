@@ -1,14 +1,14 @@
-﻿// Import Dependencies
+// Import Dependencies
 import { ElementType, ComponentPropsWithoutRef } from "react";
-import clsx from "clsx";
 import { type To, useRouteLoaderData } from "react-router";
+import clsx from "clsx";
 
 // Local Imports
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { Badge } from "@/components/ui";
+import { navigationIcons } from "@/app/navigation/icons";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
 import { ColorType } from "@/constants/app";
-import { navigationIcons } from "@/app/navigation/icons";
+import { useMediaQuery } from "@/hooks";
 
 // ----------------------------------------------------------------------
 
@@ -23,31 +23,20 @@ export interface ItemProps {
   onKeyDown?: ComponentPropsWithoutRef<"button">["onKeyDown"];
 }
 
-export function Item({
-  id,
-  title,
-  isActive,
-  icon,
-  component,
-  onKeyDown,
-  ...rest
-}: ItemProps) {
+export function Item({ id, title, isActive, icon, component, onKeyDown, ...rest }: ItemProps) {
   if (!icon || !navigationIcons[icon]) {
     throw new Error(`Icon ${icon} not found in navigationIcons`);
   }
 
   const Element = component || "button";
-  const { lgAndUp } = useBreakpointsStore();
-  const info = useRouteLoaderData("root")?.[id]?.info as
-    | { val?: string; color?: ColorType }
-    | undefined;
-
+  const showTooltip = useMediaQuery("(min-width: 1280px)");
+  const info = useRouteLoaderData("root")?.[id]?.info as { val?: string; color?: ColorType } | undefined;
   const Icon = navigationIcons[icon];
 
   return (
     <Element
       data-root-menu-item
-      data-tooltip={lgAndUp ? true : undefined}
+      data-tooltip={showTooltip ? true : undefined}
       data-tooltip-content={title}
       data-tooltip-place="right"
       className={clsx(
@@ -70,7 +59,7 @@ export function Item({
       {info?.val && (
         <Badge
           color={info.color}
-          className="text-tiny-plus absolute top-0 right-0 -m-1 h-4 min-w-[1rem] rounded-full px-1 py-0 ring-1 ring-white"
+          className="text-tiny-plus absolute top-0 right-0 -m-1 h-4 min-w-4 rounded-full px-1 py-0 ring-1 ring-white"
         >
           <span>{info.val}</span>
         </Badge>

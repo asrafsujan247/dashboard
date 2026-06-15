@@ -1,6 +1,5 @@
 import { create } from "zustand";
 import { isServer } from "@/utils/isServer";
-import { useBreakpointsStore } from "./breakpointStore";
 
 interface SidebarState {
   isExpanded: boolean;
@@ -10,21 +9,24 @@ interface SidebarState {
 }
 
 export const useSidebarStore = create<SidebarState>((set) => ({
-  isExpanded: useBreakpointsStore.getState().xlAndUp,
+  isExpanded: !isServer && window.matchMedia("(min-width: 1280px)").matches,
   toggle: () => set((state) => ({ isExpanded: !state.isExpanded })),
   open: () => set({ isExpanded: true }),
   close: () => set({ isExpanded: false }),
 }));
 
-// Auto-close sidebar when breakpoint changes to lgAndDown
-useBreakpointsStore.subscribe((state, prevState) => {
-  if (state.name !== prevState.name && state.lgAndDown) {
-    useSidebarStore.getState().close();
-  }
-});
-
-// Sync body class with sidebar expanded state
 if (!isServer) {
+  // Auto open/close sidebar when crossing the xl breakpoint (1280px)
+  const xlMq = window.matchMedia("(min-width: 1280px)");
+  xlMq.addEventListener("change", (e) => {
+    if (e.matches) {
+      useSidebarStore.getState().open();
+    } else {
+      useSidebarStore.getState().close();
+    }
+  });
+
+  // Sync body class with sidebar expanded state
   const updateBodyClass = (isExpanded: boolean) => {
     if (isExpanded) {
       document.body.classList.add("is-sidebar-open");
