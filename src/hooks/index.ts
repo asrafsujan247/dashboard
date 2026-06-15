@@ -16,5 +16,6 @@ export * from "./useIsMounted";
 export * from "./useLocalStorage";
 export * from "./useLockScrollbar";
 export * from "./useMergedRef";
+export * from "./useMediaQuery";
 export * from "./useUncontrolled";
 export * from "./useUnmount";

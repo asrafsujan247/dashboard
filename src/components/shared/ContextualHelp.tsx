@@ -15,8 +15,7 @@ import { Fragment, ElementType, ReactNode } from "react";
 
 // Local Imports
 import { Button } from "@/components/ui";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
-import { useDisclosure, useDidUpdate } from "@/hooks";
+import { useDisclosure, useDidUpdate, useMediaQuery } from "@/hooks";
 
 // ----------------------------------------------------------------------
 
@@ -35,10 +34,10 @@ export function ContextualHelp(props: ContextualHelpProps) {
     anchor = { to: "bottom start", gap: 8 },
   } = props;
 
-  const { smAndDown, name } = useBreakpointsStore();
+  const smAndDown = !useMediaQuery("(min-width: 768px)");
   const [isOpen, { open: openModal, close: closeModal }] = useDisclosure(false);
 
-  useDidUpdate(() => closeModal(), [name]);
+  useDidUpdate(() => closeModal(), [smAndDown]);
 
   const body = (
     <div className="contextual-body pointer-events-auto mt-2 text-sm text-gray-500">

@@ -17,15 +17,19 @@ import {
 } from "@heroicons/react/24/outline";
 
 // Local Imports
-import { Badge, Button, Circlebar, Input } from "@/components/ui";
+import { Badge, Button, Card, Circlebar, Input } from "@/components/ui";
 import { useDisclosure } from "@/hooks";
 import { ContextualHelp } from "@/components/shared/ContextualHelp";
 import { InvoiceTable } from "../components/InvoiceTable";
+import { Page } from "@/components/shared/Page";
 
 // ----------------------------------------------------------------------
 
 export default function Billing() {
   return (
+    <Page title="Settings">
+      <div className="transition-content grid flex-1 grid-cols-1 place-content-start px-(--margin-x) py-6">
+        <Card className="h-full w-full p-4 sm:px-5 2xl:mx-auto 2xl:max-w-5xl">
     <div className="w-full 2xl:max-w-5xl">
       <h5 className=" text-lg font-medium text-gray-800">
         Billing & Payments
@@ -43,6 +47,9 @@ export default function Billing() {
 
       <InvoiceSection />
     </div>
+        </Card>
+      </div>
+    </Page>
   );
 }
 

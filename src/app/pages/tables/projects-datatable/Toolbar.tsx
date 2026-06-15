@@ -31,7 +31,7 @@ import {
 } from "@/components/ui";
 import { DateFilter } from "@/components/shared/table/DateFilter";
 import { FacedtedFilter } from "@/components/shared/table/FacedtedFilter";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useMediaQuery } from "@/hooks";
 import { collaborators, tags } from "./data";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
 import { Project } from "./data";
@@ -46,7 +46,7 @@ const filterOptions = [
 ];
 
 export function Toolbar({ table }: { table: Table<Project> }) {
-  const { isXs } = useBreakpointsStore();
+  const isXs = !useMediaQuery("(min-width: 640px)");
   const isFullScreenEnabled = table.getState().tableSettings?.enableFullScreen;
 
   return (

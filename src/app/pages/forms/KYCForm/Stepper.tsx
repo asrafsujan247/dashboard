@@ -3,7 +3,7 @@ import clsx from "clsx";
 import { HiCheck } from "react-icons/hi";
 
 // Local Imports
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useMediaQuery } from "@/hooks";
 import { createScopedKeydownHandler } from "@/utils/dom/createScopedKeydownHandler";
 import {
   StepKey,
@@ -20,7 +20,7 @@ interface StepperProps {
 }
 
 export function Stepper({ steps, currentStep, setCurrentStep }: StepperProps) {
-  const { smAndUp } = useBreakpointsStore();
+  const smAndUp = useMediaQuery("(min-width: 640px)");
   const kycFormCtx = useKYCFormStore();
   const stepStatus = kycFormCtx.state.stepStatus;
   const stepKeys = Object.keys(kycFormCtx.state.formData) as StepKey[];

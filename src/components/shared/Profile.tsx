@@ -76,7 +76,6 @@ export function Profile() {
           <AvatarDot color="success" className="ltr:right-0 rtl:left-0" />
         }
         className="cursor-pointer"
-
       />
       <Transition
         enter="duration-200 ease-out"
@@ -138,7 +137,6 @@ export function Profile() {
                     </div>
                   </Link>
                 ))}
-
               </div>
             </>
           )}

@@ -1,15 +1,14 @@
-﻿// Import Dependencies
+// Import Dependencies
 import { useMemo, useState } from "react";
 import { useLocation } from "react-router";
 
 // Local Imports
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
 import { useSidebarStore } from "@/app/store/sidebarStore";
 import { navigation } from "@/app/navigation";
-import { useDidUpdate } from "@/hooks";
+import { useDidUpdate, useMediaQuery } from "@/hooks";
 import { isRouteActive } from "@/utils/isRouteActive";
-import { MainPanel } from "./MainPanel";
-import { PrimePanel } from "./PrimePanel";
+import { LeftPanel } from "./LeftPanel";
+import { RightPanel } from "./RightPanel";
 
 // ----------------------------------------------------------------------
 
@@ -17,8 +16,9 @@ export type SegmentPath = string | undefined;
 
 export function Sidebar() {
   const { pathname } = useLocation();
-  const { name, lgAndDown } = useBreakpointsStore();
-  const { isExpanded, close } = useSidebarStore();
+  const isExpanded = useSidebarStore((s) => s.isExpanded);
+  const close = useSidebarStore((s) => s.close);
+  const isLgAndDown = !useMediaQuery("(min-width: 1280px)");
 
   const initialSegment = useMemo(
     () => navigation.find((item) => isRouteActive(item.path, pathname)),
@@ -38,22 +38,21 @@ export function Sidebar() {
     const activePath = navigation.find((item) =>
       isRouteActive(item.path, pathname),
     )?.path;
-
     setActiveSegmentPath(activePath);
   }, [pathname]);
 
   useDidUpdate(() => {
-    if (lgAndDown && isExpanded) close();
-  }, [name]);
+    if (isLgAndDown && isExpanded) close();
+  }, [isLgAndDown]);
 
   return (
     <>
-      <MainPanel
+      <LeftPanel
         nav={navigation}
         activeSegmentPath={activeSegmentPath}
         setActiveSegmentPath={setActiveSegmentPath}
       />
-      <PrimePanel
+      <RightPanel
         close={close}
         currentSegment={currentSegment}
         pathname={pathname}

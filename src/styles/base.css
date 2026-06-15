@@ -16,11 +16,7 @@ body {
 }
 
 .transition-content {
-  @apply duration-[.25s] ease-in [transition-property:width,padding-left,padding-right,margin-left,margin-right];
-}
-
-.is-sidebar-open .transition-content {
-  @apply ease-out;
+  @apply duration-[.25s] ease-out [transition-property:padding-left,padding-right,margin-left,margin-right];
 }
 
 /* Sidebar Toggle Button */

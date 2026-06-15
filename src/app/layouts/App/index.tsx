@@ -1,26 +1,31 @@
 // Import Dependencies
-import { Outlet, ScrollRestoration } from "react-router";
 import { lazy } from "react";
+import clsx from "clsx";
+import { Outlet, ScrollRestoration } from "react-router";
 
 // Local Imports
-import { Loadable } from "@/components/shared/Loadable";
+import { Header } from "./Header";
+import { Sidebar } from "./Sidebar";
 import { Progress } from "@/components/template/Progress";
+import { Loadable } from "@/components/shared/Loadable";
 
 const Toaster = Loadable(lazy(() => import("@/components/template/Toaster")));
 const Tooltip = Loadable(lazy(() => import("@/components/template/Tooltip")));
 
 // ----------------------------------------------------------------------
 
-function Root() {
+export default function App() {
   return (
     <>
       <Progress />
       <ScrollRestoration />
-      <Outlet />
+      <Header />
+      <main className={clsx("main-content transition-content grid grid-cols-1")}>
+        <Outlet />
+      </main>
+      <Sidebar />
       <Tooltip />
       <Toaster />
     </>
   );
 }
-
-export default Root;

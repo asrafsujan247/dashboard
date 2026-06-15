@@ -32,7 +32,6 @@ function SlashIcon(props: React.SVGProps<SVGSVGElement>) {
 }
 
 export function Header() {
-
   return (
     <header
       className={clsx(
@@ -51,9 +50,7 @@ export function Header() {
               >
                 <div className="flex items-center gap-2">
                   <MagnifyingGlassIcon className="size-4" />
-                  <span className="text-gray-400">
-                    Search here...
-                  </span>
+                  <span className="text-gray-400">Search here...</span>
                 </div>
                 <SlashIcon />
               </Button>

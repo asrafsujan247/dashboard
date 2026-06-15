@@ -4,7 +4,7 @@ import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/re
 import { XMarkIcon } from "@heroicons/react/20/solid";
 
 // Local Imports
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useMediaQuery } from "@/hooks";
 import { BasketSelector } from "./BasketSelector";
 import { BasketActions } from "./BasketActions";
 import { Items } from "./Items";
@@ -15,7 +15,7 @@ import { Button, Card } from "@/components/ui";
 // ----------------------------------------------------------------------
 
 export function Basket() {
-  const { smAndUp } = useBreakpointsStore();
+  const smAndUp = useMediaQuery("(min-width: 640px)");
 
   return smAndUp ? <DesktopView /> : <MobileView />;
 }

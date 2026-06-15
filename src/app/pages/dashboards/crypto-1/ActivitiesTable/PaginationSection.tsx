@@ -7,14 +7,15 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from "@/components/ui";
-import { useBreakpointsStore } from "@/app/store/breakpointStore";
+import { useMediaQuery } from "@/hooks";
 import { CryptoActivity } from "./fakeData";
 
 // ----------------------------------------------------------------------
 
 export function PaginationSection({ table }: { table: Table<CryptoActivity> }) {
   const paginationState = table.getState().pagination;
-  const { isXl, is2xl } = useBreakpointsStore();
+  const is2xl = useMediaQuery("(min-width: 1536px)");
+  const isXlAndUp = useMediaQuery("(min-width: 1280px)");
 
   return (
     <div className="flex flex-col justify-between space-y-4 sm:flex-row sm:items-center sm:space-y-0">
@@ -23,8 +24,8 @@ export function PaginationSection({ table }: { table: Table<CryptoActivity> }) {
           total={table.getPageCount()}
           value={paginationState.pageIndex + 1}
           onChange={(page) => table.setPageIndex(page - 1)}
-          siblings={isXl ? 2 : is2xl ? 3 : 1}
-          boundaries={isXl ? 2 : 1}
+          siblings={is2xl ? 3 : isXlAndUp ? 2 : 1}
+          boundaries={isXlAndUp ? 2 : 1}
         >
           <PaginationPrevious />
           <PaginationItems />
