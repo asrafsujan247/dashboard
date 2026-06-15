@@ -1,12 +1,5 @@
 // Import Dependencies
-import {
-  ElementType,
-  ComponentPropsWithoutRef,
-  Dispatch,
-  SetStateAction,
-  useState,
-  useEffect,
-} from "react";
+import { ElementType, ComponentPropsWithoutRef, Dispatch, SetStateAction } from "react";
 import { Link, type To, useRouteLoaderData } from "react-router";
 import clsx from "clsx";
 
@@ -20,10 +13,9 @@ import { settings } from "@/app/navigation/segments/settings";
 import { NavigationTree } from "@/@types/navigation";
 import { ColorType } from "@/constants/app";
 import { Profile } from "@/components/shared/Profile";
+import { useMediaQuery } from "@/hooks";
 import { SegmentPath } from ".";
 
-// ----------------------------------------------------------------------
-// Item (was MainPanel/Menu/item.tsx)
 // ----------------------------------------------------------------------
 
 interface ItemProps {
@@ -43,24 +35,8 @@ function Item({ id, title, isActive, icon, component, onKeyDown, ...rest }: Item
   }
 
   const Element = component || "button";
-
-  const [showTooltip, setShowTooltip] = useState(() =>
-    typeof window !== "undefined"
-      ? window.matchMedia("(min-width: 1280px)").matches
-      : false,
-  );
-
-  useEffect(() => {
-    const mq = window.matchMedia("(min-width: 1280px)");
-    const handler = (e: MediaQueryListEvent) => setShowTooltip(e.matches);
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, []);
-
-  const info = useRouteLoaderData("root")?.[id]?.info as
-    | { val?: string; color?: ColorType }
-    | undefined;
-
+  const showTooltip = useMediaQuery("(min-width: 1280px)");
+  const info = useRouteLoaderData("root")?.[id]?.info as { val?: string; color?: ColorType } | undefined;
   const Icon = navigationIcons[icon];
 
   return (
@@ -89,7 +65,7 @@ function Item({ id, title, isActive, icon, component, onKeyDown, ...rest }: Item
       {info?.val && (
         <Badge
           color={info.color}
-          className="text-tiny-plus absolute top-0 right-0 -m-1 h-4 min-w-[1rem] rounded-full px-1 py-0 ring-1 ring-white"
+          className="text-tiny-plus absolute top-0 right-0 -m-1 h-4 min-w-4 rounded-full px-1 py-0 ring-1 ring-white"
         >
           <span>{info.val}</span>
         </Badge>
@@ -99,16 +75,14 @@ function Item({ id, title, isActive, icon, component, onKeyDown, ...rest }: Item
 }
 
 // ----------------------------------------------------------------------
-// Menu (was MainPanel/Menu/index.tsx)
-// ----------------------------------------------------------------------
 
-interface MenuProps {
+export interface LeftPanelProps {
   nav: NavigationTree[];
-  activeSegmentPath: SegmentPath;
   setActiveSegmentPath?: Dispatch<SetStateAction<SegmentPath>>;
+  activeSegmentPath: SegmentPath;
 }
 
-function Menu({ nav, setActiveSegmentPath, activeSegmentPath }: MenuProps) {
+export function LeftPanel({ nav, setActiveSegmentPath, activeSegmentPath }: LeftPanelProps) {
   const isExpanded = useSidebarStore((s) => s.isExpanded);
   const open = useSidebarStore((s) => s.open);
 
@@ -117,7 +91,7 @@ function Menu({ nav, setActiveSegmentPath, activeSegmentPath }: MenuProps) {
     if (!isExpanded) open();
   };
 
-  const getProps = ({ path, type, title }: NavigationTree) => {
+  const getItemProps = ({ path, type, title }: NavigationTree) => {
     const isLink = type === "item";
     return {
       component: isLink ? Link : ("button" as ElementType),
@@ -125,63 +99,25 @@ function Menu({ nav, setActiveSegmentPath, activeSegmentPath }: MenuProps) {
       onClick: isLink ? undefined : () => handleSegmentSelect(path as string),
       isActive: path === activeSegmentPath,
       title: title as string,
-      path,
     };
   };
 
   return (
-    <ScrollShadow
-      data-root-menu
-      className="hide-scrollbar flex w-full grow flex-col items-center space-y-4 overflow-y-auto pt-5 lg:space-y-3 xl:pt-5 2xl:space-y-4"
-    >
-      {nav.map(({ id, icon, path, type, title, transKey }) => (
-        <Item
-          key={path}
-          {...getProps({ id, icon, path, type, title, transKey })}
-          id={id}
-          icon={icon}
-        />
-      ))}
-    </ScrollShadow>
-  );
-}
-
-// ----------------------------------------------------------------------
-// LeftPanel (was MainPanel/index.tsx)
-// ----------------------------------------------------------------------
-
-export interface LeftPanelProps {
-  nav: NavigationTree[];
-  setActiveSegmentPath?: Dispatch<SetStateAction<SegmentPath>>;
-  activeSegmentPath: SegmentPath;
-}
-
-export function LeftPanel({
-  nav,
-  setActiveSegmentPath,
-  activeSegmentPath,
-}: LeftPanelProps) {
-  return (
     <div className="main-panel">
-      <div
-        className={clsx(
-          "border-gray-150 flex h-full w-full flex-col items-center bg-white ltr:border-r rtl:border-l",
-        )}
-      >
-        {/* Application Logo */}
+      <div className="border-gray-150 flex h-full w-full flex-col items-center bg-white ltr:border-r rtl:border-l">
         <div className="flex pt-3.5">
           <Link to="/">
             <Logo className="text-primary-600 size-10" />
           </Link>
         </div>
-
-        <Menu
-          nav={nav}
-          activeSegmentPath={activeSegmentPath}
-          setActiveSegmentPath={setActiveSegmentPath}
-        />
-
-        {/* Bottom Links */}
+        <ScrollShadow
+          data-root-menu
+          className="hide-scrollbar flex w-full grow flex-col items-center space-y-4 overflow-y-auto pt-5 lg:space-y-3 xl:pt-5 2xl:space-y-4"
+        >
+          {nav.map((item) => (
+            <Item key={item.path} {...getItemProps(item)} id={item.id} icon={item.icon} />
+          ))}
+        </ScrollShadow>
         <div className="flex flex-col items-center space-y-3 py-2.5">
           <Item
             id={settings.id}
